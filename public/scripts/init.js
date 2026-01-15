@@ -8,27 +8,30 @@ export function init() {
         updateUrlParam(template);
     });
 
-    document.getElementById('form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = e.target.email.value;
+    const form = document.getElementById('form');
+    if (form) {
+        document.getElementById('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.email.value;
 
-        fetch('api/emailer', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, template }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Email sent successfully!');
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            alert('Error sending email.');
-            console.error('Error:', error);
+            fetch('api/emailer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, template }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Email sent successfully!');
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                alert('Error sending email.');
+                console.error('Error:', error);
+            });
         });
-    });
+    }
 
     // Initial render
     const param = window.location.search;
