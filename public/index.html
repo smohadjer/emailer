@@ -25,7 +25,7 @@
 </head>
 <body>
     <p><a class="toggle" href="original.html">Original Template</a></p>
-    <p>Select email template:
+    <p>Select template:
         <select>
             <option value="authentication_nonce">authentication_nonce</option>
             <option value="client_cc">client_cc</option>
@@ -53,6 +53,14 @@
             <option value="verification_nonce">verification_nonce</option>
         </select>
     </p>
+    <p>Enter your email address to receive selected template as email:</p>
+    <form id="form" method="post" action="api/emailer">
+        <label>Email:
+            <input type="email" name="email" value="">
+        </label>
+        <button type="submit">Send Email</button>
+    </form>
+    <br>
     <div class="resizable-frame">
         <iframe id="frame"></iframe>
     </div>

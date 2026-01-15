@@ -17,9 +17,9 @@
     },
     "event_details": {
         "event_name": "event_name",
-        "short_event_id": "short_event_id",
+        "short_event_id": "12345",
         "event_type": {
-            "type_label": "event_type_label",
+            "type_label": "Withdrawal",
             "type_value": "event_type_value",
             "type_label_l10n": {
                 "fr_CA": "étiquette_de_type_d'événement"
