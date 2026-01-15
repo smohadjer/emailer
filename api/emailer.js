@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Mustache from 'mustache';
-import data from "../public/data.json" assert { type: "json" };
+import data from "../public/data.json" with { type: "json" };
 import nodemailer from 'nodemailer';
 
 import dotenv from 'dotenv';
