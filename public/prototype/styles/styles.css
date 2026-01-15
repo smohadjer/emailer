@@ -1,11 +1,12 @@
-.header img {
+/* styles.css */
+.branding-header img {
     display: block;
     width: 120px;
     height: auto;
 }
 
 @media (min-width: 768px) {
-    .header img {
+    .branding-header img {
         width: 180px;
     }
 }

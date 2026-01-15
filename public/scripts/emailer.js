@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const Mustache = require('mustache');
-const data = require('../../data.json');
+const data = require('../data.json');
 const nodemailer = require("nodemailer");
 
 require("dotenv").config();
@@ -38,7 +38,8 @@ const transporter = nodemailer.createTransport({
 
 transporter.sendMail({
   from: process.env.EMAIL_USER,
-  to: "saeid@fastmail.fm",
+  to: process.env.EMAIL_USER,
+  cc: process.env.EMAIL_CC,
   subject: "Email test",
   text: "Sent from Node.js",
   html: renderedEmail
