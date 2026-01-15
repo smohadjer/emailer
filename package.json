@@ -1,7 +1,7 @@
 {
     "name": "notifications",
     "scripts": {
-        "start": "http-server ./ -c-1 -p 8080"
+        "build": "echo \"No build step\""
     },
     "dependencies": {
         "dotenv": "^17.2.3",

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const Mustache = require('mustache');
-const data = require('../data.json');
+const data = require('../../data.json');
 const nodemailer = require("nodemailer");
 
 require("dotenv").config();
