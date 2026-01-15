@@ -1,0 +1,12 @@
+{
+    "name": "notifications",
+    "scripts": {
+        "start": "http-server ./ -c-1 -p 8080"
+    },
+    "dependencies": {
+        "dotenv": "^17.2.3",
+        "http-server": "^14.1.1",
+        "mustache": "^4.2.0",
+        "nodemailer": "^7.0.12"
+    }
+}

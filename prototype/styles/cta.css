@@ -1,0 +1,46 @@
+/* Call to action styles */
+.cta {
+    margin: 1em auto;
+    padding: 2em 0;
+    text-align: center;
+    max-width: none;
+    box-sizing: border-box;
+}
+.cta a.button {
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    background: #3671e7;
+    color: white;
+    padding: 0.55em 1.5em;
+    text-decoration: none;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.cta a.button__secondary {
+    background: #9e0812;
+}
+.cta--background {
+    background: #F3F4F6;
+}
+.cta a.link {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 0.5em 1em;
+    font-weight: 500;
+}
+@media (min-width: 768px) {
+    .cta a.button,
+    .cta a.link {
+        display: inline-block;
+        margin: 0 auto;
+    }    
+
+    .cta a + a.button,
+    .cta a + a.link {
+        margin-left: 2em;
+    }
+}

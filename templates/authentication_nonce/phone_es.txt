@@ -1,0 +1,13 @@
+{{#twilio}}<Response>
+		<Say language="es-ES">
+			Hola. Tu PIN para Recall InfoLink es: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>
+		</Say>
+		<Pause length="2"/>
+		<Say language="es-ES">
+			Tu PIN para Recall InfoLink es: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>
+		</Say>
+		<Pause length="2"/>
+		<Say language="es-ES">
+			Tu PIN para Recall InfoLink es: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>
+		</Say>
+</Response>{{/twilio}}

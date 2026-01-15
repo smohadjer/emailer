@@ -1,0 +1,15 @@
+{{#twilio}}<Response>
+    <Say language="de-DE">
+        Hallo. Ihre Rückruf-InfoLink-PIN lautet: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Bitte geben Sie diese in das PIN-Feld unter {{portal_url}} ein, um sich anzumelden, wo Sie dann Ihr Passwort zurücksetzen können.
+    </Say>
+    <Say language="de-DE">
+        Ihre Rückruf-InfoLink-PIN lautet: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Bitte geben Sie diese in das PIN-Feld unter {{portal_url}} ein, um sich anzumelden, wo Sie dann Ihr Passwort zurücksetzen können.
+    </Say>
+    <Pause length="2"/>
+    <Say language="de-DE">
+        Ihre Rückruf-InfoLink-PIN lautet: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Bitte geben Sie diese in das PIN-Feld unter {{portal_url}} ein, um sich anzumelden, wo Sie dann Ihr Passwort zurücksetzen können.
+    </Say>
+</Response>{{/twilio}}

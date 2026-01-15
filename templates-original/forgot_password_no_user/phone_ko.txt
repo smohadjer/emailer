@@ -1,0 +1,15 @@
+{{#twilio}}<Response>
+    <Say language="ko-KR">
+        안녕하세요. 귀하의 리콜 인포링크 PIN은 다음과 같습니다: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+       {{portal_url}} 의 PIN 필드에 입력하여 로그인하십시오.
+    </Say>
+    <Pause length="2"/>
+    <Say language="ko-KR">
+        귀하의 리콜 인포링크 PIN은 다음과 같습니다: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        로그인하려면 {{portal_url}} 의 PIN 입력란에 이 번호를 입력해 주세요.
+    </Say>
+    <Pause length="2"/>
+    <Say language="ko-KR">
+        귀하의 리콜 인포링크 PIN은 다음과 같습니다: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+       {{portal_url}} 의 PIN 입력란에 이 번호를 입력하여 로그인하십시오    </Say>
+</Response>{{/twilio}}

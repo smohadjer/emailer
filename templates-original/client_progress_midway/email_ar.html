@@ -1,0 +1,56 @@
+<html dir="rtl" lang="ar">
+    <head>
+        <style type='text/css'>
+            .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden;}
+            .datagrid table { border-collapse: collapse; text-align: right; border: 1px solid #006699; word-wrap:break-word; }
+            .datagrid table td,
+            .datagrid table th { padding: 3px 10px;}
+            .datagrid table thead th {text-align:center; background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F));background:-moz-linear-gradient(center top, #006699 5%, #00557F 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#FFFFFF; font-size: 15px; font-weight: bold; border-right: 1px solid #0070A8; }
+            .datagrid table tbody td { color: #00557F; border: 1px solid #E1EEF4;font-size: 12px;font-weight: normal; }
+            .datagrid table tbody .alt td { background: #E1EEf4; color: #00557F; }
+            .banner { background-color: #f4cb46; padding: 10px; }
+        </style>
+    </head>
+<body>
+<a href="{{event_link}}">الحدث رقم {{event_details.short_event_id}}</a> تحديث التقدم المحرز <br><br>
+{{^incident_details.incident_purview.purview_is_live}}
+<div class="banner">
+{{incident_details.incident_purview.purview_label}}
+</div><br />
+{{/incident_details.incident_purview.purview_is_live}}
+
+<div class="datagrid">
+<table>
+    <thead>
+        <tr><th colspan="2">معلومات الفعالية</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>اسم الحدث</td>
+        <td>{{event_details.event_name}}</td></tr>
+      <tr class="alt"><td>بدأ في</td>
+        <td>{{event_details.initiated_at.value}}</td></tr>
+      <tr><td>بدأ منذ</td>
+        <td>{{event_details.initiated_ago.value}}</td></tr>
+      <tr class="alt"><td>عدد نقاط التوزيع</td>
+        <td>{{distribution_point_count}}</td></tr>
+    </tbody>
+</table>
+</div>
+<br>
+<div class="datagrid">
+<table>
+    <thead>
+        <tr><th colspan="2">حالة نقطة التوزيع</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>تم الإخطار</td>
+        <td>{{distribution_points_by_status.notified.count}} ({{distribution_points_by_status.notified.percentage.value}})</td></tr>
+      <tr class="alt"><td>تم الوصول</td>
+        <td>{{distribution_points_by_status.accessed.count}} ({{distribution_points_by_status.accessed.percentage.value}})</td></tr>
+      <tr><td>تم التأكيد</td>
+        <td>{{distribution_points_by_status.confirmed.count}} ({{distribution_points_by_status.confirmed.percentage.value}})</td></tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

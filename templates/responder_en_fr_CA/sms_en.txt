@@ -1,0 +1,23 @@
+{{#twilio}}
+{{#initial}}
+{{^incident_details.incident_purview.purview_is_live}}
+This is a {{{incident_details.incident_purview.purview_label}}} event.
+{{/incident_details.incident_purview.purview_is_live}}
+{{{preamble_en}}}
+To view full details, please visit {{{event_link}}}.
+Reply HELP for help. Reply STOP to unsubscribe. Msg&Data Rates May Apply.
+--
+{{^incident_details.incident_purview.purview_is_live}}
+Il s'agit d'un événement {{{incident_details.incident_purview.purview_label_l10n.fr_CA}}}.
+{{/incident_details.incident_purview.purview_is_live}}
+{{{preamble_fr}}}
+Pour afficher tous les détails, veuillez visiter {{{event_link}}}?langTag=fr-CA.
+Répondez AIDE pour obtenir de l'aide. Répondez ARRÊT pour vous désabonner. Des tarifs de messagerie et de données peuvent s'appliquer.
+{{/initial}}
+{{/twilio}}
+{{#twilio}}
+{{#no_previous_notification}}<Response><Message>Unknown channel. Contact {{{ril_corporate.support_email}}} or call {{{ril_corporate.support_phone}}} if you need support.</Message></Response>{{/no_previous_notification}}
+{{#help}}<Response><Message>Reply STOP to unsubscribe. Msg and Data Rates May Apply.</Message></Response>{{/help}}
+{{#stop}}<Response><Message>You have successfully been unsubscribed. You will not receive any more messages to this channel. Reply START to resubscribe.</Message></Response>{{/stop}}
+{{#start}}<Response><Message>You have successfully been re-subscribed to messages for this channel. Reply HELP for help. Reply STOP to unsubscribe. Msg and Data Rates May Apply.</Message></Response>{{/start}}
+{{/twilio}}

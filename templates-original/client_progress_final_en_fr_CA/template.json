@@ -1,0 +1,19 @@
+{
+    "template_reference": "client_progress_final_en_fr_CA",
+    "contents": [
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Final Progress Update (Event #{{{event_details.short_event_id}}}) / Mise à jour finale de la progression (Événement n° {{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

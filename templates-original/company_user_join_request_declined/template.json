@@ -1,0 +1,89 @@
+{
+    "template_reference": "company_user_join_request_declined",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "رفض طلب الانضمام إلى {{{company_name}}} على Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Declined request to join {{{company_name}}} on Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Abgelehnte Anfrage zum Beitritt zu {{{company_name}}} auf Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Solicitud rechazada para unirte a {{{company_name}}} en Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Demande refusée pour rejoindre {{{company_name}}} sur Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "{{{company_name}}} 의 Recall InfoLink 가입 요청 거절",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

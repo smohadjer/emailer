@@ -1,0 +1,1 @@
+Pour réinitialiser votre mot de passe pour Recall InfoLink, veuillez visiter : {{{set_password_link}}}

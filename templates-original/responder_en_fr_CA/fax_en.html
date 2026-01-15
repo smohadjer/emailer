@@ -1,0 +1,59 @@
+<html>
+<body>
+{{^incident_details.incident_purview.purview_is_live}}
+<h1>
+{{incident_details.incident_purview.purview_label}}
+</h1><br />
+{{/incident_details.incident_purview.purview_is_live}}
+{{{preamble_en}}}
+
+To view full details, please visit {{portal_url}} and log in following these steps:
+<div>
+    <ol>
+        <li>Select Fax from the Channel Type dropdown.</li>
+        <li>Enter your Fax Number as {{channel_value}}, then click Next.</li>
+        <li>Select the option to Enter PIN.</li>
+        <li>Enter your PIN as {{nonce}}, then click Log In.</li>
+    </ol>
+</div>
+
+<div style="white-space: pre;">
+Contact {{ril_corporate.support_email}} or call {{ril_corporate.support_phone}} if you need support.
+
+If have received this fax in error or to opt-out of these notifications,
+visit {{notification_preferences_link}}.
+
+Powered by
+{{ril_corporate.name}}
+{{ril_corporate.address}}
+</div>
+
+{{^incident_details.incident_purview.purview_is_live}}
+<h1>
+{{incident_details.incident_purview.purview_label_l10n.fr_CA}}
+</h1><br />
+{{/incident_details.incident_purview.purview_is_live}}
+
+{{{preamble_fr}}}
+
+Pour afficher tous les détails, veuillez visiter {{portal_url}} et vous connecter en suivant ces étapes :
+<div>
+    <ol>
+        <li>Sélectionnez Fax dans la liste déroulante Type de canal.</li>
+        <li>Saisissez votre numéro de fax sous la forme {{channel_value}}, puis cliquez sur Suivant.</li>
+        <li>Sélectionnez l'option Saisir le NIP.</li>
+        <li>Saisissez votre NIP sous le nom {{nonce}}, puis cliquez sur Connexion.</li>
+    </ol>
+</div>
+<div style="white-space: pre;">
+Contactez {{ril_corporate.support_email}} ou appelez le {{ril_corporate.support_phone}} si vous avez besoin d'assistance.
+
+Si vous avez reçu ce fax par erreur ou si vous souhaitez vous désinscrire de ces notifications,
+visitez {{notification_preferences_link}}?langTag=fr-CA.
+
+Alimenté par
+{{ril_corporate.name}}
+{{ril_corporate.address}}
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <style>
+        .resizable-frame {
+            resize: both;
+            overflow: auto;
+            width: 90vw;
+            height: 80vh;
+            border: 1px solid #aaa;
+            padding: 0;
+        }
+
+        .resizable-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <p><a class="toggle" href="original.html">Original Template</a></p>
+    <p>Select email template:
+        <select>
+            <option value="authentication_nonce">authentication_nonce</option>
+            <option value="client_cc">client_cc</option>
+            <option value="client_cc_en_fr_CA">client_cc_en_fr_CA</option>
+            <option value="client_initiator">client_initiator</option>
+            <option value="client_initiator_en_fr_CA">client_initiator_en_fr_CA</option>
+            <option value="client_progress_final">client_progress_final</option>
+            <option value="client_progress_final_en_fr_CA">client_progress_final_en_fr_CA</option>
+            <option value="client_progress_midway">client_progress_midway</option>
+            <option value="client_progress_midway_en_fr_CA">client_progress_midway_en_fr_CA</option>
+            <option value="company_supplier_invite">company_supplier_invite</option>
+            <option value="company_user_added">company_user_added</option>
+            <option value="company_user_invite">company_user_invite</option>
+            <option value="company_user_join_request">company_user_join_request</option>
+            <option value="company_user_join_request_accepted">company_user_join_request_accepted</option>
+            <option value="company_user_join_request_declined">company_user_join_request_declined</option>
+            <option value="forgot_password">forgot_password</option>
+            <option value="forgot_password_no_user">forgot_password_no_user</option>
+            <option value="forgot_password_sso">forgot_password_sso</option>
+            <option value="master_alert">master_alert</option>
+            <option value="removal_confirmation">removal_confirmation</option>
+            <option value="responder">responder</option>
+            <option value="responder_new">responder new</option>
+            <option value="responder_en_fr_CA">responder_en_fr_CA</option>
+            <option value="verification_nonce">verification_nonce</option>
+        </select>
+    </p>
+    <div class="resizable-frame">
+        <iframe id="frame"></iframe>
+    </div>
+    <div id="raw-html"></div>
+</body>
+</html>

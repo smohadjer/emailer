@@ -1,0 +1,89 @@
+{
+    "template_reference": "company_user_added",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "أضيف إلى {{{company_name}}} على Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Added to {{{company_name}}} on Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Zu {{{company_name}}} auf Recall InfoLink hinzugefügt",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Agregada a {{{company_name}}} en Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Ajouté à {{{company_name}}} sur Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "리콜 정보 링크( {{{company_name}}} )에 추가됨",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

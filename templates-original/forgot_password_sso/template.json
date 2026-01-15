@@ -1,0 +1,89 @@
+{
+    "template_reference": "forgot_password_sso",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "الوصول إلى حساب Recall InfoLink الخاص بك",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Access to your Recall InfoLink account",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Zugriff auf Ihr Recall InfoLink-Konto",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Acceso a su cuenta de Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Accès à votre compte Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "귀하의 Recall InfoLink 계정에 대한 접근",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

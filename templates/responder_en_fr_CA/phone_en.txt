@@ -1,0 +1,139 @@
+{{#twilio}}<Response>
+{{#extension}}
+  <Play digits="ww{{num}}"></Play>
+  <Pause length="30"/>
+{{/extension}}
+{{#initial}}
+    {{#first_lang}}
+    <Gather action="{{incoming_url}}" numDigits="1">
+        {{^incident_details.incident_purview.purview_is_live}}
+        <Say language="en-US">
+            This is a {{incident_details.incident_purview.purview_label}} event.
+        </Say>
+        {{/incident_details.incident_purview.purview_is_live}}
+        {{#recorded_preamble_en}}<Play>{{recorded_preamble_en}}</Play>{{/recorded_preamble_en}}
+        <Say language="en-US">
+            {{preamble_en}}
+        </Say>
+        {{^incident_details.incident_purview.purview_is_live}}
+        <Say language="fr-CA">
+            Il s'agit d'un événement {{incident_details.incident_purview.purview_label_l10n.fr_CA}}.
+        </Say>
+        {{/incident_details.incident_purview.purview_is_live}}
+        {{#recorded_preamble_fr}}<Play>{{recorded_preamble_fr}}</Play>{{/recorded_preamble_fr}}
+        <Say language="fr-CA">
+            {{preamble_fr}}
+        </Say>
+        <Pause length="5"/>
+
+        <Say language="en-US">
+            To view full details, please visit {{portal_url}} and log in following these steps:
+
+            1. Select Phone from the dropdown, and enter your number as <prosody rate="x-slow"><say-as interpret-as="spell-out">{{channel_value}}</say-as></prosody>, then click Next.
+            2. Enter your PIN of <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody> to Log In. Once again, your PIN to Log In is <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+
+            If you have any questions, call Recall InfoLink support line at <say-as interpret-as="spell-out">{{ril_corporate.support_phone_to_spell}}</say-as>.
+        </Say>
+    </Gather>
+    {{/first_lang}}
+    {{#second_lang}}
+    <Say language="fr-CA">
+        Il s'agit d'une notification {{incident_details.incident_type.type_label_l10n.fr_CA}} importante de {{incident_details.initiating_company}}.
+
+        Pour afficher tous les détails, veuillez visiter {{portal_url}} et vous connecter en suivant ces étapes :
+
+        1. Sélectionnez Téléphone dans la liste déroulante et saisissez votre numéro sous la forme <prosody rate="x-slow"><say-as interpret-as="spell-out">{{channel_value}}</say-as></prosody>, puis cliquez sur Suivant.
+        2. Saisissez votre NIP <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody> pour vous connecter. Encore une fois, votre NIP pour vous connecter est <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+
+        Si vous avez des questions, appelez la ligne d'assistance Recall InfoLink au <say-as interpret-as="telephone">{{ril_corporate.support_phone_to_spell}}</say-as>.
+    </Say>
+    {{/second_lang}}
+    <Redirect>{{incoming_url}}</Redirect>
+{{/initial}}
+{{#options}}
+    {{#first_lang}}
+    <Gather numDigits="1">
+        <Say language="en-US">
+            To replay this message, press 9.
+
+            Press 1 to confirm you will log into the application and to stop additional phone reminders.
+
+            Press 2 if you have received this call in error or to opt out of these calls.
+
+            To end this call press 3 or hang up.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+    {{/first_lang}}
+    {{#second_lang}}
+    <Gather numDigits="1">
+        <Say language="fr-CA">
+            Pour réécouter ce message, appuyez sur 9.
+
+            Appuyez sur 1 pour confirmer que vous vous connecterez à l'application et pour arrêter les rappels téléphoniques supplémentaires.
+
+            Appuyez sur 2 si vous avez reçu cet appel par erreur ou pour vous désinscrire de ces appels.
+
+            Pour mettre fin à cet appel, appuyez sur 3 ou raccrochez.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+    {{/second_lang}}
+{{/options}}
+{{#pressed_1}}
+    {{#first_lang}}
+    <Say language="en-US">Thanks.</Say>
+    {{/first_lang}}
+    {{#second_lang}}
+    <Say language="fr-CA">Merci.</Say>
+    {{/second_lang}}
+    <Hangup/>
+{{/pressed_1}}
+{{#pressed_2}}
+    {{#first_lang}}
+    <Gather numDigits="1">
+        <Say language="en-US">
+            Press 4 if you have received this call in error.
+
+            Press 5 if you wish to opt out of these calls.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+    {{/first_lang}}
+    {{#second_lang}}
+    <Gather numDigits="1">
+        <Say language="fr-CA">
+            Appuyez sur 4 si vous avez reçu cet appel par erreur.
+
+            Appuyez sur 5 si vous souhaitez vous désinscrire de ces appels.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+    {{/second_lang}}
+{{/pressed_2}}
+{{#pressed_3}}
+    <Hangup/>
+{{/pressed_3}}
+{{#pressed_4}}
+    {{#first_lang}}
+    <Say language="en-US">You have successfully been unsubscribed.</Say>
+    {{/first_lang}}
+    {{#second_lang}}
+    <Say language="fr-CA">Vous avez été désabonné avec succès.</Say>
+    {{/second_lang}}
+    <Hangup/>
+{{/pressed_4}}
+{{#pressed_5}}
+    {{#first_lang}}
+    <Say language="en-US">You have successfully been unsubscribed.</Say>
+    {{/first_lang}}
+    {{#second_lang}}
+    <Say language="fr-CA">Vous avez été désabonné avec succès.</Say>
+    {{/second_lang}}
+    <Hangup/>
+{{/pressed_5}}
+{{#hangup}}
+    <Hangup/>
+{{/hangup}}
+</Response>
+{{/twilio}}

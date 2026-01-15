@@ -1,0 +1,334 @@
+{
+    "template_reference": "authentication_nonce",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "رقم التعريف الشخصي لـ Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Your Recall InfoLink PIN",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Ihr Recall InfoLink PIN",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Tu PIN para Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Votre code PIN Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr_CA",
+            "channel_type": "email",
+            "body_content": "file://email_fr_CA.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Votre NIP Recall InfoLink",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "귀하의 리콜 정보 링크 PIN",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ar",
+            "channel_type": "phone",
+            "body_content": "file://phone_ar.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "phone",
+            "body_content": "file://phone_en.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "phone",
+            "body_content": "file://phone_de.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "phone",
+            "body_content": "file://phone_es.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "phone",
+            "body_content": "file://phone_fr.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "fr_CA",
+            "channel_type": "phone",
+            "body_content": "file://phone_fr_CA.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "phone",
+            "body_content": "file://phone_ko.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "ar",
+            "channel_type": "sms",
+            "body_content": "file://sms_ar.txt",
+            "fields": []
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "sms",
+            "body_content": "file://sms_en.txt",
+            "fields": []
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "sms",
+            "body_content": "file://sms_de.txt",
+            "fields": []
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "sms",
+            "body_content": "file://sms_es.txt",
+            "fields": []
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "sms",
+            "body_content": "file://sms_fr.txt",
+            "fields": []
+        },
+        {
+            "locale_code": "fr_CA",
+            "channel_type": "sms",
+            "body_content": "file://sms_fr_CA.txt",
+            "fields": []
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "sms",
+            "body_content": "file://sms_ko.txt",
+            "fields": []
+        },
+        {
+            "locale_code": "ar",
+            "channel_type": "fax",
+            "body_content": "file://fax_ar.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "رقم التعريف الشخصي لـ Recall InfoLink",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "fax",
+            "body_content": "file://fax_en.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Your Recall InfoLink PIN",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "fax",
+            "body_content": "file://fax_de.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Ihr Recall InfoLink PIN",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "fax",
+            "body_content": "file://fax_es.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Tu PIN para Recall InfoLink",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "fax",
+            "body_content": "file://fax_fr.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Votre code PIN Recall InfoLink",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "fr_CA",
+            "channel_type": "fax",
+            "body_content": "file://fax_fr_CA.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Votre NIP Recall InfoLink",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "fax",
+            "body_content": "file://fax_ko.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "귀하의 리콜 정보 링크 PIN",
+                    "is_required": false
+                }
+            ]
+        }
+    ]
+}

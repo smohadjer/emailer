@@ -1,0 +1,16 @@
+{{#twilio}}<Response>
+    <Say language="es-ES">
+        Hola. Su código PIN de Recall InfoLink es: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Por favor, ingréselo en el campo PIN en {{portal_url}} para iniciar sesión.
+    </Say>
+    <Pause length="2"/>
+    <Say language="es-ES">
+        Su código PIN de Recall InfoLink es: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Por favor, ingréselo en el campo PIN en {{portal_url}} para iniciar sesión.
+    </Say>
+    <Pause length="2"/>
+    <Say language="es-ES">
+        Su código PIN de Recall InfoLink es: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Por favor, ingréselo en el campo PIN en {{portal_url}} para iniciar sesión.
+    </Say>
+</Response>{{/twilio}}

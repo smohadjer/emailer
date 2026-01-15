@@ -1,0 +1,185 @@
+{
+    "template_reference": "responder_en_fr_CA",
+    "contents": [
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "de": "Zweisprachiger E-Mail-Betreff",
+                        "en": "Bilingual Email Subject",
+                        "es": "Asunto de correo bilingüe",
+                        "fr": "Objet d'e-mail bilingue"
+                    },
+                    "default_value": "Important {{{incident_details.incident_type.type_label}}} Notification / Notification importante {{{incident_details.incident_type.type_label_l10n.fr_CA}}}: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble_en",
+                    "type": "html",
+                    "label_i18n": {
+                        "de": "E-Mail-Vorwort auf Englisch",
+                        "en": "Email Preamble in English",
+                        "es": "Preámbulo del correo electrónico en Inglés",
+                        "fr": "Préambule de l'email en Anglais"
+                    },
+                    "default_value": "<h2>Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble_fr",
+                    "type": "html",
+                    "label_i18n": {
+                        "de": "E-Mail-Vorwort auf Französisch",
+                        "en": "Email Preamble in French",
+                        "es": "Preámbulo del correo electrónico en Francés",
+                        "fr": "Préambule de l'email en Français"
+                    },
+                    "default_value": "<h2>Notification importante {{incident_details.incident_type.type_label_l10n.fr_CA}} de {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "phone",
+            "body_content": "file://phone_en.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "de": "Zweisprachiger Anrufgrund",
+                        "en": "Bilingual Call Reason",
+                        "es": "Motivo de llamada bilingüe",
+                        "fr": "Motif d'appel bilingue"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble_en",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "de": "Aufgezeichnetes Vorwort auf Englisch",
+                        "en": "Recorded Preamble in English",
+                        "es": "Preámbulo grabado en inglés",
+                        "fr": "Préambule enregistré en anglais"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble_en",
+                    "type": "text",
+                    "label_i18n": {
+                        "de": "Telefon-Vorwort auf Englisch",
+                        "en": "Phone Preamble in English",
+                        "es": "Preámbulo de la llamada en Inglés",
+                        "fr": "Préambule du Téléphone en Anglais"
+                    },
+                    "default_value": "Hello. This is an important {{{incident_details.incident_type.type_label}}} notification from {{{incident_details.initiating_company}}}, hold for instructions in English.",
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble_fr",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "de": "Aufgezeichnetes Vorwort auf Französisch",
+                        "en": "Recorded Preamble in French",
+                        "es": "Preámbulo grabado en Francés",
+                        "fr": "Préambule enregistré en Français"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble_fr",
+                    "type": "text",
+                    "label_i18n": {
+                        "de": "Telefon-Vorwort auf Französisch",
+                        "en": "Phone Preamble in French",
+                        "es": "Preámbulo de la llamada en Francés",
+                        "fr": "Préambule du Téléphone en Français"
+                    },
+                    "default_value": "Bonjour. Il s'agit d'une notification {{{incident_details.incident_type.type_label_l10n.fr_CA}}} importante de {{{incident_details.initiating_company}}}, appuyez sur 0 pour obtenir des instructions en français.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "sms",
+            "body_content": "file://sms_en.txt",
+            "fields": [
+                {
+                    "key": "preamble_en",
+                    "type": "text",
+                    "label_i18n": {
+                        "de": "SMS-Vorwort auf Englisch",
+                        "en": "SMS Preamble in English",
+                        "es": "Preámbulo del Mensaje SMS en Inglés",
+                        "fr": "Préambule du SMS en Anglais"
+                    },
+                    "default_value": "Important {{{incident_details.incident_type.type_label}}} Notification from {{{incident_details.initiating_company}}}.",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble_fr",
+                    "type": "text",
+                    "label_i18n": {
+                        "de": "SMS-Vorwort auf Französisch",
+                        "en": "SMS Preamble in French",
+                        "es": "Preámbulo del Mensaje SMS en Francés",
+                        "fr": "Préambule du SMS en Français"
+                    },
+                    "default_value": "Notification importante {{{incident_details.incident_type.type_label_l10n.fr_CA}}} de {{{incident_details.initiating_company}}}.",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "fax",
+            "body_content": "file://fax_en.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "de": "Zweisprachiger Faxkopf",
+                        "en": "Bilingual Fax Header",
+                        "es": "Encabezado de Fax Bilingüe",
+                        "fr": "En-tête de Fax Bilingue"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble_en",
+                    "type": "html",
+                    "label_i18n": {
+                        "de": "Fax-Vorwort auf Englisch",
+                        "en": "Fax Preamble in English",
+                        "es": "Preámbulo del fax en Inglés",
+                        "fr": "Préambule du fax en Anglais"
+                    },
+                    "default_value": "<h1>Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}.</h1><h2>Event {{event_details.short_event_id}}: {{event_details.event_name}}</h2>",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble_fr",
+                    "type": "html",
+                    "label_i18n": {
+                        "de": "Fax-Vorwort auf Französisch",
+                        "en": "Fax Preamble in French",
+                        "es": "Preámbulo del Fax en Francés",
+                        "fr": "Préambule du Fax en Français"
+                    },
+                    "default_value": "<h1>Notification importante {{incident_details.incident_type.type_label_l10n.fr_CA}} de {{incident_details.initiating_company}}.</h1><h2>Événement {{event_details.short_event_id}} : {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{{#twilio}}<Response>
+{{#extension}}
+  <Play digits="ww{{num}}"></Play>
+  <Pause length="30"/>
+{{/extension}}
+{{#initial}}
+    {{^incident_details.incident_purview.purview_is_live}}
+        <Say language="ko-KR">
+            이것은 {{incident_details.incident_purview.purview_label}} 이벤트입니다.
+        </Say>
+    {{/incident_details.incident_purview.purview_is_live}}
+    {{#recorded_preamble}}<Play>{{recorded_preamble}}</Play>{{/recorded_preamble}}
+    <Say language="ko-KR">
+       {{preamble}}
+
+        전체 세부 정보를 보려면 {{portal_url}} 을 방문하여 다음 단계에 따라 로그인하십시오:
+
+        1. 드롭다운에서 '전화'를 선택하고 번호를 다음과 같이 입력한 후 '다음'을 클릭하십시오 <prosody rate="x-slow"><say-as interpret-as="spell-out">{{channel_value}}</say-as></prosody>로 입력한 후 '다음'을 클릭하세요.
+        2. 로그인 PIN 번호 <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody> 를 입력하여 로그인하십시오. 다시 한번, 로그인 PIN은 <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>입니다.
+
+        문의 사항이 있으시면 Recall InfoLink 지원 라인 <say-as interpret-as="spell-out">{{ril_corporate.support_phone_to_spell}}</say-as>로 문의하십시오.
+    </Say>
+    <Redirect>{{incoming_url}}</Redirect>
+{{/initial}}
+{{#options}}
+    <Gather numDigits="1">
+        <Say language="ko-KR">
+            이 메시지를 다시 들으려면 9번을 누르세요.
+
+            응용 프로그램에 로그인하고 추가 전화 알림을 중지하려면 1번을 누르세요.
+
+            오류로 이 전화를 받으셨거나 이러한 전화 수신을 거부하려면 2번을 누르세요.
+
+            통화를 종료하려면 3번을 누르거나 전화를 끊으세요.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/options}}
+{{#pressed_1}}
+    <Say language="ko-KR">감사합니다.</Say>
+    <Hangup/>
+{{/pressed_1}}
+{{#pressed_2}}
+    <Gather numDigits="1">
+        <Say language="ko-KR">
+            이 통화를 실수로 받으셨다면 4번을 누르세요.
+
+            이러한 전화 수신을 거부하려면 5번을 누르세요.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/pressed_2}}
+{{#pressed_3}}
+    <Hangup/>
+{{/pressed_3}}
+{{#pressed_4}}
+    <Say language="ko-KR">수신 거부 신청이 완료되었습니다.</Say>
+    <Hangup/>
+{{/pressed_4}}
+{{#pressed_5}}
+    <Say language="ko-KR">수신 거부 신청이 완료되었습니다.</Say>
+    <Hangup/>
+{{/pressed_5}}
+{{#hangup}}
+    <Hangup/>
+{{/hangup}}
+</Response>
+{{/twilio}}

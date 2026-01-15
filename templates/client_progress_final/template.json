@@ -1,0 +1,89 @@
+{
+    "template_reference": "client_progress_final",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "تحديث التقدم النهائي (الحدث رقم {{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Final Progress Update (Event #{{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Letztes Fortschrittsupdate (Ereignis Nr. {{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Actualización del progreso final (Evento n.° {{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "Mise à jour finale de la progression (Événement n° {{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "최종 진행 상황 업데이트 (이벤트 #{{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

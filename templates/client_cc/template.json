@@ -1,0 +1,215 @@
+{
+    "template_reference": "client_cc",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "CC-E-Mail-Betreff",
+                        "en": "CC Email Subject",
+                        "es": "Asunto del Correo Electrónico CC",
+                        "fr": "Objet de l'E-mail en CC",
+                        "ko": "CC 이메일 제목"
+                    },
+                    "default_value": "إشعار هام من {{{incident_details.incident_type.type_label}}}: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني CC",
+                        "de": "CC-E-Mail-Vorwort",
+                        "en": "CC Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico CC",
+                        "fr": "Préambule de l'E-mail en CC",
+                        "ko": "CC 이메일 서문"
+                    },
+                    "default_value": "<h2>إشعار هام من {{incident_details.incident_type.type_label}} {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "CC-E-Mail-Betreff",
+                        "en": "CC Email Subject",
+                        "es": "Asunto del Correo Electrónico CC",
+                        "fr": "Objet de l'E-mail en CC",
+                        "ko": "CC 이메일 제목"
+                    },
+                    "default_value": "Important {{{incident_details.incident_type.type_label}}} Notification: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني CC",
+                        "de": "CC-E-Mail-Vorwort",
+                        "en": "CC Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico CC",
+                        "fr": "Préambule de l'E-mail en CC",
+                        "ko": "CC 이메일 서문"
+                    },
+                    "default_value": "<h2>Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "CC-E-Mail-Betreff",
+                        "en": "CC Email Subject",
+                        "es": "Asunto del Correo Electrónico CC",
+                        "fr": "Objet de l'E-mail en CC",
+                        "ko": "CC 이메일 제목"
+                    },
+                    "default_value": "Wichtige {{{incident_details.incident_type.type_label}}}-Benachrichtigung: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني CC",
+                        "de": "CC-E-Mail-Vorwort",
+                        "en": "CC Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico CC",
+                        "fr": "Préambule de l'E-mail en CC",
+                        "ko": "CC 이메일 서문"
+                    },
+                    "default_value": "<h2>Wichtige {{incident_details.incident_type.type_label}}-Benachrichtigung von {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "CC-E-Mail-Betreff",
+                        "en": "CC Email Subject",
+                        "es": "Asunto del Correo Electrónico CC",
+                        "fr": "Objet de l'E-mail en CC",
+                        "ko": "CC 이메일 제목"
+                    },
+                    "default_value": "Notificación Importante de {{{incident_details.incident_type.type_label}}}: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني CC",
+                        "de": "CC-E-Mail-Vorwort",
+                        "en": "CC Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico CC",
+                        "fr": "Préambule de l'E-mail en CC",
+                        "ko": "CC 이메일 서문"
+                    },
+                    "default_value": "<h2>Notificación Importante de {{incident_details.incident_type.type_label}} de {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "CC-E-Mail-Betreff",
+                        "en": "CC Email Subject",
+                        "es": "Asunto del Correo Electrónico CC",
+                        "fr": "Objet de l'E-mail en CC",
+                        "ko": "CC 이메일 제목"
+                    },
+                    "default_value": "Notification importante {{{incident_details.incident_type.type_label}}} : {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني CC",
+                        "de": "CC-E-Mail-Vorwort",
+                        "en": "CC Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico CC",
+                        "fr": "Préambule de l'E-mail en CC",
+                        "ko": "CC 이메일 서문"
+                    },
+                    "default_value": "<h2>Notification importante {{incident_details.incident_type.type_label}} de {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "CC-E-Mail-Betreff",
+                        "en": "CC Email Subject",
+                        "es": "Asunto del Correo Electrónico CC",
+                        "fr": "Objet de l'E-mail en CC",
+                        "ko": "CC 이메일 제목"
+                    },
+                    "default_value": "중요 알림: {{{incident_details.incident_type.type_label}}} / {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني CC",
+                        "de": "CC-E-Mail-Vorwort",
+                        "en": "CC Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico CC",
+                        "fr": "Préambule de l'E-mail en CC",
+                        "ko": "CC 이메일 서문"
+                    },
+                    "default_value": "<h2>{{incident_details.incident_type.type_label}} 의 중요한 공지사항 {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

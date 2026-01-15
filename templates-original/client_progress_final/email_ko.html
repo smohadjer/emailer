@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style type='text/css'>
+            .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden;}
+            .datagrid table { border-collapse: collapse; text-align: left; border: 1px solid #006699; word-wrap:break-word; }
+            .datagrid table td,
+            .datagrid table th { padding: 3px 10px;}
+            .datagrid table thead th {text-align:center; background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F));background:-moz-linear-gradient(center top, #006699 5%, #00557F 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 1px solid #0070A8; }
+            .datagrid table tbody td { color: #00557F; border: 1px solid #E1EEF4;font-size: 12px;font-weight: normal; }
+            .datagrid table tbody .alt td { background: #E1EEf4; color: #00557F; }
+            .banner { background-color: #f4cb46; padding: 10px; }
+        </style>
+    </head>
+<body>
+<a href="{{event_link}}">이벤트 #{{event_details.short_event_id}}</a> 진행 상황 업데이트:<br><br>
+{{^incident_details.incident_purview.purview_is_live}}
+<div class="banner">
+{{incident_details.incident_purview.purview_label}}
+</div><br />
+{{/incident_details.incident_purview.purview_is_live}}
+
+<div class="datagrid">
+<table>
+    <thead>
+        <tr><th colspan="2">이벤트 정보</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>이벤트 이름</td>
+        <td>{{event_details.event_name}}</td></tr>
+      <tr class="alt"><td>에서 시작</td>
+        <td>{{event_details.initiated_at.value}}</td></tr>
+      <tr><td>시작 시간</td>
+        <td>{{event_details.initiated_ago.value}}</td></tr>
+      <tr class="alt"><td>배포 지점 수</td>
+        <td>{{distribution_point_count}}</td></tr>
+    </tbody>
+</table>
+</div>
+<br>
+<div class="datagrid">
+<table>
+    <thead>
+        <tr><th colspan="2">배포 지점 상태</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>알림</td>
+        <td>{{distribution_points_by_status.notified.count}} ({{distribution_points_by_status.notified.percentage.value}})</td></tr>
+      <tr class="alt"><td>액세스됨</td>
+        <td>{{distribution_points_by_status.accessed.count}} ({{distribution_points_by_status.accessed.percentage.value}})</td></tr>
+      <tr><td>확인됨</td>
+        <td>{{distribution_points_by_status.confirmed.count}} ({{distribution_points_by_status.confirmed.percentage.value}})</td></tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

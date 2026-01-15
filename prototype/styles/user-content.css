@@ -1,0 +1,16 @@
+/* content entered by user in dashboard */
+.user-content table {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
+
+.user-content table td {
+    padding: 0.5em 0;
+    border-bottom: solid 1px #ccc;
+}
+
+.user-content table tr:last-child td {
+    border-bottom: none;
+}

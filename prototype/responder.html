@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/user-content.css">
+    <link rel="stylesheet" href="styles/cta.css">
+    <link rel="stylesheet" href="styles/meta.css">
+    <style type="text/css" rel="stylesheet" media="all">
+      /* inline CSS styles can go here */
+    </style>
+</head>
+<body>
+    <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
+        {{incident_details.initiating_company}}</span>
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+         <tr>
+            <td width="100%" valign="top" align="left" bgcolor="#d5d5d5">
+                <header>
+                    <p>Do not share this email with anyone.</p>
+                </header>
+                <!-- <div class="banner">Practice</div> -->
+                <main>
+                    <!-- <div class="header">
+                        <img src="ril-logo.png" alt="logo">
+                    </div> -->
+                    <ul class="meta">
+                        <li><span>Event Type</span> Withdrawal</li>
+                        <li><span>Classification</span> Class I</li>
+                        <li><span>Event ID</span> #355</li>
+                        <li><span>Event Date</span>10/20/2025</li>
+                    </ul>
+                    <section>
+                        <div class="user-content">
+                            <h1>Important Withdrawal Notification from Test Inc</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>
+                            <p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>
+                            <table>
+                                <tr>
+                                    <td>Event Name</td>
+                                    <td>DairyHealth yogurt</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Type</td>
+                                    <td>Product Removal</td>
+                                </tr>
+                                <tr>
+                                    <td>Event ID</td>
+                                    <td>24347</td>
+                                </tr>
+                                <tr>
+                                    <td>Effective Date</td>
+                                    <td>2022-01-20</td>
+                                </tr>
+                                <tr>
+                                    <td>Classification Type</td>
+                                    <td>Class I</td>
+                                </tr>
+                                <tr>
+                                    <td>Reason</td>
+                                    <td>Potentially contains undeclared allergen (Milk).</td>
+                                </tr>
+                                <tr>
+                                    <td>Disposition</td>
+                                    <td>Consectetur adipisicing elit necessitatibus eveniet perspiciatis tempora quibusdam aspernatur eos sit, nostrum voluptates.</td>
+                                </tr>
+                            </table>
+                            <p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>
+                        </div>
+                        <p class="cta">
+                            <a class="button" href="http://link.to.reset.password">View Details</a>
+                        </p>
+                        <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for channel <a href="#">responder@test.com</a>.</p>
+                    </section>
+                </main>
+                <footer>
+                    <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href="mailto:support@recallinfolink.com">support@recallinfolink.com</a> or call 1 (208) 890-9169 if you need support.</p>
+                    <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="">notification preferences</a>.</p>
+                    <!-- we use inline img element instead of css background-image since some email clients don't render background images (e.g. macOS Mail app) -->
+                    <p><img width="15" src="https://sandbox.saeidmohadjer.com/ril/notifications/prototype/ril.svg" alt="logo">
+                    <span>Powered by Recall InfoLink</span></p>
+                </footer>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

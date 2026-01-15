@@ -1,0 +1,70 @@
+{{#twilio}}<Response>
+{{#extension}}
+  <Play digits="ww{{num}}"></Play>
+  <Pause length="30"/>
+{{/extension}}
+{{#initial}}
+    {{^incident_details.incident_purview.purview_is_live}}
+        <Say language="es-ES">
+            Este es un evento de {{incident_details.incident_purview.purview_label}}.
+        </Say>
+    {{/incident_details.incident_purview.purview_is_live}}
+    {{#recorded_preamble}}<Play>{{recorded_preamble}}</Play>{{/recorded_preamble}}
+    <Say language="es-ES">
+        {{preamble}}
+
+        Para ver los detalles completos, por favor visite {{portal_url}} e inicie sesión siguiendo estos pasos:
+
+        1. Seleccione Teléfono en el menú desplegable e ingrese su número como <prosody rate="x-slow"><say-as interpret-as="spell-out">{{channel_value}}</say-as></prosody>, luego haga clic en Siguiente.
+        2. Ingrese su PIN de <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody> para iniciar sesión. Una vez más, su PIN para iniciar sesión es <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+
+        Si tiene alguna pregunta, llame a la línea de soporte de Recall InfoLink al <say-as interpret-as="telephone">{{ril_corporate.support_phone_to_spell}}</say-as>.
+    </Say>
+    <Redirect>{{incoming_url}}</Redirect>
+{{/initial}}
+{{#options}}
+    <Gather numDigits="1">
+        <Say language="es-ES">
+            Para repetir este mensaje, presione 9.
+
+            Presione 1 para confirmar que iniciará sesión en la aplicación y evitar llamadas adicionales relativas al presente aviso.
+
+            Presione 2 si ha recibido esta llamada por error o para optar por no recibir estas llamadas.
+
+            Para terminar esta llamada presione 3 o cuelgue.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/options}}
+{{#pressed_1}}
+    <Say language="es-ES">
+        Gracias.
+    </Say>
+    <Hangup/>
+{{/pressed_1}}
+{{#pressed_2}}
+    <Gather numDigits="1">
+        <Say language="es-ES">
+            Presione 4 si ha recibido esta llamada por error.
+
+            Presione 5 si desea optar por no recibir estas llamadas.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/pressed_2}}
+{{#pressed_3}}
+    <Hangup/>
+{{/pressed_3}}
+{{#pressed_4}}
+    <Say language="es-ES">Se ha dado de baja con éxito.</Say>
+    <Hangup/>
+{{/pressed_4}}
+{{#pressed_5}}
+    <Say language="es-ES">Se ha dado de baja con éxito.</Say>
+    <Hangup/>
+{{/pressed_5}}
+{{#hangup}}
+    <Hangup/>
+{{/hangup}}
+</Response>
+{{/twilio}}

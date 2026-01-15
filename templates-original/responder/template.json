@@ -1,0 +1,908 @@
+{
+    "template_reference": "responder",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "إشعار هام من {{{incident_details.incident_type.type_label}}}: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني",
+                        "de": "E-Mail-Vorwort",
+                        "en": "Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico",
+                        "fr": "Préambule de l'Email",
+                        "ko": "이메일 서문"
+                    },
+                    "default_value": "<h2>إشعار هام من {{incident_details.incident_type.type_label}} {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Important {{{incident_details.incident_type.type_label}}} Notification: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني",
+                        "de": "E-Mail-Vorwort",
+                        "en": "Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico",
+                        "fr": "Préambule de l'Email",
+                        "ko": "이메일 서문"
+                    },
+                    "default_value": "<h2>Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Wichtige {{{incident_details.incident_type.type_label}}}-Benachrichtigung: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني",
+                        "de": "E-Mail-Vorwort",
+                        "en": "Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico",
+                        "fr": "Préambule de l'Email",
+                        "ko": "이메일 서문"
+                    },
+                    "default_value": "<h2>Wichtige {{incident_details.incident_type.type_label}}-Benachrichtigung von {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Notificación Importante de {{{incident_details.incident_type.type_label}}}: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني",
+                        "de": "E-Mail-Vorwort",
+                        "en": "Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico",
+                        "fr": "Préambule de l'Email",
+                        "ko": "이메일 서문"
+                    },
+                    "default_value": "<h2>Notificación Importante de {{incident_details.incident_type.type_label}} de {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Notification importante {{{incident_details.incident_type.type_label}}} : {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني",
+                        "de": "E-Mail-Vorwort",
+                        "en": "Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico",
+                        "fr": "Préambule de l'Email",
+                        "ko": "이메일 서문"
+                    },
+                    "default_value": "<h2>Notification importante {{incident_details.incident_type.type_label}} de {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "중요 알림: {{{incident_details.incident_type.type_label}}} / {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة البريد الإلكتروني",
+                        "de": "E-Mail-Vorwort",
+                        "en": "Email Preamble",
+                        "es": "Preámbulo del Correo Electrónico",
+                        "fr": "Préambule de l'Email",
+                        "ko": "이메일 서문"
+                    },
+                    "default_value": "<h2>{{incident_details.incident_type.type_label}} 의 중요한 공지사항 {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ar",
+            "channel_type": "phone",
+            "body_content": "file://phone_ar.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "ar": "سبب الاتصال",
+                        "de": "Anrufgrund",
+                        "en": "Call Reason",
+                        "es": "Motivo de la Llamada",
+                        "fr": "Raison de l'Appel",
+                        "ko": "통화 사유"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "ar": "الديباجة المسجلة",
+                        "de": "Aufgezeichnetes Vorwort",
+                        "en": "Recorded Preamble",
+                        "es": "Preámbulo Grabado",
+                        "fr": "Préambule Enregistré",
+                        "ko": "기록된 서문"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "مقدمة المكالمة الهاتفية",
+                        "de": "Telefonat-Vorwort",
+                        "en": "Phone Call Preamble",
+                        "es": "Preámbulo de la Llamada Telefónica",
+                        "fr": "Préambule de l'Appel Téléphonique",
+                        "ko": "전화 통화 서문"
+                    },
+                    "default_value": "مرحبًا. هذا إخطار هام من {{{incident_details.incident_type.type_label}}} من {{{incident_details.initiating_company}}}.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "phone",
+            "body_content": "file://phone_en.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "ar": "سبب الاتصال",
+                        "de": "Anrufgrund",
+                        "en": "Call Reason",
+                        "es": "Motivo de la Llamada",
+                        "fr": "Raison de l'Appel",
+                        "ko": "통화 사유"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "ar": "الديباجة المسجلة",
+                        "de": "Aufgezeichnetes Vorwort",
+                        "en": "Recorded Preamble",
+                        "es": "Preámbulo Grabado",
+                        "fr": "Préambule Enregistré",
+                        "ko": "기록된 서문"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "مقدمة المكالمة الهاتفية",
+                        "de": "Telefonat-Vorwort",
+                        "en": "Phone Call Preamble",
+                        "es": "Preámbulo de la Llamada Telefónica",
+                        "fr": "Préambule de l'Appel Téléphonique",
+                        "ko": "전화 통화 서문"
+                    },
+                    "default_value": "Hello. This is an important {{{incident_details.incident_type.type_label}}} notification from {{{incident_details.initiating_company}}}.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "phone",
+            "body_content": "file://phone_de.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "ar": "سبب الاتصال",
+                        "de": "Anrufgrund",
+                        "en": "Call Reason",
+                        "es": "Motivo de la Llamada",
+                        "fr": "Raison de l'Appel",
+                        "ko": "통화 사유"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "ar": "الديباجة المسجلة",
+                        "de": "Aufgezeichnetes Vorwort",
+                        "en": "Recorded Preamble",
+                        "es": "Preámbulo Grabado",
+                        "fr": "Préambule Enregistré",
+                        "ko": "기록된 서문"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "مقدمة المكالمة الهاتفية",
+                        "de": "Telefonat-Vorwort",
+                        "en": "Phone Call Preamble",
+                        "es": "Preámbulo de la Llamada Telefónica",
+                        "fr": "Préambule de l'Appel Téléphonique",
+                        "ko": "전화 통화 서문"
+                    },
+                    "default_value": "Hallo. Dies ist eine wichtige Benachrichtigung über {{{incident_details.incident_type.type_label}}} von {{{incident_details.initiating_company}}}.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "phone",
+            "body_content": "file://phone_es.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "ar": "سبب الاتصال",
+                        "de": "Anrufgrund",
+                        "en": "Call Reason",
+                        "es": "Motivo de la Llamada",
+                        "fr": "Raison de l'Appel",
+                        "ko": "통화 사유"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "ar": "الديباجة المسجلة",
+                        "de": "Aufgezeichnetes Vorwort",
+                        "en": "Recorded Preamble",
+                        "es": "Preámbulo Grabado",
+                        "fr": "Préambule Enregistré",
+                        "ko": "기록된 서문"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "مقدمة المكالمة الهاتفية",
+                        "de": "Telefonat-Vorwort",
+                        "en": "Phone Call Preamble",
+                        "es": "Preámbulo de la Llamada Telefónica",
+                        "fr": "Préambule de l'Appel Téléphonique",
+                        "ko": "전화 통화 서문"
+                    },
+                    "default_value": "Hola. Este es un aviso importante de {{{incident_details.incident_type.type_label}}} de {{{incident_details.initiating_company}}}.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "phone",
+            "body_content": "file://phone_fr.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "ar": "سبب الاتصال",
+                        "de": "Anrufgrund",
+                        "en": "Call Reason",
+                        "es": "Motivo de la Llamada",
+                        "fr": "Raison de l'Appel",
+                        "ko": "통화 사유"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "ar": "الديباجة المسجلة",
+                        "de": "Aufgezeichnetes Vorwort",
+                        "en": "Recorded Preamble",
+                        "es": "Preámbulo Grabado",
+                        "fr": "Préambule Enregistré",
+                        "ko": "기록된 서문"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "مقدمة المكالمة الهاتفية",
+                        "de": "Telefonat-Vorwort",
+                        "en": "Phone Call Preamble",
+                        "es": "Preámbulo de la Llamada Telefónica",
+                        "fr": "Préambule de l'Appel Téléphonique",
+                        "ko": "전화 통화 서문"
+                    },
+                    "default_value": "Bonjour. Il s'agit d'une notification {{{incident_details.incident_type.type_label}}} importante de {{{incident_details.initiating_company}}}.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "fr_CA",
+            "channel_type": "phone",
+            "body_content": "file://phone_fr_CA.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "ar": "سبب الاتصال",
+                        "de": "Anrufgrund",
+                        "en": "Call Reason",
+                        "es": "Motivo de la Llamada",
+                        "fr": "Raison de l'Appel",
+                        "ko": "통화 사유"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "ar": "الديباجة المسجلة",
+                        "de": "Aufgezeichnetes Vorwort",
+                        "en": "Recorded Preamble",
+                        "es": "Preámbulo Grabado",
+                        "fr": "Préambule Enregistré",
+                        "ko": "기록된 서문"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "مقدمة المكالمة الهاتفية",
+                        "de": "Telefonat-Vorwort",
+                        "en": "Phone Call Preamble",
+                        "es": "Preámbulo de la Llamada Telefónica",
+                        "fr": "Préambule de l'Appel Téléphonique",
+                        "ko": "전화 통화 서문"
+                    },
+                    "default_value": "Bonjour. Il s'agit d'une notification {{{incident_details.incident_type.type_label}}} importante de {{{incident_details.initiating_company}}}.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "phone",
+            "body_content": "file://phone_ko.txt",
+            "fields": [
+                {
+                    "key": "call_reason",
+                    "type": "hidden",
+                    "label_i18n": {
+                        "ar": "سبب الاتصال",
+                        "de": "Anrufgrund",
+                        "en": "Call Reason",
+                        "es": "Motivo de la Llamada",
+                        "fr": "Raison de l'Appel",
+                        "ko": "통화 사유"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "recorded_preamble",
+                    "type": "audio_upload",
+                    "label_i18n": {
+                        "ar": "الديباجة المسجلة",
+                        "de": "Aufgezeichnetes Vorwort",
+                        "en": "Recorded Preamble",
+                        "es": "Preámbulo Grabado",
+                        "fr": "Préambule Enregistré",
+                        "ko": "기록된 서문"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "مقدمة المكالمة الهاتفية",
+                        "de": "Telefonat-Vorwort",
+                        "en": "Phone Call Preamble",
+                        "es": "Preámbulo de la Llamada Telefónica",
+                        "fr": "Préambule de l'Appel Téléphonique",
+                        "ko": "전화 통화 서문"
+                    },
+                    "default_value": "안녕하세요. {{{incident_details.initiating_company}}} 에서 보내는 중요한 {{{incident_details.incident_type.type_label}}} 알림입니다.",
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "ar",
+            "channel_type": "sms",
+            "body_content": "file://sms_ar.txt",
+            "fields": [
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "ديباجة الرسائل القصيرة",
+                        "de": "SMS-Vorwort",
+                        "en": "SMS Preamble",
+                        "es": "Preámbulo del Mensaje SMS",
+                        "fr": "Préambule du SMS",
+                        "ko": "SMS 서문"
+                    },
+                    "default_value": "إشعار هام من {{{incident_details.incident_type.type_label}}} من {{{incident_details.initiating_company}}}.",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "sms",
+            "body_content": "file://sms_en.txt",
+            "fields": [
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "ديباجة الرسائل القصيرة",
+                        "de": "SMS-Vorwort",
+                        "en": "SMS Preamble",
+                        "es": "Preámbulo del Mensaje SMS",
+                        "fr": "Préambule du SMS",
+                        "ko": "SMS 서문"
+                    },
+                    "default_value": "Important {{{incident_details.incident_type.type_label}}} Notification from {{{incident_details.initiating_company}}}.",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "sms",
+            "body_content": "file://sms_de.txt",
+            "fields": [
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "ديباجة الرسائل القصيرة",
+                        "de": "SMS-Vorwort",
+                        "en": "SMS Preamble",
+                        "es": "Preámbulo del Mensaje SMS",
+                        "fr": "Préambule du SMS",
+                        "ko": "SMS 서문"
+                    },
+                    "default_value": "Wichtige {{{incident_details.incident_type.type_label}}}-Benachrichtigung von {{{incident_details.initiating_company}}}.",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "sms",
+            "body_content": "file://sms_es.txt",
+            "fields": [
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "ديباجة الرسائل القصيرة",
+                        "de": "SMS-Vorwort",
+                        "en": "SMS Preamble",
+                        "es": "Preámbulo del Mensaje SMS",
+                        "fr": "Préambule du SMS",
+                        "ko": "SMS 서문"
+                    },
+                    "default_value": "Notificación Importante de {{{incident_details.incident_type.type_label}}} de {{{incident_details.initiating_company}}}.",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "sms",
+            "body_content": "file://sms_fr.txt",
+            "fields": [
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "ديباجة الرسائل القصيرة",
+                        "de": "SMS-Vorwort",
+                        "en": "SMS Preamble",
+                        "es": "Preámbulo del Mensaje SMS",
+                        "fr": "Préambule du SMS",
+                        "ko": "SMS 서문"
+                    },
+                    "default_value": "Notification importante {{{incident_details.incident_type.type_label}}} de {{{incident_details.initiating_company}}}.",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "sms",
+            "body_content": "file://sms_ko.txt",
+            "fields": [
+                {
+                    "key": "preamble",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "ديباجة الرسائل القصيرة",
+                        "de": "SMS-Vorwort",
+                        "en": "SMS Preamble",
+                        "es": "Preámbulo del Mensaje SMS",
+                        "fr": "Préambule du SMS",
+                        "ko": "SMS 서문"
+                    },
+                    "default_value": "{{{incident_details.initiating_company}}} 에서 발송한 중요한 {{{incident_details.incident_type.type_label}}} 알림입니다.",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ar",
+            "channel_type": "fax",
+            "body_content": "file://fax_ar.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "رأس الفاكس",
+                        "de": "Faxkopf",
+                        "en": "Fax Header",
+                        "es": "Encabezado de Fax",
+                        "fr": "En-Tête de Fax",
+                        "ko": "팩스 헤더"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة الفاكس",
+                        "de": "Fax-Vorwort",
+                        "en": "Fax Preamble",
+                        "es": "Preámbulo del Fax",
+                        "fr": "Préambule du Fax",
+                        "ko": "팩스 서문"
+                    },
+                    "default_value": "<h1>{{incident_details.incident_type.type_label}} إشعار هام من {{incident_details.initiating_company}}.</h1><h2>{{event_details.short_event_id}}: {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "fax",
+            "body_content": "file://fax_en.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "رأس الفاكس",
+                        "de": "Faxkopf",
+                        "en": "Fax Header",
+                        "es": "Encabezado de Fax",
+                        "fr": "En-Tête de Fax",
+                        "ko": "팩스 헤더"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة الفاكس",
+                        "de": "Fax-Vorwort",
+                        "en": "Fax Preamble",
+                        "es": "Preámbulo del Fax",
+                        "fr": "Préambule du Fax",
+                        "ko": "팩스 서문"
+                    },
+                    "default_value": "<h1>Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}.</h1><h2>Event {{event_details.short_event_id}}: {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "fax",
+            "body_content": "file://fax_de.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "رأس الفاكس",
+                        "de": "Faxkopf",
+                        "en": "Fax Header",
+                        "es": "Encabezado de Fax",
+                        "fr": "En-Tête de Fax",
+                        "ko": "팩스 헤더"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة الفاكس",
+                        "de": "Fax-Vorwort",
+                        "en": "Fax Preamble",
+                        "es": "Preámbulo del Fax",
+                        "fr": "Préambule du Fax",
+                        "ko": "팩스 서문"
+                    },
+                    "default_value": "<h1>Wichtige {{incident_details.incident_type.type_label}}-Benachrichtigung von {{incident_details.initiating_company}}.</h1><h2>Ereignis {{event_details.short_event_id}}: {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "fax",
+            "body_content": "file://fax_es.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "رأس الفاكس",
+                        "de": "Faxkopf",
+                        "en": "Fax Header",
+                        "es": "Encabezado de Fax",
+                        "fr": "En-Tête de Fax",
+                        "ko": "팩스 헤더"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة الفاكس",
+                        "de": "Fax-Vorwort",
+                        "en": "Fax Preamble",
+                        "es": "Preámbulo del Fax",
+                        "fr": "Préambule du Fax",
+                        "ko": "팩스 서문"
+                    },
+                    "default_value": "<h1>Notificación Importante de {{incident_details.incident_type.type_label}} de {{incident_details.initiating_company}}.</h1><h2>Evento {{event_details.short_event_id}}: {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "fax",
+            "body_content": "file://fax_fr.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "رأس الفاكس",
+                        "de": "Faxkopf",
+                        "en": "Fax Header",
+                        "es": "Encabezado de Fax",
+                        "fr": "En-Tête de Fax",
+                        "ko": "팩스 헤더"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة الفاكس",
+                        "de": "Fax-Vorwort",
+                        "en": "Fax Preamble",
+                        "es": "Preámbulo del Fax",
+                        "fr": "Préambule du Fax",
+                        "ko": "팩스 서문"
+                    },
+                    "default_value": "<h1>Notification importante {{incident_details.incident_type.type_label}} de {{incident_details.initiating_company}}.</h1><h2>Événement {{event_details.short_event_id}} : {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "fr_CA",
+            "channel_type": "fax",
+            "body_content": "file://fax_fr_CA.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "رأس الفاكس",
+                        "de": "Faxkopf",
+                        "en": "Fax Header",
+                        "es": "Encabezado de Fax",
+                        "fr": "En-Tête de Fax",
+                        "ko": "팩스 헤더"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة الفاكس",
+                        "de": "Fax-Vorwort",
+                        "en": "Fax Preamble",
+                        "es": "Preámbulo del Fax",
+                        "fr": "Préambule du Fax",
+                        "ko": "팩스 서문"
+                    },
+                    "default_value": "<h1>Notification importante {{incident_details.incident_type.type_label}} de {{incident_details.initiating_company}}.</h1><h2>Événement {{event_details.short_event_id}} : {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "fax",
+            "body_content": "file://fax_ko.html",
+            "fields": [
+                {
+                    "key": "page_header",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "رأس الفاكس",
+                        "de": "Faxkopf",
+                        "en": "Fax Header",
+                        "es": "Encabezado de Fax",
+                        "fr": "En-Tête de Fax",
+                        "ko": "팩스 헤더"
+                    },
+                    "is_required": false
+                },
+                {
+                    "key": "preamble",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "مقدمة الفاكس",
+                        "de": "Fax-Vorwort",
+                        "en": "Fax Preamble",
+                        "es": "Preámbulo del Fax",
+                        "fr": "Préambule du Fax",
+                        "ko": "팩스 서문"
+                    },
+                    "default_value": "<h1>중요 {{incident_details.incident_type.type_label}} 공지사항 ( {{incident_details.initiating_company}} 발송)</h1><h2>이벤트 {{event_details.short_event_id}}: {{event_details.event_name}}</h2>",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

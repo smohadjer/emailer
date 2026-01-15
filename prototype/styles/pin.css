@@ -1,0 +1,23 @@
+
+.pin {
+    text-align: center;
+    background: #F3F4F6;
+    padding: 2em 1em 3em;
+    margin: 1em 0;
+    box-sizing: border-box;
+    max-width: none;
+}
+.pin span {
+    display: block;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    margin-bottom: 0.5em;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+}
+@media (min-width: 768px) {
+    .pin {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

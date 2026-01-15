@@ -1,0 +1,74 @@
+<Schedule>
+    <Rounds>
+        <Round at="PT0M">
+            <Notifications>
+                <Notification type="responder">
+                    <To>
+                        <DistributionPointResponders maxPointStatus="notified" />
+                    </To>
+                    <Channels>
+                        <Channel type="email" />
+                    </Channels>
+                </Notification>
+                <Notification type="master_alert">
+                    <To>
+                        <RecallInfoLinkUsers />
+                    </To>
+                    <Channels>
+                        <Channel type="email" />
+                    </Channels>
+                    <ClientDataScope>
+                        <PointStatusRange maxPointStatus="notified" />
+                    </ClientDataScope>
+                </Notification>
+                <Notification type="client_initiator">
+                    <To>
+                        <ClientInitiatorUsers />
+                    </To>
+                    <Channels>
+                        <Channel type="email" />
+                    </Channels>
+                    <ClientDataScope>
+                        <PointStatusRange maxPointStatus="notified" />
+                    </ClientDataScope>
+                </Notification>
+            </Notifications>
+        </Round>
+        <Round at="PT1M">
+            <Notifications>
+                <Notification type="responder">
+                    <To>
+                        <DistributionPointResponders maxPointStatus="notified" />
+                    </To>
+                    <Channels>
+                        <Channel type="sms" />
+                    </Channels>
+                </Notification>
+            </Notifications>
+        </Round>
+        <Round at="PT2M">
+            <Notifications>
+                <Notification type="responder">
+                    <To>
+                        <DistributionPointResponders maxPointStatus="notified" />
+                    </To>
+                    <Channels>
+                        <Channel type="phone" />
+                    </Channels>
+                </Notification>
+            </Notifications>
+        </Round>
+        <Round at="PT3M">
+            <Notifications>
+                <Notification type="responder">
+                    <To>
+                        <DistributionPointResponders maxPointStatus="notified" />
+                    </To>
+                    <Channels>
+                        <Channel type="fax" />
+                    </Channels>
+                </Notification>
+            </Notifications>
+        </Round>
+    </Rounds>
+</Schedule>

@@ -1,0 +1,48 @@
+{
+    "template_reference": "client_cc_en_fr_CA",
+    "contents": [
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "de": "Zweisprachiger E-Mail-Betreff für CC",
+                        "en": "CC Bilingual Email Subject",
+                        "es": "Asunto de correo bilingüe en CC",
+                        "fr": "Objet d'e-mail bilingue en CC"
+                    },
+                    "default_value": "Important {{{incident_details.incident_type.type_label}}} Notification / Notification importante {{{incident_details.incident_type.type_label_l10n.fr_CA}}}: {{{event_details.event_name}}} / {{{event_details.short_event_id}}}",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble_en",
+                    "type": "html",
+                    "label_i18n": {
+                        "de": "CC-E-Mail-Vorwort auf Englisch",
+                        "en": "CC Email Preamble in English",
+                        "es": "Preámbulo del Correo Electrónico CC en Inglés",
+                        "fr": "Préambule de l'E-mail en CC en Anglais"
+                    },
+                    "default_value": "<h2>Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                },
+                {
+                    "key": "preamble_fr",
+                    "type": "html",
+                    "label_i18n": {
+                        "de": "CC-E-Mail-Vorwort auf Französisch",
+                        "en": "CC Email Preamble in French",
+                        "es": "Preámbulo del Correo Electrónico CC en Francés",
+                        "fr": "Préambule de l'E-mail en CC en Français"
+                    },
+                    "default_value": "<h2>Notification importante {{incident_details.incident_type.type_label_l10n.fr_CA}} de {{incident_details.initiating_company}}</h2>",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

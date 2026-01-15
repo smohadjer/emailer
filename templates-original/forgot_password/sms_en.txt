@@ -1,0 +1,1 @@
+To reset your password for Recall InfoLink, please visit: {{{set_password_link}}}

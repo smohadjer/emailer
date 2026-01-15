@@ -1,0 +1,46 @@
+
+.meta {
+    text-align: right;
+    margin: 0.75em auto 2.5em;
+}
+
+.meta li {
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.meta li:last-child {
+    border-right: none;
+}
+
+.meta li {
+    border-right: dotted 1px #999;
+    display: inline-block;
+    padding: 0 0.5em;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.meta li span {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: #666;
+}
+
+.meta li span::after {
+    content: none;
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .meta li {
+        padding: 0 1em;
+        font-size: 14px;
+    }
+
+    .meta li span {
+        font-size: 12px;    
+    }
+}

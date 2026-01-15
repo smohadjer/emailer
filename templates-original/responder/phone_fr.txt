@@ -1,0 +1,68 @@
+{{#twilio}}<Response>
+{{#extension}}
+  <Play digits="ww{{num}}"></Play>
+  <Pause length="30"/>
+{{/extension}}
+{{#initial}}
+    {{^incident_details.incident_purview.purview_is_live}}
+        <Say language="fr-FR">
+            Il s'agit d'un événement {{incident_details.incident_purview.purview_label}}.
+        </Say>
+    {{/incident_details.incident_purview.purview_is_live}}
+    {{#recorded_preamble}}<Play>{{recorded_preamble}}</Play>{{/recorded_preamble}}
+    <Say language="fr-FR">
+        {{preamble}}
+
+        Pour afficher tous les détails, veuillez visiter {{portal_url}} et vous connecter en suivant ces étapes :
+
+        1. Sélectionnez Téléphone dans la liste déroulante et saisissez votre numéro sous la forme <prosody rate="x-slow"><say-as interpret-as="spell-out">{{channel_value}}</say-as></prosody>, puis cliquez sur Suivant.
+        2. Saisissez votre code PIN <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody> pour vous connecter. Encore une fois, votre code PIN pour vous connecter est <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+
+        Si vous avez des questions, appelez la ligne d'assistance Recall InfoLink au <say-as interpret-as="telephone">{{ril_corporate.support_phone_to_spell}}</say-as>.
+    </Say>
+    <Redirect>{{incoming_url}}</Redirect>
+{{/initial}}
+{{#options}}
+    <Gather numDigits="1">
+        <Say language="fr-FR">
+            Pour réécouter ce message, appuyez sur 9.
+
+            Appuyez sur 1 pour confirmer que vous vous connecterez à l'application et pour arrêter les rappels téléphoniques supplémentaires.
+
+            Appuyez sur 2 si vous avez reçu cet appel par erreur ou pour vous désinscrire de ces appels.
+
+            Pour mettre fin à cet appel, appuyez sur 3 ou raccrochez.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/options}}
+{{#pressed_1}}
+    <Say language="fr-FR">Merci.</Say>
+    <Hangup/>
+{{/pressed_1}}
+{{#pressed_2}}
+    <Gather numDigits="1">
+        <Say language="fr-FR">
+            Appuyez sur 4 si vous avez reçu cet appel par erreur.
+
+            Appuyez sur 5 si vous souhaitez vous désinscrire de ces appels.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/pressed_2}}
+{{#pressed_3}}
+    <Hangup/>
+{{/pressed_3}}
+{{#pressed_4}}
+    <Say language="fr-FR">Vous avez été désabonné avec succès.</Say>
+    <Hangup/>
+{{/pressed_4}}
+{{#pressed_5}}
+    <Say language="fr-FR">Vous avez été désabonné avec succès.</Say>
+    <Hangup/>
+{{/pressed_5}}
+{{#hangup}}
+    <Hangup/>
+{{/hangup}}
+</Response>
+{{/twilio}}

@@ -1,0 +1,19 @@
+{
+    "template_reference": "client_initiator_en_fr_CA",
+    "contents": [
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "hidden",
+                    "label_i18n": {},
+                    "default_value": "{{{incident_details.initiating_company}}}: Master Alert Notification (Event #{{{event_details.short_event_id}}}) / Notification d'Alerte Principale (Événement n°{{{event_details.short_event_id}}})",
+                    "is_required": true
+                }
+            ]
+        }
+    ]
+}

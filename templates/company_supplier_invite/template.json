@@ -1,0 +1,293 @@
+{
+    "template_reference": "company_supplier_invite",
+    "contents": [
+        {
+            "locale_code": "ar",
+            "channel_type": "email",
+            "body_content": "file://email_ar.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "انضم كمورد لـ {{{company_name}}} على منصة Recall InfoLink",
+                    "is_required": true
+                },
+                {
+                    "key": "body_content",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "نص البريد الإلكتروني",
+                        "de": "E-Mail-Text",
+                        "en": "Email Body",
+                        "es": "Cuerpo del correo electrónico",
+                        "fr": "Corps de l'e-mail",
+                        "ko": "이메일 본문"
+                    },
+                    "default_value": "<p>لقد تمت دعوتك كمورد لـ {{company_name}} على منصة Recall InfoLink.</p>\n<p>يرجى زيارة هذا الرابط لقبول الدعوة:<br>{{{invite_link}}}</p>\n<p>سوف تنتهي صلاحية الرابط بعد {{expires_in_days}} يومًا.</p>",
+                    "is_required": true
+                },
+                {
+                    "key": "attachments",
+                    "type": "uploads",
+                    "label_i18n": {
+                        "ar": "مرفقات البريد الإلكتروني",
+                        "de": "E-Mail-Anhänge",
+                        "en": "Email Attachments",
+                        "es": "Ficheros Adjuntos del Correo Electrónico",
+                        "fr": "Pièces Jointes d'E-mail",
+                        "ko": "이메일 첨부 파일"
+                    },
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "en",
+            "channel_type": "email",
+            "body_content": "file://email_en.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Join as a supplier of {{{company_name}}} on Recall InfoLink platform",
+                    "is_required": true
+                },
+                {
+                    "key": "body_content",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "نص البريد الإلكتروني",
+                        "de": "E-Mail-Text",
+                        "en": "Email Body",
+                        "es": "Cuerpo del correo electrónico",
+                        "fr": "Corps de l'e-mail",
+                        "ko": "이메일 본문"
+                    },
+                    "default_value": "<p>You've been invited as a supplier of {{company_name}} on Recall InfoLink platform.</p>\n<p>Please visit this link to accept the invitation:<br>{{{invite_link}}}</p>\n<p>Your link will expire after {{expires_in_days}} days.</p>",
+                    "is_required": true
+                },
+                {
+                    "key": "attachments",
+                    "type": "uploads",
+                    "label_i18n": {
+                        "ar": "مرفقات البريد الإلكتروني",
+                        "de": "E-Mail-Anhänge",
+                        "en": "Email Attachments",
+                        "es": "Ficheros Adjuntos del Correo Electrónico",
+                        "fr": "Pièces Jointes d'E-mail",
+                        "ko": "이메일 첨부 파일"
+                    },
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "de",
+            "channel_type": "email",
+            "body_content": "file://email_de.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Treten Sie als Lieferant von {{{company_name}}} auf der Recall InfoLink-Plattform bei",
+                    "is_required": true
+                },
+                {
+                    "key": "body_content",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "نص البريد الإلكتروني",
+                        "de": "E-Mail-Text",
+                        "en": "Email Body",
+                        "es": "Cuerpo del correo electrónico",
+                        "fr": "Corps de l'e-mail",
+                        "ko": "이메일 본문"
+                    },
+                    "default_value": "<p>Sie wurden als Lieferant von {{company_name}} zur Recall InfoLink-Plattform eingeladen.</p>\n<p>Bitte besuchen Sie diesen Link, um die Einladung anzunehmen:<br>{{{invite_link}}}</p>\n<p>Ihr Link wird nach {{expires_in_days}} Tagen ablaufen.</p>",
+                    "is_required": true
+                },
+                {
+                    "key": "attachments",
+                    "type": "uploads",
+                    "label_i18n": {
+                        "ar": "مرفقات البريد الإلكتروني",
+                        "de": "E-Mail-Anhänge",
+                        "en": "Email Attachments",
+                        "es": "Ficheros Adjuntos del Correo Electrónico",
+                        "fr": "Pièces Jointes d'E-mail",
+                        "ko": "이메일 첨부 파일"
+                    },
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "es",
+            "channel_type": "email",
+            "body_content": "file://email_es.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Únase como proveedor de {{{company_name}}} en la plataforma Recall InfoLink",
+                    "is_required": true
+                },
+                {
+                    "key": "body_content",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "نص البريد الإلكتروني",
+                        "de": "E-Mail-Text",
+                        "en": "Email Body",
+                        "es": "Cuerpo del correo electrónico",
+                        "fr": "Corps de l'e-mail",
+                        "ko": "이메일 본문"
+                    },
+                    "default_value": "<p>Ha sido invitado como proveedor de {{company_name}} en la plataforma Recall InfoLink.</p>\n<p>Por favor, visite este enlace para aceptar la invitación:<br>{{{invite_link}}}</p>\n<p>Su enlace expirará en {{expires_in_days}} días.</p>",
+                    "is_required": true
+                },
+                {
+                    "key": "attachments",
+                    "type": "uploads",
+                    "label_i18n": {
+                        "ar": "مرفقات البريد الإلكتروني",
+                        "de": "E-Mail-Anhänge",
+                        "en": "Email Attachments",
+                        "es": "Ficheros Adjuntos del Correo Electrónico",
+                        "fr": "Pièces Jointes d'E-mail",
+                        "ko": "이메일 첨부 파일"
+                    },
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "fr",
+            "channel_type": "email",
+            "body_content": "file://email_fr.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "Rejoignez-nous en tant que fournisseur de {{{company_name}}} sur la plateforme Recall InfoLink",
+                    "is_required": true
+                },
+                {
+                    "key": "body_content",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "نص البريد الإلكتروني",
+                        "de": "E-Mail-Text",
+                        "en": "Email Body",
+                        "es": "Cuerpo del correo electrónico",
+                        "fr": "Corps de l'e-mail",
+                        "ko": "이메일 본문"
+                    },
+                    "default_value": "<p>Vous avez été invité en tant que fournisseur de {{company_name}} sur la plateforme Recall InfoLink.</p>\n<p>Veuillez visiter ce lien pour accepter l'invitation :<br>{{{invite_link}}}</p>\n<p>Votre lien expirera après {{expires_in_days}} jours.</p>",
+                    "is_required": true
+                },
+                {
+                    "key": "attachments",
+                    "type": "uploads",
+                    "label_i18n": {
+                        "ar": "مرفقات البريد الإلكتروني",
+                        "de": "E-Mail-Anhänge",
+                        "en": "Email Attachments",
+                        "es": "Ficheros Adjuntos del Correo Electrónico",
+                        "fr": "Pièces Jointes d'E-mail",
+                        "ko": "이메일 첨부 파일"
+                    },
+                    "is_required": false
+                }
+            ]
+        },
+        {
+            "locale_code": "ko",
+            "channel_type": "email",
+            "body_content": "file://email_ko.html",
+            "fields": [
+                {
+                    "key": "subject_line",
+                    "type": "text",
+                    "label_i18n": {
+                        "ar": "موضوع البريد الإلكتروني",
+                        "de": "E-Mail-Betreff",
+                        "en": "Email Subject",
+                        "es": "Asunto del Correo Electrónico",
+                        "fr": "Objet de l'E-mail",
+                        "ko": "이메일 제목"
+                    },
+                    "default_value": "리콜 인포링크 플랫폼에서 {{{company_name}}} 의 공급업체로 가입하세요",
+                    "is_required": true
+                },
+                {
+                    "key": "body_content",
+                    "type": "html",
+                    "label_i18n": {
+                        "ar": "نص البريد الإلكتروني",
+                        "de": "E-Mail-Text",
+                        "en": "Email Body",
+                        "es": "Cuerpo del correo electrónico",
+                        "fr": "Corps de l'e-mail",
+                        "ko": "이메일 본문"
+                    },
+                    "default_value": "<p>귀사는 Recall InfoLink 플랫폼에서 {{company_name}} 의 공급업체로 초대되었습니다.</p>\n<p>초대 수락을 위해 다음 링크를 방문해 주십시오:<br>{{{invite_link}}}</p>\n<p>귀하의 링크는 {{expires_in_days}} 일 후에 만료됩니다.</p>",
+                    "is_required": true
+                },
+                {
+                    "key": "attachments",
+                    "type": "uploads",
+                    "label_i18n": {
+                        "ar": "مرفقات البريد الإلكتروني",
+                        "de": "E-Mail-Anhänge",
+                        "en": "Email Attachments",
+                        "es": "Ficheros Adjuntos del Correo Electrónico",
+                        "fr": "Pièces Jointes d'E-mail",
+                        "ko": "이메일 첨부 파일"
+                    },
+                    "is_required": false
+                }
+            ]
+        }
+    ]
+}

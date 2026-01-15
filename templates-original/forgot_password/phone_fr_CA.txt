@@ -1,0 +1,15 @@
+{{#twilio}}<Response>
+    <Say language="fr-CA">
+        Bonjour. Votre NIP Recall InfoLink est : <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Veuillez le saisir dans le champ NIP sur {{portal_url}} pour vous connecter, où vous pourrez ensuite réinitialiser votre mot de passe.
+    </Say>
+    <Say language="fr-CA">
+        Votre NIP Recall InfoLink est : <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Veuillez le saisir dans le champ NIP sur {{portal_url}} pour vous connecter, où vous pourrez ensuite réinitialiser votre mot de passe.
+    </Say>
+    <Pause length="2"/>
+    <Say language="fr-CA">
+        Votre NIP Recall InfoLink est : <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        Veuillez le saisir dans le champ NIP sur {{portal_url}} pour vous connecter, où vous pourrez ensuite réinitialiser votre mot de passe.
+    </Say>
+</Response>{{/twilio}}

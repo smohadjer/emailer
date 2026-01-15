@@ -1,0 +1,13 @@
+{{#twilio}}<Response>
+    <Say language="ar-AE">
+        مرحبًا. رقم PIN الخاص بك في Recall InfoLink هو: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        يرجى إدخاله في حقل رقم التعريف الشخصي على {{portal_url}} لتسجيل الدخول، حيث يمكنك بعد ذلك إعادة تعيين كلمة المرور الخاصة بك    </Say>
+    <Pause length="2"/>
+    <Say language="ar-AE">
+        رقم التعريف الشخصي (PIN) الخاص بك على Recall InfoLink هو: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        يرجى إدخاله في حقل رقم التعريف الشخصي (PIN) على {{portal_url}} لتسجيل الدخول، حيث يمكنك بعد ذلك إعادة تعيين كلمة المرور الخاصة بك    </Say>
+    <Pause length="2"/>
+    <Say language="ar-AE">
+        رقم التعريف الشخصي (PIN) الخاص بك على Recall InfoLink هو: <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+        يرجى إدخاله في حقل PIN على {{portal_url}} لتسجيل الدخول، حيث يمكنك بعد ذلك إعادة تعيين كلمة المرور الخاصة بك    </Say>
+</Response>{{/twilio}}

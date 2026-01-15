@@ -1,0 +1,186 @@
+<html>
+
+<head>
+  <style type='text/css'>
+    .datagrid {
+      font: normal 12px/150% Arial, Helvetica, sans-serif;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .datagrid table {
+      border-collapse: collapse;
+      text-align: left;
+      border: 1px solid #006699;
+      word-wrap: break-word;
+    }
+
+    .datagrid table td,
+    .datagrid table th {
+      padding: 3px 10px;
+    }
+
+    .datagrid table thead th {
+      text-align: center;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F));
+      background: -moz-linear-gradient(center top, #006699 5%, #00557F 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+      background-color: #006699;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: bold;
+      border-left: 1px solid #0070A8;
+    }
+
+    .datagrid table tbody td {
+      color: #00557F;
+      border: 1px solid #E1EEF4;
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    .datagrid table tbody .alt td {
+      background: #E1EEf4;
+      color: #00557F;
+    }
+
+    .banner {
+      background-color: #f4cb46;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  Ereignis Nr. {{event_details.short_event_id}} wurde erfolgreich eingeleitet:<br />
+  <a href="{{event_link}}">{{event_link}}</a><br /><br />
+
+  {{^incident_details.incident_purview.purview_is_live}}
+  <div class="banner">
+    {{incident_details.incident_purview.purview_label}}
+  </div><br />
+  {{/incident_details.incident_purview.purview_is_live}}
+
+  <div class="datagrid">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Ereignisinformationen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ereignisname</td>
+          <td>{{event_details.event_name}}</td>
+        </tr>
+        <tr class="alt">
+          <td>Ereignistyp</td>
+          <td>{{event_details.event_type.type_label}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class="datagrid">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Informationen zum Vorfall</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name des Vorfalls</td>
+          <td>{{incident_details.incident_name}}</td>
+        </tr>
+        <tr class="alt">
+          <td>Vorfalltyp</td>
+          <td>{{incident_details.incident_type.type_label}}</td>
+        </tr>
+        <tr>
+          <td>Problembereich</td>
+          <td>
+            {{#incident_details.has_concern_area}}{{incident_details.concern_area.area_label}}{{/incident_details.has_concern_area}}
+            {{^incident_details.has_concern_area}}-{{/incident_details.has_concern_area}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class="datagrid">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Informationen zum Initiator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Unternehmen</td>
+          <td>{{incident_details.initiating_company}}</td>
+        </tr>
+        <tr class="alt">
+          <td>Initiiert am</td>
+          <td>{{event_details.initiated_at.value}}</td>
+        </tr>
+        <tr>
+          <td>Erstellt von</td>
+          <td>{{client_event_details.created_by.name_initials}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class="datagrid">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Wave-Informationen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Initiiert am</td>
+          <td>{{wave_details.initiated_at.value}}</td>
+        </tr>
+        <tr class="alt">
+          <td>Erstellt von</td>
+          <td>{{client_wave_details.created_by.name_initials}}</td>
+        </tr>
+        <tr>
+          <td>Zeitplan</td>
+          <td>{{client_wave_details.communication_schedule.schedule_name.value}}</td>
+        </tr>
+        <tr class="alt">
+          <td>Umfang</td>
+          <td>{{client_wave_details.communication_schedule.schedule_scope.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class="datagrid">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Ereignisstatistiken</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#has_trade_items}}
+        <tr>
+          <td>Anzahl der Handelsartikel</td>
+          <td>{{trade_item_count}}</td>
+        </tr>
+        {{/has_trade_items}}
+        <tr class="alt">
+          <td>Anzahl der Verteilungspunkte</td>
+          <td>{{distribution_point_count}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

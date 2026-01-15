@@ -1,0 +1,67 @@
+{{#twilio}}<Response>
+{{#extension}}
+  <Play digits="ww{{num}}"></Play>
+  <Pause length="30"/>
+{{/extension}}
+{{#initial}}
+    {{^incident_details.incident_purview.purview_is_live}}
+        <Say language="ar-AE">
+            هذا حدث {{incident_details.incident_purview.purview_label}}.
+        </Say>
+    {{/incident_details.incident_purview.purview_is_live}}
+    {{#recorded_preamble}}<Play>{{recorded_preamble}}</Play>{{/recorded_preamble}}
+    <Say language="ar-AE">
+       {{preamble}}
+
+        للاطلاع على التفاصيل الكاملة، يرجى زيارة {{portal_url}} وتسجيل الدخول باتباع الخطوات التالية:
+
+        1. حدد "الهاتف" من القائمة المنسدلة، وأدخل رقمك كما هو موضح <prosody rate="x-slow"><say-as interpret-as="spell-out">{{channel_value}}</say-as></prosody>، ثم انقر فوق "التالي".
+        2. أدخل رقم التعريف الشخصي الخاص بك <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody> للتسجيل. مرة أخرى، رقم التعريف الشخصي (PIN) الخاص بك للتسجيل هو <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+
+        إذا كان لديك أي أسئلة، اتصل بخط دعم Recall InfoLink على الرقم <say-as interpret-as="spell-out">{{ril_corporate.support_phone_to_spell}}</say-as></Say>
+    <Redirect>{{incoming_url}}</Redirect>
+{{/initial}}
+{{#options}}
+    <Gather numDigits="1">
+        <Say language="ar-AE">
+            لإعادة تشغيل هذه الرسالة، اضغط على 9.
+
+            اضغط على 1 لتأكيد تسجيل الدخول إلى التطبيق وإيقاف المكالمات التذكيرية الإضافية.
+
+            اضغط على 2 إذا تلقيت هذه المكالمة عن طريق الخطأ أو إذا كنت ترغب في إلغاء الاشتراك في هذه المكالمات.
+
+            لإنهاء هذه المكالمة، اضغط على 3 أو أغلق السماعة        
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/options}}
+{{#pressed_1}}
+    <Say language="ar-AE">شكرًا.</Say>
+    <Hangup/>
+{{/pressed_1}}
+{{#pressed_2}}
+    <Gather numDigits="1">
+        <Say language="ar-AE">
+            اضغط على 4 إذا تلقيت هذه المكالمة عن طريق الخطأ.
+
+            اضغط على 5 إذا كنت ترغب في إلغاء الاشتراك في هذه المكالمات        
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/pressed_2}}
+{{#pressed_3}}
+    <Hangup/>
+{{/pressed_3}}
+{{#pressed_4}}
+    <Say language="ar-AE">تم إلغاء اشتراكك بنجاح.</Say>
+    <Hangup/>
+{{/pressed_4}}
+{{#pressed_5}}
+    <Say language="ar-AE">تم إلغاء اشتراكك بنجاح.</Say>
+    <Hangup/>
+{{/pressed_5}}
+{{#hangup}}
+    <Hangup/>
+{{/hangup}}
+</Response>
+{{/twilio}}

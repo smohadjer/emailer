@@ -1,0 +1,14 @@
+{
+    "schedule_code": "demo_renotify",
+    "schedule_scope": "renotify",
+    "schedule_audience": "business",
+    "schedule_name_i18n": {
+        "ar": "إعادة إخطار العرض التوضيحي",
+        "de": "Demo Renotify",
+        "en": "Demo Renotify",
+        "es": "Demostración de Renotify",
+        "fr": "Démo Renotify",
+        "ko": "데모 Renotify"
+    },
+    "schedule_xml": "file://schedule.xml"
+}

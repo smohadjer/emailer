@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      body {
+          font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          font-size: 14px;
+          line-height: 1.6;
+          color: #333333;
+          margin: 0;
+      }
+
+      main {
+          margin: 1em;
+      }
+
+      .pin {
+          text-align: center;
+          background: #F3F4F6;
+          padding: 2em 1em 3em;
+          margin: 1em 0;
+          box-sizing: border-box;
+          max-width: none;
+      }
+      .pin span {
+          display: block;
+          font-size: 28px;
+          font-weight: 400;
+          letter-spacing: 0.4em;
+          margin-bottom: 0.5em;
+          font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      @media (min-width: 768px) {
+          .pin {
+              margin-left: auto;
+              margin-right: auto;
+              max-width: 50%;
+          }
+      }
+
+
+      footer {
+          margin: 2em 1em 1em;
+          border-top: solid 1px #F0F0F0;
+          padding-top: 0.75em;
+          text-align: right;
+          font-size: 0.9em;
+          color: #999;
+      }
+
+      footer img {
+          margin-right: 2px;
+      }
+
+      footer span,
+      footer img {
+          vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+          <p>Your Recall InfoLink PIN is:</p>
+          <p class="pin">
+              <span>{{nonce}}</span>
+              Enter it in your open browser window to sign in.
+          </p>
+      </section>
+      <p>If you haven't requested this email, there's nothing to worry about - you can safely ignore it.</p>
+    </main>
+    <footer>
+        <!-- we use inline img element instead of css background-image since some email clients don't render background images (e.g. macOS Mail app) -->
+        <img width="17" src="prototype/ril.svg" alt="logo">
+        <span>Powered by Recall InfoLink</span>
+    </footer>
+  </body>
+</html>

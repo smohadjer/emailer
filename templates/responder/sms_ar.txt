@@ -1,0 +1,15 @@
+{{#twilio}}
+{{#initial}}
+{{^incident_details.incident_purview.purview_is_live}}
+هذا حدث {{{incident_details.incident_purview.purview_label}}}.
+{{/incident_details.incident_purview.purview_is_live}}
+{{{preamble}}}
+للاطلاع على التفاصيل الكاملة، يرجى زيارة {{{event_link}}}.
+أرسل HELP للحصول على المساعدة. أرسل STOP لإلغاء الاشتراك. قد يتم تطبيق رسوم على الرسائل والبيانات{{/initial}}
+{{/twilio}}
+{{#twilio}}
+{{#no_previous_notification}}<Response><Message>قناة غير معروفة. اتصل بـ {{{ril_corporate.support_email}}} أو اتصل بـ {{{ril_corporate.support_phone}}} إذا كنت بحاجة إلى دعم.</Message></Response>{{/no_previous_notification}}
+{{#help}}<Response><Message>أرسل STOP لإلغاء الاشتراك. قد يتم تطبيق رسوم على الرسائل والبيانات.</Message></Response>{{/help}}
+{{#stop}}<Response><Message>تم إلغاء اشتراكك بنجاح. لن تتلقى أي رسائل أخرى على هذه القناة. أرسل START لإعادة الاشتراك.</Message></Response>{{/stop}}
+{{#start}}<Response><Message>لقد تمت إعادة اشتراكك بنجاح في رسائل هذه القناة. أرسل HELP للحصول على المساعدة. أرسل STOP لإلغاء الاشتراك. قد يتم تطبيق رسوم على الرسائل والبيانات.</Message></Response>{{/start}}
+{{/twilio}}

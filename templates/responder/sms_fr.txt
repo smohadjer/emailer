@@ -1,0 +1,16 @@
+{{#twilio}}
+{{#initial}}
+{{^incident_details.incident_purview.purview_is_live}}
+Il s'agit d'un événement {{{incident_details.incident_purview.purview_label}}}.
+{{/incident_details.incident_purview.purview_is_live}}
+{{{preamble}}}
+Pour afficher tous les détails, veuillez visiter {{{event_link}}}.
+Répondez AIDE pour obtenir de l'aide. Répondez ARRÊT pour vous désabonner. Des tarifs de messagerie et de données peuvent s'appliquer.
+{{/initial}}
+{{/twilio}}
+{{#twilio}}
+{{#no_previous_notification}}<Response><Message>Canal inconnu. Contactez {{{ril_corporate.support_email}}} ou appelez le {{{ril_corporate.support_phone}}} si vous avez besoin d'assistance.</Message></Response>{{/no_previous_notification}}
+{{#help}}<Response><Message>Répondez ARRÊT pour vous désabonner. Des frais de messagerie et de données peuvent s'appliquer.</Message></Response>{{/help}}
+{{#stop}}<Response><Message>Vous avez été désabonné avec succès. Vous ne recevrez plus de messages sur cette chaîne. Répondez COMMENCER pour vous réabonner.</Message></Response>{{/stop}}
+{{#start}}<Response><Message>Vous avez été réabonné avec succès aux messages de cette chaîne. Répondez AIDE pour obtenir de l'aide. Répondez ARRÊT pour vous désabonner. Des frais de messagerie et de données peuvent s'appliquer.</Message></Response>{{/start}}
+{{/twilio}}

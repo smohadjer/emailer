@@ -1,0 +1,68 @@
+{{#twilio}}<Response>
+{{#extension}}
+  <Play digits="ww{{num}}"></Play>
+  <Pause length="30"/>
+{{/extension}}
+{{#initial}}
+    {{^incident_details.incident_purview.purview_is_live}}
+    <Say language="en-US">
+        This is a {{incident_details.incident_purview.purview_label}} event.
+    </Say>
+    {{/incident_details.incident_purview.purview_is_live}}
+    {{#recorded_preamble}}<Play>{{recorded_preamble}}</Play>{{/recorded_preamble}}
+    <Say language="en-US">
+        {{preamble}}
+
+        To view full details, please visit {{portal_url}} and log in following these steps:
+
+        1. Select Phone from the dropdown, and enter your number as <prosody rate="x-slow"><say-as interpret-as="spell-out">{{channel_value}}</say-as></prosody>, then click Next.
+        2. Enter your PIN of <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody> to Log In. Once again, your PIN to Log In is <prosody rate="x-slow"><say-as interpret-as="spell-out">{{nonce}}</say-as></prosody>.
+
+        If you have any questions, call Recall InfoLink support line at <say-as interpret-as="spell-out">{{ril_corporate.support_phone_to_spell}}</say-as>.
+    </Say>
+    <Redirect>{{incoming_url}}</Redirect>
+{{/initial}}
+{{#options}}
+    <Gather numDigits="1">
+        <Say language="en-US">
+            To replay this message, press 9.
+
+            Press 1 to confirm you will log into the application and to stop additional phone reminders.
+
+            Press 2 if you have received this call in error or to opt out of these calls.
+
+            To end this call press 3 or hang up.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/options}}
+{{#pressed_1}}
+    <Say language="en-US">Thanks.</Say>
+    <Hangup/>
+{{/pressed_1}}
+{{#pressed_2}}
+    <Gather numDigits="1">
+        <Say language="en-US">
+            Press 4 if you have received this call in error.
+
+            Press 5 if you wish to opt out of these calls.
+        </Say>
+        <Pause length="10"/>
+    </Gather>
+{{/pressed_2}}
+{{#pressed_3}}
+    <Hangup/>
+{{/pressed_3}}
+{{#pressed_4}}
+    <Say language="en-US">You have successfully been unsubscribed.</Say>
+    <Hangup/>
+{{/pressed_4}}
+{{#pressed_5}}
+    <Say language="en-US">You have successfully been unsubscribed.</Say>
+    <Hangup/>
+{{/pressed_5}}
+{{#hangup}}
+    <Hangup/>
+{{/hangup}}
+</Response>
+{{/twilio}}
