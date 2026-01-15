@@ -1,315 +1,347 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Important {{incident_details.incident_type.type_label}} Notification from
         {{incident_details.initiating_company}}</title>
-    <style>
-        /* -------------------------------------
-           GLOBAL RESETS
-        ------------------------------------- */
+    <style type="text/css" rel="stylesheet" media="all">
+/* layout.css */
+body, table.email-wrapper {
+    width: 100% !important;
+    height: 100%;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+    background-color: #d5d5d5;
+}
 
-        /*All the styling goes here*/
+.preheader {
+      display: none !important;
+      visibility: hidden;
+      mso-hide: all;
+      font-size: 1px;
+      line-height: 1px;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+}
 
-        img {
-            border: none;
-            -ms-interpolation-mode: bicubic;
-            max-width: 100%;
-        }
+* {
+    margin-bottom: 0;
+}
 
-        body {
-            background-color: #fff;
-            font-family: sans-serif;
-            -webkit-font-smoothing: antialiased;
-            font-size: 14px;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0;
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-        }
+.main {
+    margin: 0 1em;
+    background-color: white;
+    padding: 1em 1em 2em;
+    box-sizing: border-box
+}
 
-        table {
-            border-collapse: separate;
-            mso-table-lspace: 0;
-            mso-table-rspace: 0;
-            min-width: 100%;
+.main > .section {
+    margin: 2em 0;
+}
+
+.main > .section:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .main {
+        margin: 0 auto;
+        max-width: 728px;
+    }
+
+    .main > .section {
+        margin-left: 4em;
+        margin-right: 4em;
+    } 
+}
+
+h1 {
+    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 1.5em 0 0.25em 0;
+}
+
+p {
+    margin-top: 0.5em;
+}
+
+a {
+    color: #3671e7;
+    word-wrap:break-word;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+li span {
+    font-weight: 700;
+}
+
+.main table {
+    border-collapse: collapse;
+    font-size: inherit;
+}
+
+.main table th {
+    padding-right: 1em;
+    line-height: 1.2;
+    vertical-align: bottom;
+    padding-bottom: 0.5em;
+}
+
+.main table td {
+    padding: 0.2em 1em 0.2em 0;
+    vertical-align: top;
+    line-height: 1.3;
+}
+
+.main table td p {
+    margin-top: 0.5em;
+}
+
+.main table td p:first-child {
+    margin-top: 0;
+}
+
+.main table tr:last-child td {
+    border-bottom: none;
+}
+
+.main table td:first-child {
+    font-weight: 700;
+    width: 15ch;
+}
+
+.header,
+.footer {
+    margin: 1em auto 0;
+    font-size: 0.9em;
+    color: #555;
+    max-width: 728px;
+    padding: 0 1em 1em;
+}
+
+.header {
+    text-align: center;
+}
+
+.footer {
+    margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+    .header,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.footer img {
+    margin-right: 2px;
+}
+
+.footer span,
+.footer img {
+    vertical-align: middle;
+}
+
+.header a,
+.footer a {
+    color: #555;
+}
+
+.banner {
+    padding: 0.5em 1em;
+    background-color: #fdc04c;
+    font-weight: 500;
+    margin: 0 1em;
+    max-width: 728px;;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        margin: 0 auto;
+    }
+}
+
+        /* user-content.css */
+        .user-content table {
             width: 100%;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border-collapse: collapse;
         }
 
-        table td {
-            font-family: sans-serif;
-            font-size: 14px;
-            vertical-align: top;
+        .user-content table td {
+            padding: 0.5em 0;
+            border-bottom: solid 1px #ccc;
         }
 
-        /* -------------------------------------
-            BODY & CONTAINER
-        ------------------------------------- */
-
-        .body {
-            background-color: #fff;
-            width: 100%;
+        .user-content table tr:last-child td {
+            border-bottom: none;
         }
-
-        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-        .container {
-            display: block;
-            margin: 0 auto !important;
-            /* makes it centered */
-            max-width: 580px;
-            padding: 10px;
-            width: 580px;
-        }
-
-        /* This should also be a block element, so that it will fill 100% of the .container */
-        .content {
+        /* Call to action styles */
+        .cta {
+            margin: 1em auto;
+            padding: 2em 0;
+            text-align: center;
+            max-width: none;
             box-sizing: border-box;
-            display: block;
-            margin: 0 auto;
-            max-width: 580px;
-            padding: 10px;
         }
-
-        /* -------------------------------------
-            HEADER, FOOTER, MAIN
-        ------------------------------------- */
-        .main {
-            background: #ffffff;
-            border-radius: 3px;
-            width: 100%;
-
-            border: 0.5rem solid {{branding.theme.email_border_color}};
-        }
-
-        .header {
-            padding: 20px 0;
-        }
-
-        .header img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .wrapper {
-            box-sizing: border-box;
-            padding: 20px 20px 0 20px;
-        }
-
-        .content-block {
-            padding-bottom: 10px;
-            padding-top: 10px;
-        }
-
-        .footer {
-            clear: both;
-            margin-left: 10px;
-            margin-top: 10px;
-            text-align: left;
-            width: 100%;
-        }
-
-        .footer table {
-            margin-left: 30px;
-        }
-
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-            font-size: 12px;
-            text-align: left;
-        }
-
-        /* -------------------------------------
-            TYPOGRAPHY
-        ------------------------------------- */
-        h2 {
-            font-family: sans-serif;
-            font-weight: 400;
-            line-height: 1.4;
-            margin: 0;
-            margin-bottom: 20px;
-            text-transform: capitalize;
-        }
-
-
-        p,
-        ol {
-            font-family: sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            margin: 0;
-            margin-bottom: 15px;
-        }
-
-        p li,
-        ol li {
-            list-style-position: inside;
-            margin-left: 5px;
-        }
-
-        /* -------------------------------------
-            BUTTONS
-        ------------------------------------- */
-        /* Some clients will show this text as a preview. */
-        .button {
-            background-color: #3869D4;
-            border-top: 10px solid #3869D4;
-            border-right: 18px solid #3869D4;
-            border-bottom: 10px solid #3869D4;
-            border-left: 18px solid #3869D4;
+        .cta a.button {
+            font-size: 16px;
             display: inline-block;
-            color: #ffffff !important;
+            text-align: center;
+            background: #3671e7;
+            color: white;
+            padding: 0.55em 1.5em;
             text-decoration: none;
-            border-radius: 3px;
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
-            -webkit-text-size-adjust: none;
-            box-sizing: border-box;
-            font-size: 18px;
+            margin-bottom: 1em;
+            border-radius: 20px;
+            font-weight: 500;
         }
 
-        .preheader {
-            color: transparent;
-            display: none;
-            height: 0;
-            max-height: 0;
-            max-width: 0;
-            opacity: 0;
-            overflow: hidden;
-            mso-hide: all;
-            visibility: hidden;
-            width: 0;
+        .cta a.button__secondary {
+            background: #9e0812;
         }
-
-        .powered-by a {
-            text-decoration: none;
+        .cta--background {
+            background: #F3F4F6;
         }
-
-        .powered-by p {
-            margin: 0;
+        .cta a.link {
+            font-size: 16px;
+            display: block;
+            text-align: center;
+            padding: 0.5em 1em;
+            font-weight: 500;
         }
+        @media (min-width: 768px) {
+            .cta a.button,
+            .cta a.link {
+                display: inline-block;
+                margin: 0 auto;
+            }    
 
-        /* -------------------------------------
-            RESPONSIVE AND MOBILE FRIENDLY STYLES
-        ------------------------------------- */
-        @media only screen and (max-width: 620px) {
-            table[class=body] p,
-            table[class=body] ol,
-            table[class=body] td,
-            table[class=body] span,
-
-            table[class=body] .wrapper,
-            table[class=body] .content {
-                padding: 0 !important;
-            }
-
-            table[class=body] .container {
-                padding: 0 !important;
-                width: 100% !important;
-            }
-
-            table[class=body] .main {
-                border-left-width: 0 !important;
-                border-radius: 0 !important;
-                border-right-width: 0 !important;
-            }
-
-        }
-
-        /* -------------------------------------
-            PRESERVE THESE STYLES IN THE HEAD
-        ------------------------------------- */
-        @media all {
-            .apple-link a {
-                color: inherit !important;
-                font-family: inherit !important;
-                font-size: inherit !important;
-                font-weight: inherit !important;
-                line-height: inherit !important;
-                text-decoration: none !important;
+            .cta a + a.button,
+            .cta a + a.link {
+                margin-left: 2em;
             }
         }
 
-        .banner {
-            background-color: #f4cb46;
-            padding: 10px;
+        .meta {
+            text-align: right;
+            margin: 0.75em auto 2.5em;
+        }
+
+        .meta li {
+            font-weight: bold;
+            text-align: left;
+            line-height: 1.2;
+        }
+
+        .meta li:last-child {
+            border-right: none;
+        }
+
+        .meta li {
+            border-right: dotted 1px #999;
+            display: inline-block;
+            padding: 0 0.5em;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        .meta li span {
+            display: block;
+            font-size: 11px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .meta li span::after {
+            content: none;
+            margin-right: 0;
+        }
+
+        @media (min-width: 768px) {
+            .meta li {
+                padding: 0 1em;
+                font-size: 14px;
+            }
+
+            .meta li span {
+                font-size: 12px;    
+            }
         }
     </style>
 </head>
-
-<body class="">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+<body>
+    <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
+        {{incident_details.initiating_company}}</span>
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
         <tr>
-            <td>&nbsp;</td>
-            <td class="container">
+            <td width="100%" valign="top" align="left" bgcolor="#d5d5d5">
                 <div class="header">
-                    {{#branding.email_header_image}}<img
-                        src="{{branding.email_header_image}}">{{/branding.email_header_image}}
+                    <p>Do not share this email with anyone.</p>
                 </div>
-                <div class="content">
-                    <!-- START CENTERED WHITE CONTAINER -->
-                    <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
-                        {{incident_details.initiating_company}}</span>
-                    <table role="presentation" class="main">
-                        <!-- START MAIN CONTENT AREA -->
-                        <tr>
-                            <td class="wrapper">
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td>
-                                            {{^incident_details.incident_purview.purview_is_live}}
-                                            <div class="banner">
-                                                {{incident_details.incident_purview.purview_label}}
-                                            </div><br />
-                                            {{/incident_details.incident_purview.purview_is_live}}
-                                            {{{preamble}}}
-                                            <p><a href="{{event_link}}" class="button">Click Here for Details</a></p>
-                                            <p>Do not forward this email as the link displays information intended
-                                                specifically for {{channel_value}}.</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <!-- END MAIN CONTENT AREA -->
-                    </table>
+                {{^incident_details.incident_purview.purview_is_live}}
+                <div class="banner">
+                    {{incident_details.incident_purview.purview_label}}
                 </div>
-                <!-- START FOOTER -->
+                {{/incident_details.incident_purview.purview_is_live}}
+                <div class="main">
+                    <div class="branding-header">
+                        {{#branding.email_header_image}}<img
+                            src="{{branding.email_header_image}}">{{/branding.email_header_image}}
+                    </div>
+                    <ul class="meta">
+                        <li><span>Event Type</span>{{event_details.event_type.type_label}}</li>
+                        <li><span>Classification</span> N/A</li>
+                        <li><span>Event ID</span> {{event_details.short_event_id}}</li>
+                    </ul>
+                    <div class="section">
+                        <div class="user-content">
+                            {{{preamble}}}
+                        </div>
+                        <p class="cta">
+                            <a class="button" href="{{event_link}}">View Details</a>
+                        </p>
+                        <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
+                    </div>
+                </div>
                 <div class="footer">
-                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td class="content-block">
-                                <p>
-                                    This email message was sent from an address that is not monitored. Do not reply to
-                                    this email.<br>
-                                    Contact <a
-                                        href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a>
-                                    or call {{ril_corporate.support_phone}} if you need support.
-                                </p>
-                                <p style="padding-top: 20px;">If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="content-block powered-by">
-                                <p>Powered by</p>
-                                <p>{{ril_corporate.name}}</p>
-                                <p>{{ril_corporate.address}}</p>
-                            </td>
-                        </tr>
-                    </table>
-                    {{#branding.email_footer_image}}<img
-                        src="{{branding.email_footer_image}}">{{/branding.email_footer_image}}
+                    <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact 
+                        <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a>
+                        or call {{ril_corporate.support_phone}} if you need support.</p>
+                    <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
+                    <p><img width="15" height="15" src="https://emailer-psi-five.vercel.app/prototype/assets/ril.png" alt="logo">
+                    <span>Powered by Recall InfoLink</span></p>
                 </div>
-                <!-- END FOOTER -->
             </td>
-            <!-- END CENTERED WHITE CONTAINER -->
-            <td>&nbsp;</td>
         </tr>
-    </table>
+    </table>    
 </body>
-
 </html>

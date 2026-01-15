@@ -9,7 +9,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 // Load the email template
-const templatePath = path.join(__dirname, '../templates/responder_new/email_en.html');
+const templatePath = path.join(__dirname, '../templates/responder/email_en.html');
 const template = fs.readFileSync(templatePath, 'utf8');
 
 // Render the template with data
