@@ -34,7 +34,7 @@
     margin-right: 0;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .meta li {
         padding: 0 1em;
         font-size: 14px;
