@@ -10,21 +10,23 @@
     font-size: 16px;
     display: inline-block;
     text-align: center;
-    background: #3671e7;
+    background-color: #3571e8;
     color: white;
     padding: 0.55em 1.5em;
     text-decoration: none;
     margin-bottom: 1em;
-    border-radius: 20px;
+    border-radius: 0.5em;
     font-weight: 500;
 }
 
-.cta a.button__secondary {
-    background: #9e0812;
+.cta a.button:hover {
+    background-color: #1742DD;
 }
+
 .cta--background {
-    background: #F3F4F6;
+    background-color: #F3F4F6;
 }
+
 .cta a.link {
     font-size: 16px;
     display: block;
