@@ -267,11 +267,13 @@ li span {
         }
 
         .meta li {
-            border-right: dotted 1px #999;
             display: inline-block;
             padding: 0 0.5em;
             font-size: 13px;
-            margin-bottom: 0;
+        }
+
+        .meta li + li {
+            border-left: dotted 1px #999;
         }
 
         .meta li span {
