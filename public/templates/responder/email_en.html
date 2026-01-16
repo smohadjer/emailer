@@ -20,7 +20,10 @@ body, table.email-wrapper {
     margin: 0;
     background-color: #d5d5d5;
 }
-
+table.email-wrapper {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
 .preheader {
       display: none !important;
       visibility: hidden;
@@ -38,10 +41,11 @@ body, table.email-wrapper {
 }
 
 .main {
-    margin: 0 1em;
+    margin: 0 auto;
     background-color: white;
     padding: 1em 1em 2em;
-    box-sizing: border-box
+    box-sizing: border-box;
+    max-width: 728px;
 }
 
 .main > .section {
@@ -53,11 +57,6 @@ body, table.email-wrapper {
 }
 
 @media only screen and (min-width: 768px) {
-    .main {
-        margin: 0 auto;
-        max-width: 728px;
-    }
-
     .main > .section {
         margin-left: 4em;
         margin-right: 4em;
@@ -139,7 +138,7 @@ li span {
     font-size: 0.9em;
     color: #555;
     max-width: 728px;
-    padding: 0 1em 1em;
+    padding-bottom: 1em;
 }
 
 .header {
@@ -148,14 +147,6 @@ li span {
 
 .footer {
     margin-bottom: 1em;
-}
-
-@media only screen and (min-width: 768px) {
-    .header,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
 }
 
 .footer img {
@@ -176,128 +167,120 @@ li span {
     padding: 0.5em 1em;
     background-color: #fdc04c;
     font-weight: 500;
-    margin: 0 1em;
+    margin: 0 auto;
     max-width: 728px;;
     text-align: center;
     box-sizing: border-box;
 }
+/* user-content.css */
+.user-content table {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
+
+.user-content table td {
+    padding: 0.5em 0;
+    border-bottom: solid 1px #ccc;
+}
+
+.user-content table tr:last-child td {
+    border-bottom: none;
+}
+/* cta.css */
+.cta {
+    margin: 1em auto;
+    padding: 2em 0;
+    text-align: center;
+    max-width: none;
+    box-sizing: border-box;
+}
+.cta a.button {
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    background-color: #3671e7;
+    color: white;
+    padding: 0.55em 1.5em;
+    text-decoration: none;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    font-weight: 500;
+}
+
+.cta a.button:hover {
+    background-color: #1742DD;
+}
+
+.cta--background {
+    background-color: #F3F4F6;
+}
+
+.cta a.link {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 0.5em 1em;
+    font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+    .cta a.button,
+    .cta a.link {
+        display: inline-block;
+        margin: 0 auto;
+    }    
+
+    .cta a + a.button,
+    .cta a + a.link {
+        margin-left: 2em;
+    }
+}
+/* meta.css */
+.meta {
+    text-align: right;
+    margin: 0.75em auto 2.5em;
+}
+
+.meta li {
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.meta li {
+    display: inline-block;
+    padding: 0 0.5em;
+    font-size: 13px;
+}
+
+.meta li + li {
+    border-left: dotted 1px #999;
+}
+
+.meta li span {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: #666;
+}
+
+.meta li span::after {
+    content: none;
+    margin-right: 0;
+}
 
 @media only screen and (min-width: 768px) {
-    .banner {
-        margin: 0 auto;
+    .meta li {
+        padding: 0 1em;
+        font-size: 14px;
+    }
+
+    .meta li span {
+        font-size: 12px;    
     }
 }
 
-        /* user-content.css */
-        .user-content table {
-            width: 100%;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            border-collapse: collapse;
-        }
-
-        .user-content table td {
-            padding: 0.5em 0;
-            border-bottom: solid 1px #ccc;
-        }
-
-        .user-content table tr:last-child td {
-            border-bottom: none;
-        }
-        /* Call to action styles */
-        .cta {
-            margin: 1em auto;
-            padding: 2em 0;
-            text-align: center;
-            max-width: none;
-            box-sizing: border-box;
-        }
-        .cta a.button {
-            font-size: 16px;
-            display: inline-block;
-            text-align: center;
-            background: #3671e7;
-            color: white;
-            padding: 0.55em 1.5em;
-            text-decoration: none;
-            margin-bottom: 1em;
-            border-radius: 20px;
-            font-weight: 500;
-        }
-
-        .cta a.button__secondary {
-            background: #9e0812;
-        }
-        .cta--background {
-            background: #F3F4F6;
-        }
-        .cta a.link {
-            font-size: 16px;
-            display: block;
-            text-align: center;
-            padding: 0.5em 1em;
-            font-weight: 500;
-        }
-        @media only screen and (min-width: 768px) {
-            .cta a.button,
-            .cta a.link {
-                display: inline-block;
-                margin: 0 auto;
-            }    
-
-            .cta a + a.button,
-            .cta a + a.link {
-                margin-left: 2em;
-            }
-        }
-
-        .meta {
-            text-align: right;
-            margin: 0.75em auto 2.5em;
-        }
-
-        .meta li {
-            font-weight: bold;
-            text-align: left;
-            line-height: 1.2;
-        }
-
-        .meta li:last-child {
-            border-right: none;
-        }
-
-        .meta li {
-            display: inline-block;
-            padding: 0 0.5em;
-            font-size: 13px;
-        }
-
-        .meta li + li {
-            border-left: dotted 1px #999;
-        }
-
-        .meta li span {
-            display: block;
-            font-size: 11px;
-            font-weight: 500;
-            color: #666;
-        }
-
-        .meta li span::after {
-            content: none;
-            margin-right: 0;
-        }
-
-        @media only screen and (min-width: 768px) {
-            .meta li {
-                padding: 0 1em;
-                font-size: 14px;
-            }
-
-            .meta li span {
-                font-size: 12px;    
-            }
-        }
     </style>
 </head>
 <body>
@@ -305,7 +288,8 @@ li span {
         {{incident_details.initiating_company}}</span>
     <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
         <tr>
-            <td width="100%" valign="top" align="left" bgcolor="#d5d5d5">
+            <td width="15px" valign="top" align="left" bgcolor="#d5d5d5">&nbsp;</td>
+            <td valign="top" align="left" bgcolor="#d5d5d5">
                 <div class="header">
                     <p>Do not share this email with anyone.</p>
                 </div>
@@ -343,6 +327,7 @@ li span {
                     <span>Powered by Recall InfoLink</span></p>
                 </div>
             </td>
+            <td width="15px" valign="top" align="left" bgcolor="#d5d5d5">&nbsp;</td>
         </tr>
     </table>    
 </body>

@@ -12,6 +12,11 @@ body, table.email-wrapper {
     background-color: #d5d5d5;
 }
 
+table.email-wrapper {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
 .preheader {
       display: none !important;
       visibility: hidden;
@@ -29,10 +34,11 @@ body, table.email-wrapper {
 }
 
 .main {
-    margin: 0 1em;
+    margin: 0 auto;
     background-color: white;
     padding: 1em 1em 2em;
-    box-sizing: border-box
+    box-sizing: border-box;
+    max-width: 728px;
 }
 
 .main > .section {
@@ -44,11 +50,6 @@ body, table.email-wrapper {
 }
 
 @media only screen and (min-width: 768px) {
-    .main {
-        margin: 0 auto;
-        max-width: 728px;
-    }
-
     .main > .section {
         margin-left: 4em;
         margin-right: 4em;
@@ -130,7 +131,7 @@ li span {
     font-size: 0.9em;
     color: #555;
     max-width: 728px;
-    padding: 0 1em 1em;
+    padding-bottom: 1em;
 }
 
 .header {
@@ -139,14 +140,6 @@ li span {
 
 .footer {
     margin-bottom: 1em;
-}
-
-@media only screen and (min-width: 768px) {
-    .header,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
 }
 
 .footer img {
@@ -167,14 +160,8 @@ li span {
     padding: 0.5em 1em;
     background-color: #fdc04c;
     font-weight: 500;
-    margin: 0 1em;
+    margin: 0 auto;
     max-width: 728px;;
     text-align: center;
     box-sizing: border-box;
-}
-
-@media only screen and (min-width: 768px) {
-    .banner {
-        margin: 0 auto;
-    }
 }
