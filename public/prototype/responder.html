@@ -2,20 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="x-apple-disable-message-reformatting" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Responder</title>
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/user-content.css" />
     <link rel="stylesheet" href="styles/cta.css" />
     <link rel="stylesheet" href="styles/meta.css" />
-    <style type="text/css" rel="stylesheet" media="all">
+    <style type="text/css" media="all">
       /* inline CSS styles can go here */
     </style>
   </head>
   <body>
     <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
         {{incident_details.initiating_company}}</span>
-    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0">
          <tr>
             <td width="15px" valign="top" align="left" bgcolor="#d5d5d5">&nbsp;</td>
             <td valign="top" align="left" bgcolor="#d5d5d5">
@@ -24,9 +25,6 @@
                 </div>
                 <div class="banner">Practice</div>
                 <div class="main">
-                    <!-- <div class="header">
-                        <img src="ril-logo.png" alt="logo">
-                    </div> -->
                     <ul class="meta">
                         <li><span>Event Type</span> Withdrawal</li>
                         <li><span>Classification</span> Class I</li>

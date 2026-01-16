@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="x-apple-disable-message-reformatting" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Important {{incident_details.incident_type.type_label}} Notification from
         {{incident_details.initiating_company}}</title>
-    <style type="text/css" rel="stylesheet" media="all">
+    <style type="text/css" media="all">
 /* layout.css */
 body, table.email-wrapper {
     width: 100% !important;
@@ -282,8 +282,8 @@ li span {
 }
 
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
         {{incident_details.initiating_company}}</span>
     <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
@@ -323,7 +323,7 @@ li span {
                         <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a>
                         or call {{ril_corporate.support_phone}} if you need support.</p>
                     <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
-                    <p><img width="15" height="15" src="https://emailer-psi-five.vercel.app/prototype/assets/ril.png" alt="logo">
+                    <p><img width="15" height="15" src="https://emailer-psi-five.vercel.app/prototype/assets/ril.png" alt="" />
                     <span>Powered by Recall InfoLink</span></p>
                 </div>
             </td>
