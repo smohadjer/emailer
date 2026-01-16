@@ -64,7 +64,7 @@
         "name": "Recall Inc.",
         "address": "123 Main St, Anytown, USA"
     },
-    "event_link": "event_link_value",
+    "event_link": "https://dashboard.recallinfolink.eu/",
     "wave_details": {
         "initiated_ago": {
             "value": "20"
