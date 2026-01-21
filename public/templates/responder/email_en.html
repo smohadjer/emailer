@@ -43,7 +43,7 @@ table.email-wrapper {
 .main {
     margin: 0 auto;
     background-color: white;
-    padding: 1em 1em 2em;
+    padding: 1.5em 1em;
     box-sizing: border-box;
     max-width: 728px;
 }
@@ -280,6 +280,20 @@ li span {
         font-size: 12px;    
     }
 }
+/* branding.css */
+.branding-footer img,
+.branding-header img {
+    display: block;
+    height: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .branding-footer img,
+    .branding-header img {
+        height: 50px;
+    }
+}
+
 
     </style>
   </head>
@@ -299,10 +313,11 @@ li span {
                 </div>
                 {{/incident_details.incident_purview.purview_is_live}}
                 <div class="main">
+                    {{#branding.email_header_image}}
                     <div class="branding-header">
-                        {{#branding.email_header_image}}<img
-                            src="{{branding.email_header_image}}">{{/branding.email_header_image}}
+                        <img src="{{branding.email_header_image}}" alt="" />
                     </div>
+                    {{/branding.email_header_image}}
                     <ul class="meta">
                         <li><span>Event Type</span>{{event_details.event_type.type_label}}</li>
                         <li><span>Classification</span> Class I</li>
@@ -317,6 +332,11 @@ li span {
                         </p>
                         <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
                     </div>
+                    {{#branding.email_footer_image}}
+                    <div class="branding-footer">
+                        <img src="{{branding.email_footer_image}}" alt="logo" />
+                    </div>
+                    {{/branding.email_footer_image}}
                 </div>
                 <div class="footer">
                     <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact 

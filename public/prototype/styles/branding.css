@@ -1,0 +1,13 @@
+/* branding.css */
+.branding-footer img,
+.branding-header img {
+    display: block;
+    height: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .branding-footer img,
+    .branding-header img {
+        height: 50px;
+    }
+}

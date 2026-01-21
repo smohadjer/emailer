@@ -8,8 +8,8 @@
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
     "branding": {
-        "email_header_image": "",
-        "email_footer_image": "",
+        "email_header_image": "https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png",
+        "email_footer_image": "https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png",
         "theme": {
             "email_border_color": "#cccccc",
             "email_button_color": "#cccccc"
@@ -57,7 +57,7 @@
             "purview_value": "customer_data"
         }
     },
-    "channel_value": "channel blah blah",
+    "channel_value": "test@example.com",
     "ril_corporate": {
         "support_phone": "1 (208) 890-9169",
         "support_email": "support@recallinfolink.com",
