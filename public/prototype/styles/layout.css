@@ -41,6 +41,10 @@ table.email-wrapper {
     max-width: 728px;
 }
 
+.branding-header {
+    margin-bottom: 2em;
+}
+
 .main > .section {
     margin: 2em 0;
 }
