@@ -10,13 +10,11 @@
     "branding": {
         "header_image": {
             "path": "https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png",
-            "width": 150,
-            "height": 50
+            "width": 150
         },  
         "footer_image": {
             "path": "https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png",
-            "width": 90,
-            "height": 30
+            "width": 120
         }
     },
     "event_details": {

@@ -304,8 +304,18 @@ li span {
                 {{/incident_details.incident_purview.purview_is_live}}
                 <div class="main">
                     {{#branding.header_image}}
+                    <!-- example of implementing a responsive image -->
                     <div class="branding-header">
-                        <img style="width: {{branding.header_image.width}}px; height: {{branding.header_image.height}}px;" width="{{branding.header_image.width}}" height="{{branding.header_image.height}}" src="{{branding.header_image.path}}" alt="logo" />
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                            <img
+                                src="https://emailer-psi-five.vercel.app/prototype/assets/sun.png"
+                                style="width:100%; height:auto; display:block;"
+                                alt="">
+                            </td>
+                        </tr>
+                        </table>
                     </div>
                     {{/branding.header_image}}
                     <ul class="meta">
@@ -323,8 +333,9 @@ li span {
                         <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
                     </div>
                     {{#branding.footer_image}}
+                    <!-- example of implementing a non-responsive image -->
                     <div class="branding-footer">
-                        <img style="width: {{branding.footer_image.width}}px; height: {{branding.footer_image.height}}px;" width="{{branding.footer_image.width}}" height="{{branding.footer_image.height}}" src="{{branding.footer_image.path}}" alt="logo" />
+                        <img style="width: {{branding.footer_image.width}}px; height: auto; display: block;" width="{{branding.footer_image.width}}" src="{{branding.footer_image.path}}" alt="logo" />
                     </div>
                     {{/branding.footer_image}}
                 </div>
