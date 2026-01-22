@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import Mustache from 'mustache';
-import data from "../public/data.json" with { type: "json" };
+import data_en from "../public/data_en.json" with { type: "json" };
+import data_ar from "../public/data_ar.json" with { type: "json" };
 import nodemailer from 'nodemailer';
 
 import dotenv from 'dotenv';
@@ -22,11 +23,13 @@ export default async function handler(req, res) {
     console.log('typeof body', typeof body);
     console.log('email:', body.email);
     console.log('template:', body.template);
+    console.log('lang:', body.lang);
     console.log('cwd', process.cwd());
 
-    if (body.email && body.template) {
-        const templatePath = path.join(process.cwd(), `public/templates/${body.template}/email_en.html`);
+    if (body.email && body.template && body.lang) {
+        const templatePath = path.join(process.cwd(), `public/templates/${body.template}/email_${body.lang}.html`);
         const template = fs.readFileSync(templatePath, 'utf8');
+        const data = body.lang === 'ar' ? data_ar : data_en;
         const renderedEmail = Mustache.render(template, data);
 
         const transporter = nodemailer.createTransport({

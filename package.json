@@ -1,5 +1,6 @@
 {
     "name": "notifications",
+    "type": "module",
     "scripts": {
         "build": "echo \"No build step\""
     },

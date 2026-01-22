@@ -4,20 +4,30 @@
     margin: 0.75em auto 2.5em;
 }
 
+[dir=rtl] .meta {
+    text-align: left;
+}
+
 .meta li {
     font-weight: bold;
     text-align: left;
     line-height: 1.2;
-}
-
-.meta li {
     display: inline-block;
     padding: 0 0.5em;
     font-size: 13px;
 }
 
+[dir=rtl] .meta li {
+    text-align: right;
+}
+
 .meta li + li {
     border-left: dotted 1px #999;
+}
+
+[dir=rtl] .meta li + li {
+    border-left: none;
+    border-right: dotted 1px #999;
 }
 
 .meta li span {

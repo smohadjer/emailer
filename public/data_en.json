@@ -1,0 +1,118 @@
+{ 
+    "account": "account",
+    "event_point_link": "event_point_link",
+    "submitted_by": {
+        "formatted_channel_value": "formatted_channel_value"
+    },
+    "company_name": "Acme Corp", 
+    "expires_in_days": 7, 
+    "invite_link": "https://example.com/invite",
+    "branding": {
+        "header_image": {
+            "path": "https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png",
+            "width": 140
+        },  
+        "footer_image": {
+            "path": "https://emailer-psi-five.vercel.app/prototype/assets/sun.png"
+        }
+    },
+    "event_details": {
+        "event_name": "event_name",
+        "short_event_id": "12345",
+        "event_date": "01/22/2026",
+        "event_type": {
+            "type_label": "Withdrawal",
+            "type_value": "event_type_value",
+            "type_label_l10n": {
+                "fr_CA": "étiquette_de_type_d'événement"
+            }
+        },
+        "initiated_ago": {
+            "value": "initiated_ago_value"
+        },
+        "initiated_at": {
+            "value": "initiated_at_value"
+        }
+    },
+    "incident_details": {
+        "concern_area": {
+            "area_label": "Privacy",
+            "area_value": "privacy_value",
+            "area_label_l10n": {
+                "fr_CA": "Confidentialité"
+            }
+        },
+        "has_concern_area": true,
+        "incident_id": "incident_id_value",
+        "incident_name": "incident_name_value",
+        "initiating_company": "Acme Corp",
+        "incident_type": {
+            "type_label": "Security",
+            "type_value": "security_value",
+            "type_label_l10n": {
+                "fr_CA": "Sécurité"
+            }
+        },
+        "incident_purview": {
+            "purview_is_live": false,
+            "purview_label": "Practice",
+            "purview_value": "customer_data"
+        }
+    },
+    "channel_value": "test@example.com",
+    "ril_corporate": {
+        "support_phone": "1 (208) 890-9169",
+        "support_email": "support@recallinfolink.com",
+        "name": "Recall Inc.",
+        "address": "123 Main St, Anytown, USA"
+    },
+    "event_link": "https://dashboard.recallinfolink.eu/",
+    "wave_details": {
+        "initiated_ago": {
+            "value": "20"
+        },
+        "initiated_at": {
+            "value": "25. November 2025, 12:44:11 MEZ"
+        }
+    },
+    "client_event_details": {
+        "created_by": {
+            "name_initials": "JD"
+        }
+    },
+    "client_wave_details": {
+        "communication_schedule": {
+            "schedule_id": "schedule_id_value",
+            "schedule_name": {
+                "value": "Quarterly Update"
+            },
+            "schedule_scope": {
+                "value": "Global"
+            }
+        },
+        "created_by": {
+            "full_name": "Jane Doe",
+            "name_initials": "JD"
+        }
+    },
+    "has_trade_items": true,
+    "trade_item_count": 10,
+    "distribution_point_count": 5,
+    "distribution_points_by_status": {
+        "notified": {
+            "count": 3,
+            "percentage": {"value": "50%"}
+        },
+        "accessed": {
+            "count": 2,
+            "percentage": {"value": "33%"}
+        },
+        "confirmed": {
+            "count": 1,
+            "percentage": {"value": "17%"}
+        }
+    },
+    "nonce": "123456",
+    "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
+    "preamble": "<h1>Important Withdrawal Notification from Test Inc</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p><p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>"
+}

@@ -25,8 +25,9 @@
 </head>
 <body>
     <p><a class="toggle" href="index.html">Updated Template</a></p>
-    <p>Select email template:
-        <select>
+    <p>
+        <label>Select template:
+        <select id="template">
             <option value="authentication_nonce">authentication_nonce</option>
             <option value="client_cc">client_cc</option>
             <option value="client_cc_en_fr_CA">client_cc_en_fr_CA</option>
@@ -51,6 +52,13 @@
             <option value="responder_en_fr_CA">responder_en_fr_CA</option>
             <option value="verification_nonce">verification_nonce</option>
         </select>
+        </label>
+        <label>Select language:
+            <select id="language">
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+            </select>
+        </label>
     </p>
     <div class="resizable-frame">
         <iframe id="frame"></iframe>

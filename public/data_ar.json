@@ -19,6 +19,7 @@
     "event_details": {
         "event_name": "event_name",
         "short_event_id": "12345",
+        "event_date": "01/22/2026",
         "event_type": {
             "type_label": "Withdrawal",
             "type_value": "event_type_value",
@@ -54,7 +55,7 @@
         },
         "incident_purview": {
             "purview_is_live": false,
-            "purview_label": "Practice",
+            "purview_label": "يمارس",
             "purview_value": "customer_data"
         }
     },
@@ -113,5 +114,5 @@
     },
     "nonce": "123456",
     "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
-    "preamble": "<h1>Important Withdrawal Notification from Test Inc</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p><p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>"
+    "preamble": "<h1>إشعار هام بالانسحاب من شركة تيست إنك</h1><p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف.</p><p>خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني.</p>"
 }

@@ -1,297 +1,358 @@
-﻿<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>إشعار هام من {{incident_details.incident_type.type_label}} {{incident_details.initiating_company}}</title>
-    <style>
-        /* -------------------------------------
-           GLOBAL RESETS
-        ------------------------------------- */
+    <style type="text/css" media="all">
+/* layout.css */
+body, table.email-wrapper {
+    width: 100% !important;
+    height: 100%;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+    background-color: #d5d5d5;
+}
+table.email-wrapper {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.preheader {
+      display: none !important;
+      visibility: hidden;
+      mso-hide: all;
+      font-size: 1px;
+      line-height: 1px;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+}
 
-        /*All the styling goes here*/
+* {
+    margin-bottom: 0;
+}
 
-        img {
-            border: none;
-            -ms-interpolation-mode: bicubic;
-            max-width: 100%;
-        }
+.main {
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.5em 1em;
+    box-sizing: border-box;
+    max-width: 728px;
+}
 
-        body {
-            background-color: #fff;
-            font-family: sans-serif;
-            -webkit-font-smoothing: antialiased;
-            font-size: 14px;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0;
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        table {
-            border-collapse: separate;
-            mso-table-lspace: 0;
-            mso-table-rspace: 0;
-            min-width: 100%;
-            width: 100%;
-        }
-
-        table td {
-            font-family: sans-serif;
-            font-size: 14px;
-            vertical-align: top;
-        }
-
-        /* -------------------------------------
-            BODY & CONTAINER
-        ------------------------------------- */
-
-        .body {
-            background-color: #fff;
-            width: 100%;
-        }
-
-        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-        .container {
-            display: block;
-            margin: 0 auto !important;
-            /* makes it centered */
-            max-width: 580px;
-            padding: 10px;
-            width: 580px;
-        }
-
-        /* This should also be a block element, so that it will fill 100% of the .container */
-        .content {
-            box-sizing: border-box;
-            display: block;
-            margin: 0 auto;
-            max-width: 580px;
-            padding: 10px;
-        }
-
-        /* -------------------------------------
-            HEADER, FOOTER, MAIN
-        ------------------------------------- */
-        .main {
-            background: #ffffff;
-            border-radius: 3px;
-            width: 100%;
-            border: 0.5rem solid {{branding.theme.email_border_color}};
-        }
-
-        .header {
-            padding: 20px 0;
-        }
-
-        .header img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .wrapper {
-            box-sizing: border-box;
-            padding: 20px 20px 0 20px;
-        }
-
-        .content-block {
-            padding-bottom: 10px;
-            padding-top: 10px;
-        }
-
-        .footer {
-            clear: both;
-            margin-right: 10px;
-            margin-top: 10px;
-            text-align: right;
-            width: 100%;
-        }
-
-        .footer table {
-            margin-right: 30px;
-        }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-            font-size: 12px;
-            text-align: right;
-        }
-
-        /* -------------------------------------
-            TYPOGRAPHY
-        ------------------------------------- */
-        h2 {
-            font-family: sans-serif;
-            font-weight: 400;
-            line-height: 1.4;
-            margin: 0;
-            margin-bottom: 20px;
-            text-transform: capitalize;
-        }
+.branding-header {
+    margin-bottom: 2em;
+}
 
 
-        p,
-        ol {
-            font-family: sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            margin: 0;
-            margin-bottom: 15px;
-        }
+.main > .section {
+    margin: 2em 0;
+}
 
-        p li,
-        ol li {
-            list-style-position: inside;
-            margin-right: 5px;
-        }
+.main > .section:last-child {
+    margin-bottom: 0;
+}
 
-        /* -------------------------------------
-            BUTTONS
-        ------------------------------------- */
-        .button {
-            background-color: #3869D4;
-            border-top: 10px solid #3869D4;
-            border-right: 18px solid #3869D4;
-            border-bottom: 10px solid #3869D4;
-            border-left: 18px solid #3869D4;
-            display: inline-block;
-            color: #ffffff !important;
-            text-decoration: none;
-            border-radius: 3px;
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
-            -webkit-text-size-adjust: none;
-            box-sizing: border-box;
-            font-size: 18px;
-        }
+@media only screen and (min-width: 768px) {
+    .main > .section {
+        margin-left: 4em;
+        margin-right: 4em;
+    } 
+}
 
-        /* Some clients will show this text as a preview. */
-        .preheader {
-            color: transparent;
-            display: none;
-            height: 0;
-            max-height: 0;
-            max-width: 0;
-            opacity: 0;
-            overflow: hidden;
-            mso-hide: all;
-            visibility: hidden;
-            width: 0;
-        }
+h1 {
+    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 500;
+}
 
-        .powered-by a {
-            text-decoration: none;
-        }
+h2 {
+    font-size: 18px;
+    margin: 1.5em 0 0.25em 0;
+}
 
-        .powered-by p {
-            margin: 0;
-        }
+p {
+    margin-top: 0.5em;
+}
 
-        /* -------------------------------------
-            RESPONSIVE AND MOBILE FRIENDLY STYLES
-        ------------------------------------- */
-        @media only screen and (max-width: 620px) {
-            table[class=body] p,
-            table[class=body] ol,
-            table[class=body] td,
-            table[class=body] span,
+a {
+    color: #3671e7;
+    word-wrap:break-word;
+}
 
-            table[class=body] .wrapper,
-            table[class=body] .content {
-                padding: 0 !important;
-            }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-            table[class=body] .container {
-                padding: 0 !important;
-                width: 100% !important;
-            }
+ul li {
+    margin-bottom: 0.5em;
+}
 
-            table[class=body] .main {
-                border-left-width: 0 !important;
-                border-radius: 0 !important;
-                border-right-width: 0 !important;
-            }
+li span {
+    font-weight: 700;
+}
 
-        }
+.main table {
+    border-collapse: collapse;
+    font-size: inherit;
+}
 
-        /* -------------------------------------
-            PRESERVE THESE STYLES IN THE HEAD
-        ------------------------------------- */
-        @media all {
-            .apple-link a {
-                color: inherit !important;
-                font-family: inherit !important;
-                font-size: inherit !important;
-                font-weight: inherit !important;
-                line-height: inherit !important;
-                text-decoration: none !important;
-            }
-        }
-        .banner { background-color: #f4cb46; padding: 10px; }
+.main table th {
+    padding-right: 1em;
+    line-height: 1.2;
+    vertical-align: bottom;
+    padding-bottom: 0.5em;
+}
+
+.main table td {
+    padding: 0.2em 1em 0.2em 0;
+    vertical-align: top;
+    line-height: 1.3;
+}
+
+.main table td p {
+    margin-top: 0.5em;
+}
+
+.main table td p:first-child {
+    margin-top: 0;
+}
+
+.main table tr:last-child td {
+    border-bottom: none;
+}
+
+.main table td:first-child {
+    font-weight: 700;
+    width: 15ch;
+}
+
+.header,
+.footer {
+    margin: 1em auto 0;
+    font-size: 0.9em;
+    color: #555;
+    max-width: 728px;
+    padding-bottom: 1em;
+}
+
+.header {
+    text-align: center;
+}
+
+.footer {
+    margin-bottom: 1em;
+}
+
+.footer img {
+    margin-right: 2px;
+}
+
+.footer span,
+.footer img {
+    vertical-align: middle;
+}
+
+.header a,
+.footer a {
+    color: inherit;
+}
+
+.banner {
+    padding: 0.5em 1em;
+    background-color: #fdc04c;
+    font-weight: 500;
+    margin: 0 auto;
+    max-width: 728px;;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* user-content.css */
+.user-content table {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
+
+.user-content table td {
+    padding: 0.5em 0;
+    border-bottom: solid 1px #ccc;
+}
+
+.user-content table tr:last-child td {
+    border-bottom: none;
+}
+/* cta.css */
+.cta {
+    margin: 1em auto;
+    padding: 2em 0;
+    text-align: center;
+    max-width: none;
+    box-sizing: border-box;
+}
+.cta a.button {
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    background-color: #3671e7;
+    color: white;
+    padding: 0.55em 1.5em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    font-weight: 500;
+}
+
+.cta a.button:hover {
+    background-color: #1742DD;
+}
+
+.cta--background {
+    background-color: #F3F4F6;
+}
+
+.cta a.link {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 0.5em 1em;
+    font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+    .cta a.button,
+    .cta a.link {
+        display: inline-block;
+        margin: 0 auto;
+    }    
+
+    .cta a + a.button,
+    .cta a + a.link {
+        margin-left: 2em;
+    }
+}
+/* meta.css */
+.meta {
+    text-align: right;
+    margin: 0.75em auto 2.5em;
+}
+
+[dir=rtl] .meta {
+    text-align: left;
+}
+
+.meta li {
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 0 0.5em;
+    font-size: 13px;
+}
+
+[dir=rtl] .meta li {
+    text-align: right;
+}
+
+.meta li + li {
+    border-left: dotted 1px #999;
+}
+
+[dir=rtl] .meta li + li {
+    border-left: none;
+    border-right: dotted 1px #999;
+}
+
+.meta li span {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: #666;
+}
+
+.meta li span::after {
+    content: none;
+    margin-right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .meta li {
+        padding: 0 1em;
+        font-size: 14px;
+    }
+
+    .meta li span {
+        font-size: 12px;    
+    }
+}
     </style>
 </head>
 <body class="">
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
-    <tr>
-        <td> </td>
-        <td class="container">
-            <div class="header">
-                {{#branding.email_header_image}}<img src="{{branding.email_header_image}}" />{{/branding.email_header_image}}
-            </div>
-            <div class="content">
-                <!-- START CENTERED WHITE CONTAINER -->
-                <span class="preheader">هام {{incident_details.incident_type.type_label}} إشعار من {{incident_details.initiating_company}}</span>
-                <table role="presentation" class="main">
-                    <!-- START MAIN CONTENT AREA -->
-                    <tr>
-                        <td class="wrapper">
-                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td dir="rtl">
-                                        {{^incident_details.incident_purview.purview_is_live}}
-                                        <div class="banner">
-                                        {{incident_details.incident_purview.purview_label}}
-                                        </div><br />
-                                        {{/incident_details.incident_purview.purview_is_live}}
-                                        {{{preamble}}}
-                                        <p><a href="{{event_link}}" class="button">انقر هنا للحصول على التفاصيل</a></p>
-                                        <p>لا تقم بإعادة توجيه هذا البريد الإلكتروني حيث أن الرابط يعرض معلومات مخصصة خصيصاً لموقع {{channel_value}}.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <!-- END MAIN CONTENT AREA -->
-                </table>
-            </div>
-            <!-- START FOOTER -->
-            <div class="footer">
-                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td class="content-block">
-                            <p dir="rtl">
-                            تم إرسال هذه الرسالة الإلكترونية من عنوان غير مراقب. لا ترد على هذا البريد الإلكتروني.<br>
-                            اتصل بـ <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a> أو اتصل على &#x2066;{{ril_corporate.support_phone}}&#x2069; إذا كنت بحاجة إلى دعم.</p>
-                            <p dir="rtl" style="padding-top: 20px;">إذا تلقيت هذا البريد الإلكتروني عن طريق الخطأ، أو إذا كنت ترغب في إلغاء الاشتراك في هذه الرسائل الإلكترونية، فيرجى تعديل <a href="{{notification_preferences_link}}">تفضيلات الإشعارات</a>.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="content-block powered-by">
-                            <p>مدعوم من</p>
-                            <p>&#x2066;{{ril_corporate.name}}&#x2069;</p>
-                            <p>&#x2066;{{ril_corporate.address}}&#x2069;</p>
-                        </td>
-                    </tr>
-                </table>
-                {{#branding.email_footer_image}}<img src="{{branding.email_footer_image}}" />{{/branding.email_footer_image}}
-            </div>
-            <!-- END FOOTER -->
-        </td>
-        <!-- END CENTERED WHITE CONTAINER -->
-        <td> </td>
-    </tr>
-</table>
+    <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
+        {{incident_details.initiating_company}}</span>
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+            <td width="15px" valign="top" align="left" bgcolor="#d5d5d5">&nbsp;</td>
+            <td dir="rtl" valign="top" bgcolor="#d5d5d5">
+                <div class="header">
+                    <p>لا تشارك هذه الرسالة الإلكترونية مع أي شخص.</p>
+                </div>
+                {{^incident_details.incident_purview.purview_is_live}}
+                <div class="banner">
+                    {{incident_details.incident_purview.purview_label}}
+                </div>
+                {{/incident_details.incident_purview.purview_is_live}}
+                <div class="main">
+                    {{#branding.header_image}}
+                    <div class="branding-header">
+                        <img style="width: {{branding.header_image.width}}px; height: auto; display: block;" width="{{branding.header_image.width}}" src="{{branding.header_image.path}}" alt="logo" />
+                    </div>
+                    {{/branding.header_image}}
+                    <ul class="meta" dir="rtl">
+                        <li><span>تاريخ الحدث</span>{{event_details.event_date}}</li>
+                        <li><span>معرف الحدث</span> {{event_details.short_event_id}}</li>
+                    </ul>
+                    <div class="section">
+                        <div class="user-content">
+                            {{{preamble}}}
+                        </div>
+                        <p class="cta">
+                            <a class="button" href="{{event_link}}">عرض التفاصيل</a>
+                        </p>
+                        <p>لقد تلقيت هذه الرسالة الإلكترونية لأنك أحد المستجيبين لعملية سحب منتجات بدأتها شركة Test Inc. لا تقم بإعادة توجيه هذه الرسالة الإلكترونية لأن الرابط يعرض معلومات مخصصة تحديدًا لـ {{channel_value}}.</p>
+                    </div>
+                    {{#branding.footer_image}}
+                    <div class="branding-footer">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                                <img
+                                    src="{{branding.footer_image.path}}"
+                                    style="width:100%; height:auto; display:block;"
+                                    alt="">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    {{/branding.footer_image}}
+                </div>
+                <div class="footer">
+                    <p dir="rtl">تم إرسال هذه الرسالة الإلكترونية من عنوان بريد إلكتروني غير مُراقب. يُرجى عدم الرد على هذه الرسالة. تواصل مع فريق الدعم عبر البريد الإلكتروني support@recallinfolink.com أو اتصل على الرقم 1 (208) 890-9169 إذا كنت بحاجة إلى مساعدة.</p>
+                    <p dir="rtl">إذا تلقيت هذه الرسالة الإلكترونية عن طريق الخطأ، أو لإلغاء الاشتراك في هذه الرسائل الإلكترونية، فيرجى تعديل تفضيلات الإشعارات الخاصة بك.</p>
+                    <p dir="rtl"><img width="15" height="15" src="https://emailer-psi-five.vercel.app/prototype/assets/ril.png" alt="" />
+                    <span>مدعوم من Recall InfoLink</span></p>
+                </div>
+            </td>
+            <td width="15px" valign="top" align="left" bgcolor="#d5d5d5">&nbsp;</td>
+        </tr>
+    </table>    
 </body>
 </html>

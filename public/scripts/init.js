@@ -1,11 +1,39 @@
-export function init() {
-    let template = '';
-    
-    const select =  document.querySelector('select');
-    select.addEventListener('change', async (e) => {
+
+let template = '';
+let lang = '';
+
+export function init() {    
+    const templateSelector =  document.querySelector('select#template');
+    const langSelector =  document.querySelector('select#language');
+    const params = window.location.search;
+    const templateParam = params ? new URLSearchParams(params).get('template') : undefined;
+    const langParam = params ? new URLSearchParams(params).get('lang') : undefined;
+
+    if (templateParam) {
+        templateSelector.value = templateParam 
+    }
+
+    if (langParam) {
+        langSelector.value = langParam;
+    }
+
+    template = templateSelector.value;
+    lang = langSelector.value;
+
+    console.log(`Initial template: ${template}, lang: ${lang}`);
+
+    renderTemplate(template, lang);
+
+    templateSelector.addEventListener('change', async (e) => {
         template = e.target.value;
-        renderTemplate(template);
-        updateUrlParam(template);
+        renderTemplate(template, lang);
+        updateUrlParam();
+    });
+
+    langSelector.addEventListener('change', async (e) => {
+        lang = e.target.value;
+        renderTemplate(template, lang);
+        updateUrlParam();
     });
 
     const form = document.getElementById('form');
@@ -19,12 +47,11 @@ export function init() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, template }),
+                body: JSON.stringify({ email, template, lang}),
             })
             .then(response => response.json())
             .then(data => {
                 alert('Email sent successfully!');
-                console.log('Success:', data);
             })
             .catch((error) => {
                 alert('Error sending email.');
@@ -33,14 +60,7 @@ export function init() {
         });
     }
 
-    // Initial render
-    const param = window.location.search;
-    const name = param ? new URLSearchParams(param).get('template') : undefined;
-    select.value = name ? name : select.querySelector('option').getAttribute('value');
-    select.dispatchEvent(new Event('change'));
-
     const toggle = document.querySelector('a.toggle');
-
     // switch between original and modified templates while preserving template selection
     toggle.addEventListener('click', (e) => {
         e.preventDefault();
@@ -51,18 +71,19 @@ export function init() {
     })
 }
 
-async function renderTemplate(templateName) {
+async function renderTemplate(templateName, lang) {
     const folder = window.location.pathname.indexOf('original.html') > 0 ? 'templates-original' : 'templates';
-    const file = window.location.pathname.indexOf('original.html') > 0 ? './data-original.json' : './data.json';
+    const file = window.location.pathname.indexOf('original.html') > 0 ? './data-original.json' : `./data_${lang}.json`;
     const data = await fetch(file).then(res => res.json());
-    const template = await fetch(`./${folder}/${templateName}/email_en.html`).then(res => res.text());
+    const template = await fetch(`./${folder}/${templateName}/email_${lang}.html`).then(res => res.text());
     const rendered = Mustache.render(template, data);
-    console.log(rendered);
     document.querySelector('iframe').srcdoc = rendered;
 }
 
-function updateUrlParam(value) {
+function updateUrlParam() {
+    console.log('Updating URL params', lang);
     const url = new URL(window.location.href);
-    url.searchParams.set('template', value);
+    url.searchParams.set('template', template);
+    url.searchParams.set('lang', lang);
     window.history.replaceState({}, "", url);
 }
