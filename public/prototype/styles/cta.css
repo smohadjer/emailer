@@ -14,9 +14,12 @@
     color: white;
     padding: 0.55em 1.5em;
     text-decoration: none;
-    margin-bottom: 1em;
     border-radius: 0.5em;
     font-weight: 500;
+}
+
+.cta a + a {
+    margin-top: 1em;
 }
 
 .cta a.button:hover {
