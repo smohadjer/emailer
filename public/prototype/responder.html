@@ -9,17 +9,14 @@
     <link rel="stylesheet" href="styles/user-content.css" />
     <link rel="stylesheet" href="styles/cta.css" />
     <link rel="stylesheet" href="styles/meta.css" />
-    <style type="text/css" media="all">
-      /* inline CSS styles can go here */
-    </style>
   </head>
   <body>
     <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
         {{incident_details.initiating_company}}</span>
-    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0">
+    <table class="body" width="100%" cellpadding="0" cellspacing="0">
          <tr>
-            <td width="15px" valign="top" align="left" bgcolor="#d5d5d5">&nbsp;</td>
-            <td valign="top" align="left" bgcolor="#d5d5d5">
+            <td width="15px" bgcolor="#d5d5d5">&nbsp;</td>
+            <td valign="top" bgcolor="#d5d5d5">
                 <div class="header">
                     <p>Do not share this email with anyone.</p>
                 </div>
@@ -27,23 +24,10 @@
                 <div class="main">
                     <div class="branding-header">
                         <!-- example of implementing a non-responvie image like a logo -->
-                        <img width="150" style="width: 150px; height: auto; display: block;" src="assets/ril-logo.png" alt="Recall InfoLink" />
-
-                        <!-- example of implementing a responsive image -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td>
-                                    <img
-                                        src="assets/sun.png"
-                                        style="width:100%; height:auto; display:block;"
-                                        alt="">
-                                </td>
-                            </tr>
-                        </table>
+                        <img width="150" style="width: 150px; height: auto; display: block;" src="https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png" alt="Recall InfoLink" />
                     </div>
                     <ul class="meta">
-                        <li><span>Event Type</span> Withdrawal</li>
-                        <li><span>Classification</span> Class I</li>
+                        <li><span>Event Date</span> 1/22/2026</li>
                         <li><span>Event ID</span> #355</li>
                     </ul>
                     <div class="section">
@@ -77,17 +61,27 @@
                         <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for channel <a href="#">responder@test.com</a>.</p>
                     </div>
                     <div class="branding-footer">
-                        <img width="90" style="width: 90px; height: auto; display: block;" src="assets/ril-logo.png" alt="Recall InfoLink" />
+                        <!-- example of implementing a responsive image -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td>
+                                    <img
+                                        src="https://emailer-psi-five.vercel.app/prototype/assets/sun.png"
+                                        style="width:100%; height:auto; display:block;"
+                                        alt="" />
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="footer">
                     <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href="mailto:support@recallinfolink.com">support@recallinfolink.com</a> or call 1 (208) 890-9169 if you need support.</p>
                     <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="">notification preferences</a>.</p>
-                    <p><img width="15" height="15" src="assets/ril.png" alt="" />
+                    <p><img width="15" height="15" src="https://emailer-psi-five.vercel.app/prototype/assets/ril.png" alt="" />
                     <span>Powered by Recall InfoLink</span></p>
                 </div>
             </td>
-            <td width="15px" valign="top" align="left" bgcolor="#d5d5d5">&nbsp;</td>
+            <td width="15px" bgcolor="#d5d5d5">&nbsp;</td>
         </tr>
     </table>
   </body>

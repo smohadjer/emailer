@@ -1,5 +1,5 @@
 /* layout.css */
-body, table.email-wrapper {
+body, table.body {
     width: 100% !important;
     height: 100%;
     margin: 0;
@@ -12,7 +12,8 @@ body, table.email-wrapper {
     background-color: #d5d5d5;
 }
 
-table.email-wrapper {
+/* table-layout: fixed allows us to use tables with many columns in email without losing responsive behaviour on small devices */
+table.body {
     border-collapse: collapse;
     table-layout: fixed;
 }
