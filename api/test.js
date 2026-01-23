@@ -9,43 +9,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-    }
-});
-
-const renderEmail = (template, lang) => {
-    const templatePath = path.join(process.cwd(), `public/templates/${template}/email_${lang}.html`);
-    const templateData = fs.readFileSync(templatePath, 'utf8');
-    const data = lang === 'ar' ? data_ar : data_en;
-    const renderedEmail = Mustache.render(templateData, data);
-    return renderedEmail;
-}
-
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    const template = req.query.template;
-    const lang = req.query.lang || 'en';
-    const email = renderEmail(template, lang);
-    inline.html({
-        fileContent: email,
-        images: false,
-        relativeTo: path.resolve(process.cwd(), 'public')
-    }, function(err, result) {
-        if (err) {
-            return res.status(200).json({'error': err})
-        } else {
-            res.writeHead(200, { 'Content-Type':'text/html'});
-            return res.end(result);
-        }
-    });
-
-    return;
+  if (req.method !== "GET") {
+    return res.status(405).end();
+  } else {
+    return res.status(200).json({'text': 'hello'})
   }
 
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
@@ -56,8 +24,21 @@ export default async function handler(req, res) {
     console.log('cwd', process.cwd());
 
     if (body.email && body.template && body.lang) {
+        const templatePath = path.join(process.cwd(), `public/templates/${body.template}/email_${body.lang}.html`);
+        const template = fs.readFileSync(templatePath, 'utf8');
+        const data = body.lang === 'ar' ? data_ar : data_en;
+        const renderedEmail = Mustache.render(template, data);
+        const transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 587,
+            secure: false,
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            }
+        });
         inline.html({
-            fileContent: renderEmail(body.template, body.lang),
+            fileContent: renderedEmail,
             images: false,
             relativeTo: path.resolve(process.cwd(), 'public')
         }, function(err, result) {
