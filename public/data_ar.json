@@ -8,11 +8,11 @@
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
     "branding": {
-        "header_image": {
+        "email_header_image": {
             "path": "https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png",
             "width": 140
         },  
-        "footer_image": {
+        "email_footer_image": {
             "path": "https://emailer-psi-five.vercel.app/prototype/assets/sun.png"
         }
     },

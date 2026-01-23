@@ -27,11 +27,11 @@
                 </div>
                 {{/incident_details.incident_purview.purview_is_live}}
                 <div class="main">
-                    {{#branding.header_image}}
+                    {{#branding.email_header_image}}
                     <div class="branding-header">
-                        <img style="width: {{branding.header_image.width}}px; height: auto; display: block;" width="{{branding.header_image.width}}" src="{{branding.header_image.path}}" alt="logo" />
+                        <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="logo" />
                     </div>
-                    {{/branding.header_image}}
+                    {{/branding.email_header_image}}
                     <ul class="meta">
                         <li><span>Event Date</span> {{event_details.event_date}}</li>
                         <li><span>Event ID</span> {{event_details.short_event_id}}</li>
@@ -45,20 +45,20 @@
                         </p>
                         <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
                     </div>
-                    {{#branding.footer_image}}
+                    {{#branding.email_footer_image}}
                     <div class="branding-footer">
                         <table width="100%" cellpadding="0" cellspacing="0" border="0">
                             <tr>
                                 <td>
                                 <img
-                                    src="{{branding.footer_image.path}}"
+                                    src="{{branding.email_footer_image.path}}"
                                     style="width:100%; height:auto; display:block;"
                                     alt="">
                                 </td>
                             </tr>
                         </table>
                     </div>
-                    {{/branding.footer_image}}
+                    {{/branding.email_footer_image}}
                 </div>
                 <div class="footer">
                     <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact 
