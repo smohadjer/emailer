@@ -9,11 +9,11 @@
     "invite_link": "https://example.com/invite",
     "branding": {
         "email_header_image": {
-            "path": "https://emailer-psi-five.vercel.app/prototype/assets/ril-logo.png",
+            "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
             "width": 140
         },  
         "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/prototype/assets/sun.png"
+            "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
         }
     },
     "event_details": {
