@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{language_code}}" {{#dir}}dir="{{dir}}"{{/dir}}>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" content="yes" />
@@ -7,20 +7,17 @@
     <title>Important {{incident_details.incident_type.type_label}} Notification from
         {{incident_details.initiating_company}}</title>
     <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/user-content.css" />
     <link rel="stylesheet" href="styles/cta.css" />
     <link rel="stylesheet" href="styles/meta.css" />
   </head>
   <body>
     <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
         {{incident_details.initiating_company}}</span>
-    <table class="body" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+    <table class="body" width="100%" cellpadding="0" cellspacing="0">
         <tr>
             <td width="15px" bgcolor="#d5d5d5">&nbsp;</td>
-            <td valign="top" bgcolor="#d5d5d5">
-                <div class="header">
-                    <p>Do not share this email with anyone.</p>
-                </div>
+            <td {{#dir}}dir="{{dir}}"{{/dir}} valign="top" bgcolor="#d5d5d5">
+                <p class="header">Do not share this email with anyone</p>
                 {{^incident_details.incident_purview.purview_is_live}}
                 <div class="banner">
                     {{incident_details.incident_purview.purview_label}}
@@ -36,38 +33,42 @@
                         <li><span>Event Date</span> {{event_details.event_date}}</li>
                         <li><span>Event ID</span> {{event_details.short_event_id}}</li>
                     </ul>
-                    <div class="section">
-                        <div class="user-content">
-                            {{{preamble}}}
-                        </div>
-                        <p class="cta">
-                            <a class="button" href="{{event_link}}">View Details</a>
-                        </p>
-                        <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
-                    </div>
+                    <table class="section">
+                        <tr>
+                            <td>
+                                <div class="user-content">
+                                    {{{preamble}}}
+                                </div>
+                                <p class="cta">
+                                    <a class="button" href="{{event_link}}">View Details</a>
+                                </p>
+                                <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
+                            </td>
+                        </tr>
+                    </table>
                     {{#branding.email_footer_image}}
-                    <div class="branding-footer">
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td>
-                                <img
-                                    src="{{branding.email_footer_image.path}}"
-                                    style="width:100%; height:auto; display:block;"
-                                    alt="">
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                                <img src="{{branding.email_footer_image.path}}" style="width:100%; height:auto; display:block;" alt="" />
+                            </td>
+                        </tr>
+                    </table>
                     {{/branding.email_footer_image}}
                 </div>
-                <div class="footer">
-                    <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact 
-                        <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a>
-                        or call {{ril_corporate.support_phone}} if you need support.</p>
-                    <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
-                    <p><img width="15" height="15" src="https://emailer-psi-five.vercel.app/assets/ril.png" alt="" />
-                    <span>Powered by Recall InfoLink</span></p>
-                </div>
+                <table class="footer">
+                    <tr>
+                        <td>
+                            <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact 
+                            <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a>
+                            or call {{ril_corporate.support_phone}} if you need support.</p>
+                            <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
+                            <p><img width="15" height="15" src="https://emailer-psi-five.vercel.app/assets/ril.png" alt="" />
+                                <span>Powered by Recall InfoLink</span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
             </td>
             <td width="15px" bgcolor="#d5d5d5">&nbsp;</td>
         </tr>

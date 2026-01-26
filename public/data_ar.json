@@ -1,5 +1,7 @@
 { 
     "account": "account",
+    "language_code": "ar",
+    "dir": "rtl",
     "event_point_link": "event_point_link",
     "submitted_by": {
         "formatted_channel_value": "formatted_channel_value"
