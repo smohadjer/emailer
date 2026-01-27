@@ -9,7 +9,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const transporter = nodemailer.createTransport({
+const gmailTransporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
@@ -17,6 +17,15 @@ const transporter = nodemailer.createTransport({
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     }
+});
+
+const mailtrapTransporter = nodemailer.createTransport({
+  host: "sandbox.smtp.mailtrap.io",
+  port: 2525,
+  auth: {
+    user: process.env.MAILTRAP_EMAIL_USER,
+    pass: process.env.MAILTRAP_EMAIL_PASS,
+  }
 });
 
 const renderEmail = (template, lang) => {
@@ -54,6 +63,10 @@ export default async function handler(req, res) {
 
   let body = req.body;
     console.log('cwd', process.cwd());
+    console.log(body.mailtrap);
+
+    const transporter = (body.mailtrap) ? mailtrapTransporter : gmailTransporter;
+    const sender = (body.mailtrap) ? process.env.MAILTRAP_EMAIL_USER : process.env.EMAIL_USER;
 
     if (body.email && body.template && body.lang) {
         inline.html({
@@ -62,7 +75,7 @@ export default async function handler(req, res) {
             relativeTo: path.resolve(process.cwd(), 'public')
         }, function(err, result) {
             transporter.sendMail({
-                from: process.env.EMAIL_USER,
+                from: sender,
                 to: body.email,
                 subject: `Testing ${body.template} email template`,
                 text: "text version of email",

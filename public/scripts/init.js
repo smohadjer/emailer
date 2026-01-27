@@ -41,13 +41,15 @@ export function init() {
         document.getElementById('form').addEventListener('submit', (e) => {
             e.preventDefault();
             const email = e.target.email.value;
+            const mailtrap = e.target.mailtrap.checked;
+            console.log('mailtrap', mailtrap);
 
             fetch('api/emailer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, template, lang}),
+                body: JSON.stringify({ email, template, lang, mailtrap}),
             })
             .then(response => response.json())
             .then(data => {

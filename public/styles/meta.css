@@ -36,11 +36,6 @@
     color: #666;
 }
 
-.meta li span::after {
-    content: none;
-    margin-right: 0;
-}
-
 @media only screen and (min-width: 768px) {
     .meta li {
         padding: 0 1em;

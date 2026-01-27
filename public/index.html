@@ -21,6 +21,13 @@
             height: 100%;
             border: 0;
         }
+
+        form {
+            background: #eee;
+            padding: 0 1em 1em;
+            display: inline-block;
+            margin-bottom: 1em;
+        }
     </style>
 </head>
 <body>
@@ -61,11 +68,19 @@
             </select>
         </label>
     </p>
-    <p>Enter your email address to receive selected template as email:</p>
     <form id="form" method="post" action="api/emailer">
-        <label>Email:
-            <input type="email" name="email" value="">
-        </label>
+        <p>Enter your email address to receive selected template as email:</p>
+        <p>
+            <label>Email:
+                <input type="email" name="email" value="">
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="mailtrap" value="true">
+                Use mailtrap.io
+            </label>
+        </p>
         <button type="submit">Send Email</button>
     </form>
     <br>
