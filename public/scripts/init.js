@@ -5,9 +5,14 @@ let lang = '';
 export function init() {    
     const templateSelector =  document.querySelector('select#template');
     const langSelector =  document.querySelector('select#language');
+    const templateLink = document.querySelector('#template_link');
+
     const params = window.location.search;
     const templateParam = params ? new URLSearchParams(params).get('template') : undefined;
     const langParam = params ? new URLSearchParams(params).get('lang') : undefined;
+    const updateTemplateLink = (template, lang) => {
+        templateLink.setAttribute('href', `templates/${template}/email_${lang}.html`);
+    };
 
     if (templateParam) {
         templateSelector.value = templateParam 
@@ -23,16 +28,21 @@ export function init() {
     console.log(`Initial template: ${template}, lang: ${lang}`);
 
     renderTemplate(template, lang);
+    updateTemplateLink(template, lang);
+
+
 
     templateSelector.addEventListener('change', async (e) => {
         template = e.target.value;
         renderTemplate(template, lang);
+        updateTemplateLink(template, lang);
         updateUrlParam();
     });
 
     langSelector.addEventListener('change', async (e) => {
         lang = e.target.value;
         renderTemplate(template, lang);
+        updateTemplateLink(template, lang);
         updateUrlParam();
     });
 
