@@ -34,14 +34,14 @@ table {
 .main {
     margin: 0 auto;
     background-color: white;
-    padding: 1.5em 1em;
+    padding: 1em;
     box-sizing: border-box;
     max-width: 728px;
     border-radius: 10px;
 }
 
 .branding-header {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .section {
@@ -127,8 +127,9 @@ li span {
     padding: 0.5em 1em;
     background-color: #fdc04c;
     font-weight: 500;
-    margin: -10px auto 20px;
+    margin: 10px auto;
     max-width: 728px;;
     text-align: center;
     box-sizing: border-box;
+    border-radius: 10px;
 }

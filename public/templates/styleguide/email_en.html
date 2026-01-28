@@ -21,13 +21,13 @@
         <tr>
             <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
             <td valign="top" bgcolor="#d5d5d5">
+                {{^incident_details.incident_purview.purview_is_live}}
+                <div class="banner">
+                    {{incident_details.incident_purview.purview_label}}
+                </div>
+                {{/incident_details.incident_purview.purview_is_live}}
                 <p class="header">Do not share this email with anyone</p>
                 <div class="main">
-                    {{^incident_details.incident_purview.purview_is_live}}
-                    <div class="banner">
-                        {{incident_details.incident_purview.purview_label}}
-                    </div>
-                    {{/incident_details.incident_purview.purview_is_live}}
                     <!-- example of implementing a non-responvie image like a logo -->
                     {{#branding.email_header_image}}
                     <div class="branding-header">
