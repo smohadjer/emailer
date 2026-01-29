@@ -1,18 +1,23 @@
 
 let template = '';
 let lang = '';
+let v2 = '';
 
 export function init() {    
     const templateSelector =  document.querySelector('select#template');
     const langSelector =  document.querySelector('select#language');
     const templateLink = document.querySelector('#template_link');
+    const v2Checkbox = document.querySelector('#v2');
 
     const params = window.location.search;
     const templateParam = params ? new URLSearchParams(params).get('template') : undefined;
     const langParam = params ? new URLSearchParams(params).get('lang') : undefined;
-    const updateTemplateLink = (template, lang) => {
-        templateLink.setAttribute('href', `templates/${template}/email_${lang}.html`);
+    const updateTemplateLink = (template, lang, v2) => {
+        const folder = v2 ? 'templates_v2' : 'templates';
+        templateLink.setAttribute('href', `${folder}/${template}/email_${lang}.html`);
     };
+    const v2Param = params ? new URLSearchParams(params).get('v2') : undefined;
+
 
     if (templateParam) {
         templateSelector.value = templateParam 
@@ -22,27 +27,38 @@ export function init() {
         langSelector.value = langParam;
     }
 
+    console.log(v2Param)
+
+    v2Checkbox.checked = v2Param === 'true' ? true : false;
+
     template = templateSelector.value;
     lang = langSelector.value;
+    v2 = v2Checkbox.checked;
 
-    console.log(`Initial template: ${template}, lang: ${lang}`);
+    console.log(`Initial template: ${template}, lang: ${lang}, v2: ${v2}`);
 
-    renderTemplate(template, lang);
-    updateTemplateLink(template, lang);
+    updateTemplateLink(template, lang, v2);
 
-
+    renderTemplate(template, lang, v2);
 
     templateSelector.addEventListener('change', async (e) => {
         template = e.target.value;
-        renderTemplate(template, lang);
-        updateTemplateLink(template, lang);
+        updateTemplateLink(template, lang, v2);
+        renderTemplate(template, lang, v2);
         updateUrlParam();
     });
 
     langSelector.addEventListener('change', async (e) => {
         lang = e.target.value;
-        renderTemplate(template, lang);
-        updateTemplateLink(template, lang);
+        updateTemplateLink(template, lang, v2);
+        renderTemplate(template, lang, v2);
+        updateUrlParam();
+    });
+
+    v2Checkbox.addEventListener('change', async (e) => {
+        v2 = e.target.checked;
+        updateTemplateLink(template, lang, v2);
+        renderTemplate(template, lang, v2);
         updateUrlParam();
     });
 
@@ -59,7 +75,7 @@ export function init() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, template, lang, mailtrap}),
+                body: JSON.stringify({ email, template, lang, mailtrap, v2}),
             })
             .then(response => response.json())
             .then(data => {
@@ -71,21 +87,11 @@ export function init() {
             });
         });
     }
-
-    const toggle = document.querySelector('a.toggle');
-    // switch between original and modified templates while preserving template selection
-    toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        const param = new URLSearchParams(window.location.search).get('template');
-        const url = new URL(toggle.href);
-        url.searchParams.set('template', param);
-        window.location.href = url;
-    })
 }
 
-async function renderTemplate(templateName, lang) {
-    const folder = window.location.pathname.indexOf('original.html') > 0 ? 'templates-original' : 'templates';
-    const file = window.location.pathname.indexOf('original.html') > 0 ? './data-original.json' : `./data_${lang}.json`;
+async function renderTemplate(templateName, lang, v2) {
+    const folder = v2 ? 'templates_v2' : 'templates';
+    const file = v2 ? './data_v2.json' : `./data_${lang}.json`;
     const data = await fetch(file).then(res => res.json());
     const template = await fetch(`./${folder}/${templateName}/email_${lang}.html`).then(res => res.text());
     const rendered = Mustache.render(template, data);
@@ -97,5 +103,6 @@ function updateUrlParam() {
     const url = new URL(window.location.href);
     url.searchParams.set('template', template);
     url.searchParams.set('lang', lang);
+    url.searchParams.set('v2', v2);
     window.history.replaceState({}, "", url);
 }

@@ -31,7 +31,6 @@
     </style>
 </head>
 <body>
-    <p><a class="toggle" href="original.html">Original Template</a></p>
     <p>
         <label>Select template:
         <select id="template">
@@ -61,6 +60,8 @@
             <option value="styleguide">StyleGuide</option>
         </select>
         </label>
+    </p>
+    <p>
         <label>Select language:
             <select id="language">
                 <option value="en">English</option>
@@ -68,6 +69,7 @@
             </select>
         </label>
     </p>
+    <p><label><input id="v2" type="checkbox" name="v2" /> Use V2 templates</label></p>
     <p><a id="template_link" target="_blank" href="">Open selected Mustache template in a new tab</a></p>
     <form id="form" method="post" action="api/emailer">
         <p>Enter your email address to receive selected template as email:</p>

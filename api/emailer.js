@@ -3,6 +3,7 @@ import path from 'path';
 import Mustache from 'mustache';
 import data_en from "../public/data_en.json" with { type: "json" };
 import data_ar from "../public/data_ar.json" with { type: "json" };
+import data_v2 from "../public/data_v2.json" with { type: "json" };
 import nodemailer from 'nodemailer';
 import inline from 'web-resource-inliner';
 import dotenv from 'dotenv';
@@ -28,10 +29,12 @@ const mailtrapTransporter = nodemailer.createTransport({
   }
 });
 
-const renderEmail = (template, lang) => {
-    const templatePath = path.join(process.cwd(), `public/templates/${template}/email_${lang}.html`);
+const renderEmail = (template, lang, v2) => {
+    const folder = v2 ? 'templates_v2' : 'templates';
+    const templatePath = path.join(process.cwd(), `public/${folder}/${template}/email_${lang}.html`);
     const templateData = fs.readFileSync(templatePath, 'utf8');
-    const data = lang === 'ar' ? data_ar : data_en;
+    const data = v2 ? data_v2 :
+        lang === 'ar' ? data_ar : data_en;
     const renderedEmail = Mustache.render(templateData, data);
     return renderedEmail;
 }
@@ -40,7 +43,9 @@ export default async function handler(req, res) {
   if (req.method !== "POST") {
     const template = req.query.template;
     const lang = req.query.lang || 'en';
-    const email = renderEmail(template, lang);
+    const v2 = req.query.v2 || false;
+    console.log(v2);
+    const email = renderEmail(template, lang, v2);
     inline.html({
         fileContent: email,
         images: false,
@@ -64,13 +69,14 @@ export default async function handler(req, res) {
   let body = req.body;
     console.log('cwd', process.cwd());
     console.log(body.mailtrap);
+    console.log('version', body.v2)
 
     const transporter = (body.mailtrap) ? mailtrapTransporter : gmailTransporter;
     const sender = (body.mailtrap) ? process.env.MAILTRAP_EMAIL_USER : process.env.EMAIL_USER;
 
     if (body.email && body.template && body.lang) {
         inline.html({
-            fileContent: renderEmail(body.template, body.lang),
+            fileContent: renderEmail(body.template, body.lang, body.v2),
             images: false,
             relativeTo: path.resolve(process.cwd(), 'public')
         }, function(err, result) {
