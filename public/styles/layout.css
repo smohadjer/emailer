@@ -44,6 +44,11 @@ table {
     margin-bottom: 1em;
 }
 
+.branding-header,
+.branding-footer {
+    max-width: 700px;
+}
+
 .section {
     margin: 2em 0;
     width: 100%;

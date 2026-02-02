@@ -7,7 +7,7 @@
     text-align: left;
 }
 
-.meta li {
+.meta p {
     font-weight: bold;
     text-align: left;
     line-height: 1.2;
@@ -16,20 +16,23 @@
     font-size: 13px;
 }
 
-[dir=rtl] .meta li {
+[dir=rtl] .meta p {
     text-align: right;
 }
 
-.meta li + li {
+.meta p + p {
     border-left: dotted 1px #999;
+    padding-left: 0.75em;
 }
 
-[dir=rtl] .meta li + li {
+[dir=rtl] .meta p + p {
     border-left: none;
     border-right: dotted 1px #999;
+    padding-left: 0.5em;
+    padding-right: 0.75em;
 }
 
-.meta li span {
+.meta p span {
     display: block;
     font-size: 11px;
     font-weight: 500;
@@ -37,12 +40,21 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .meta li {
+    .meta p {
         padding: 0 1em;
         font-size: 14px;
     }
 
-    .meta li span {
+    .meta p + p {
+        padding-left: 1.25em;
+    }
+
+    [dir=rtl] .meta p + p {
+        padding-left: 1em;
+        padding-right: 1.25em;
+    }
+
+    .meta p span {
         font-size: 12px;    
     }
 }

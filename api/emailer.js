@@ -31,7 +31,7 @@ const mailtrapTransporter = nodemailer.createTransport({
 
 const renderEmail = (template, lang, v2) => {
     const folder = v2 ? 'templates_v2' : 'templates';
-    const templatePath = path.join(process.cwd(), `public/${folder}/${template}/email_${lang}.html`);
+    const templatePath = path.join(process.cwd(), `public/${folder}/${template}/email.html`);
     const templateData = fs.readFileSync(templatePath, 'utf8');
     const data = v2 ? data_v2 :
         lang === 'ar' ? data_ar : data_en;
