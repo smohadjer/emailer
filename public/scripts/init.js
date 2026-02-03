@@ -14,7 +14,8 @@ export function init() {
     const langParam = params ? new URLSearchParams(params).get('lang') : undefined;
     const updateTemplateLink = (template, lang, v2) => {
         const folder = v2 ? 'templates_v2' : 'templates';
-        templateLink.setAttribute('href', `${folder}/${template}/email.html`);
+        const filename = v2 ? `email_${lang}.html` : 'email.html';
+        templateLink.setAttribute('href', `${folder}/${template}/${filename}`);
     };
     const v2Param = params ? new URLSearchParams(params).get('v2') : undefined;
 
@@ -92,8 +93,9 @@ export function init() {
 async function renderTemplate(templateName, lang, v2) {
     const folder = v2 ? 'templates_v2' : 'templates';
     const file = v2 ? './data_v2.json' : `./data_${lang}.json`;
+    const filename = v2 ? `email_${lang}.html` : 'email.html';
     const data = await fetch(file).then(res => res.json());
-    const template = await fetch(`./${folder}/${templateName}/email.html`).then(res => res.text());
+    const template = await fetch(`./${folder}/${templateName}/${filename}`).then(res => res.text());
     const rendered = Mustache.render(template, data);
     document.querySelector('iframe').srcdoc = rendered;
 }
