@@ -40,8 +40,20 @@ table {
     border-radius: 10px;
 }
 
+@media only screen and (min-width: 768px) {
+    .main {
+        padding: 2em;
+    }
+}
+
 .branding-header {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+    .branding-header {
+        margin-bottom: 1em;
+    }
 }
 
 .branding-header,

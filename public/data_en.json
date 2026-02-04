@@ -13,7 +13,7 @@
     "branding": {
         "email_header_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 140
+            "width": 150
         },  
         "email_footer_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/sun_s.png"
