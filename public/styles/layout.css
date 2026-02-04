@@ -114,11 +114,6 @@ li span {
     text-align: center;
 }
 
-.footer span,
-.footer img {
-    vertical-align: middle;
-}
-
 .header a,
 .footer a {
     color: #555;
