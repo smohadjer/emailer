@@ -9,7 +9,7 @@
     font-size: 16px;
     display: inline-block;
     text-align: center;
-    background-color: #3671e7;
+    background-color: #1742DD;
     color: white;
     padding: 0.55em 1.5em;
     text-decoration: none;
@@ -19,10 +19,6 @@
 
 .cta a + a {
     margin-top: 1em;
-}
-
-.cta a.button:hover {
-    background-color: #1742DD;
 }
 
 .cta--background {

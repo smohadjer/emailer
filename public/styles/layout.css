@@ -134,6 +134,7 @@ li span {
 .banner {
     padding: 0.5em 1em;
     background-color: #fdc04c;
+    color: #333;
     font-weight: 500;
     margin: 10px auto;
     max-width: 728px;;
