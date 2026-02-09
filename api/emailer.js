@@ -1,9 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import Mustache from 'mustache';
-import data_en from "../public/data_en.json" with { type: "json" };
-import data_ar from "../public/data_ar.json" with { type: "json" };
-import data_v2 from "../public/data_v2.json" with { type: "json" };
 import nodemailer from 'nodemailer';
 import inline from 'web-resource-inliner';
 import dotenv from 'dotenv';
@@ -31,10 +28,12 @@ const mailtrapTransporter = nodemailer.createTransport({
 
 const renderEmail = (template, lang, v2) => {
     const folder = v2 ? 'templates_v2' : 'templates';
+    const dataPath = v2 ? path.join(process.cwd(), `public/data_v2.json`) :
+        lang === 'ar' ? path.join(process.cwd(), `public/${folder}/${template}/data_ar.json`) :
+        path.join(process.cwd(), `public/${folder}/${template}/data_en.json`);
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
     const templatePath = path.join(process.cwd(), `public/${folder}/${template}/email.html`);
     const templateData = fs.readFileSync(templatePath, 'utf8');
-    const data = v2 ? data_v2 :
-        lang === 'ar' ? data_ar : data_en;
     const renderedEmail = Mustache.render(templateData, data);
     return renderedEmail;
 }
