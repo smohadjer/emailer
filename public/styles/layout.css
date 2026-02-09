@@ -142,3 +142,11 @@ li span {
     box-sizing: border-box;
     border-radius: 10px;
 }
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.footer .nowrap {
+    font-weight: 600;
+}
