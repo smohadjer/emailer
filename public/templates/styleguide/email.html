@@ -4,40 +4,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Important {{incident_details.incident_type.type_label}} Notification from
-        {{incident_details.initiating_company}}</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/listing.css" />
-    <link rel="stylesheet" href="styles/user-content.css" />
     <link rel="stylesheet" href="styles/cta.css" />
     <link rel="stylesheet" href="styles/meta.css" />
+    <link rel="stylesheet" href="styles/user-content.css" />
+    <link rel="stylesheet" href="styles/listing.css" />
     <link rel="stylesheet" href="styles/pin.css" />
     <link rel="stylesheet" href="styles/table.css" />
+    <!--[if mso]>
+        <style>
+            .mso_table_banner,
+            .mso_table_footer {
+                border-collapse: collapse;
+                max-width: 756px;
+                margin-bottom: 0;
+            }
+
+            .mso_table_banner td {
+                padding: 0.25em 0;
+                background: #fdc04c;
+            }
+
+            .header {
+                margin: 0;
+            }
+
+            .footer {
+                margin-bottom: 15px;
+            }
+
+            .mso_table_main {
+                border-collapse: collapse;
+                max-width: 728px;
+                margin-bottom: 0;
+            }            
+
+            .mso_table_main td {
+                background: yellow;
+                padding: 14px;
+            }
+
+            .main {
+                margin: 0;
+                padding: 0;
+                max-width: none;
+                border-radius: 0;
+            }
+
+
+            .mso_table_cta td {
+                padding: 0.1em 1.5em;
+                background: #3671e7;
+                text-align: center;
+            }
+
+            .meta p {
+                text-align: right;
+                font-size: 12px;
+                color: #333333
+            }
+
+            .meta p span {
+                font-weight: bold;
+                font-size: 12px;
+                color: #333333v
+            }
+        </style>
+    <![endif]-->
   </head>
-  <body>
-    <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from
-        {{incident_details.initiating_company}}</span>
+    <span class="preheader">{{title}}</span>
     <table class="body" width="100%" cellpadding="0" cellspacing="0">
         <tr>
             <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
-            <td valign="top" bgcolor="#d5d5d5">
+            <td {{#dir}} dir="{{dir}}" class="{{dir}}" {{/dir}} valign="top" bgcolor="#d5d5d5">
+                <!--[if mso]>
+                <div style="text-align: center;">
+                <table class="mso_table_banner" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                <td>
+                <![endif]-->                
                 {{^incident_details.incident_purview.purview_is_live}}
                 <div class="banner">
                     {{incident_details.incident_purview.purview_label}}
                 </div>
                 {{/incident_details.incident_purview.purview_is_live}}
-                <p class="header">Do not share this email with anyone</p>
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                </div>
+                <![endif]-->
+
+                <p class="header">{{header}}</p>
+                <!--[if mso]>
+                <div style="text-align: center; margin: 1em 0 0;">
+                <table class="mso_table_main" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                <td>
+                <![endif]-->  
                 <div class="main">
-                    <!-- example of implementing a non-responvie image like a logo -->
                     {{#branding.email_header_image}}
                     <div class="branding-header">
                         <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="logo" />
                     </div>
                     {{/branding.email_header_image}}
-                    <ul class="meta">
-                        <li><span>Event Date</span> {{event_details.event_date}}</li>
-                        <li><span>Event ID</span> {{event_details.short_event_id}}</li>
-                    </ul>
+
+                    <div class="meta">
+                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
+                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                    </div>
                     <table class="section">
                         <tr>
                             <td>
@@ -63,10 +139,22 @@
                                     </table>
                                     <p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>
                                 </div>
+                                <!--[if mso]>
+                                <div style="text-align: center; margin: 1em 0;">
+                                <table class="mso_table_cta" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                <td>
+                                <![endif]-->
                                 <p class="cta">
-                                    <a class="button" href="{{event_link}}">View Details</a>
+                                    <a class="button" href="{{event_link}}">{{cta_label}}</a>
                                 </p>
-                                <p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
+                                <!--[if mso]>
+                                </td>
+                                </tr>
+                                </table>
+                                </div>
+                                <![endif]-->
+                                <p>{{warning}}</p>
                             </td>
                         </tr>
                     </table>
@@ -248,7 +336,7 @@
                     
                      <!-- example of implementing a responsive image -->
                     {{#branding.email_footer_image}}
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <table class="branding-footer" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <td>
                                 <img src="{{branding.email_footer_image.path}}" style="width:100%; height:auto; display:block;" alt="" />
@@ -257,20 +345,29 @@
                     </table>
                     {{/branding.email_footer_image}}
                 </div>
-
-                <table class="footer">
-                    <tr>
-                        <td>
-                            <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact 
-                            <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a>
-                            or call {{ril_corporate.support_phone}} if you need support.</p>
-                            <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
-                            <p><img width="15" height="15" src="https://emailer-psi-five.vercel.app/assets/ril.png" alt="" />
-                                <span>Powered by Recall InfoLink</span>
-                            </p>
-                        </td>
-                    </tr>
+                <!--[if mso]>
+                </td>
+                </tr>
                 </table>
+                </div>
+                <![endif]-->
+
+                <!--[if mso]>
+                <div style="text-align: center;">
+                <table class="mso_table_footer" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                <td>
+                <![endif]--> 
+                <div class="footer">
+                    {{{footer.preamble}}}
+                    <p>{{footer.copyright}}</p>
+                </div>
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                </div>
+                <![endif]-->
             </td>
             <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
         </tr>
