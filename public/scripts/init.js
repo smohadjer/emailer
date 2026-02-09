@@ -92,7 +92,8 @@ export function init() {
 
 async function renderTemplate(templateName, lang, v2) {
     const folder = v2 ? 'templates_v2' : 'templates';
-    const file = v2 ? './data_v2.json' : `./data_${lang}.json`;
+    const file = v2 ? 'data_v2.json' : `./${folder}/${templateName}/data_${lang}.json`;
+    console.log('file', file);
     const filename = v2 ? `email_${lang}.html` : 'email.html';
     const data = await fetch(file).then(res => res.json());
     const template = await fetch(`./${folder}/${templateName}/${filename}`).then(res => res.text());

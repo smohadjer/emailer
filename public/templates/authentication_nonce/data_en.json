@@ -1,0 +1,32 @@
+{ 
+    "language_code": "en",
+    "dir": "ltr",
+    "title": "Important Security Notification from Acme Corp",
+    "header": "Do not share this email with anyone",
+    "branding": {
+        "email_header_image": {
+            "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
+            "width": 150
+        },  
+        "email_footer_image": {
+            "path": "https://emailer-psi-five.vercel.app/assets/sun_s.png"
+        }
+    },
+    "nonce": "123456",
+    "incident_details": {
+        "incident_purview": {
+            "purview_is_live": false,
+            "purview_label": "Practice",
+            "purview_value": "customer_data"
+        }
+    },
+    "footer": {
+        "copyright": "Powered by Recall InfoLink",
+        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
+    },
+    "content": {
+        "para1": "Your Recall InfoLink PIN is:",
+        "para2": "Enter it in your open browser window to sign in.",
+        "para3": "If you haven't requested this email, there's nothing to worry about - you can safely ignore it."
+    }
+}

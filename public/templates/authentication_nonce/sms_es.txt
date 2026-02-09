@@ -1,1 +1,0 @@
-Tu PIN para Recall InfoLink es: {{{nonce}}}

@@ -2,7 +2,7 @@
 .pin {
     text-align: center;
     background: #F3F4F6;
-    padding: 2em 1em 3em;
+    padding: 3em 1em;
     margin: 1em 0;
     box-sizing: border-box;
 }
@@ -11,7 +11,6 @@
     font-size: 28px;
     font-weight: 400;
     letter-spacing: 0.4em;
-    margin-bottom: 0.5em;
     font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
 }
 @media only screen and (min-width: 768px) {
