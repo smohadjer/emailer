@@ -91,8 +91,6 @@ export function init() {
             e.preventDefault();
             const email = e.target.email.value;
             const mailtrap = e.target.mailtrap.checked;
-            const branded = e.target.branded.checked;
-            console.log('branded', branded);
 
             fetch('api/emailer', {
                 method: 'POST',
