@@ -8,17 +8,22 @@ export function init() {
     const templateSelector =  document.querySelector('select#template');
     const langSelector =  document.querySelector('select#language');
     const templateLink = document.querySelector('#template_link');
+    const emailLink = document.querySelector('#email_link');
     const v2Checkbox = document.querySelector('#v2');
     const brandedCheckbox = document.querySelector('#branded');
 
     const params = window.location.search;
     const templateParam = params ? new URLSearchParams(params).get('template') : undefined;
     const langParam = params ? new URLSearchParams(params).get('lang') : undefined;
-    const updateTemplateLink = (template, lang, v2) => {
+    const updateTemplateLink = (template, lang, v2, branded) => {
         const folder = v2 ? 'templates_v2' : 'templates';
         const filename = v2 ? `email_${lang}.html` : 'email.html';
         templateLink.setAttribute('href', `${folder}/${template}/${filename}`);
+
+        const href = `api/emailer?template=${template}&lang=${lang}${v2 ? `&v2=${v2}` : ''}${branded ? `&branded=${branded}` : ''}`;
+        emailLink.setAttribute('href', href);
     };
+
     const v2Param = params ? new URLSearchParams(params).get('v2') : undefined;
 
 
@@ -55,7 +60,7 @@ export function init() {
 
     langSelector.addEventListener('change', async (e) => {
         lang = e.target.value;
-        updateTemplateLink(template, lang, v2, );
+        updateTemplateLink(template, lang, v2, branded);
         renderTemplate(template, lang, v2, );
         updateUrlParam();
     });
