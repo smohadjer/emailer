@@ -3,15 +3,6 @@
     "dir": "rtl",
     "title": "إشعار أمني هام من شركة أكمي",
     "header": "لا تشارك هذه الرسالة الإلكترونية مع أي شخص.",
-    "branding": {
-        "email_header_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 150
-        },  
-        "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/sun_s.png"
-        }
-    },
     "nonce": "123456",
     "incident_details": {
         "incident_purview": {

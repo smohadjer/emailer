@@ -26,12 +26,19 @@ const mailtrapTransporter = nodemailer.createTransport({
   }
 });
 
-const renderEmail = (template, lang, v2) => {
+const renderEmail = (template, lang, v2, branded) => {
     const folder = v2 ? 'templates_v2' : 'templates';
     const dataPath = v2 ? path.join(process.cwd(), `public/data_v2.json`) :
         lang === 'ar' ? path.join(process.cwd(), `public/${folder}/${template}/data_ar.json`) :
         path.join(process.cwd(), `public/${folder}/${template}/data_en.json`);
     const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    // if branded is false, we can remove the branding section from the data to prevent it from rendering in the email. This allows us to use the same template with or without branding based on the user's choice.
+    if (!branded) {
+        if (data.branding) {
+            console.log('Removing branding from email data');
+            delete data.branding;
+        }
+    }
     const templatePath = path.join(process.cwd(), `public/${folder}/${template}/email.html`);
     const templateData = fs.readFileSync(templatePath, 'utf8');
     const renderedEmail = Mustache.render(templateData, data);
@@ -43,8 +50,8 @@ export default async function handler(req, res) {
     const template = req.query.template;
     const lang = req.query.lang || 'en';
     const v2 = req.query.v2 || false;
-    console.log(v2);
-    const email = renderEmail(template, lang, v2);
+    const branded = req.query.branded ? req.query.branded === 'true' : false;
+    const email = renderEmail(template, lang, v2, branded);
     inline.html({
         fileContent: email,
         images: false,
@@ -75,7 +82,7 @@ export default async function handler(req, res) {
 
     if (body.email && body.template && body.lang) {
         inline.html({
-            fileContent: renderEmail(body.template, body.lang, body.v2),
+            fileContent: renderEmail(body.template, body.lang, body.v2, body.branded),
             images: false,
             relativeTo: path.resolve(process.cwd(), 'public')
         }, function(err, result) {
