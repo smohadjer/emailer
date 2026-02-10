@@ -10,6 +10,13 @@ body, table.body {
     background-color: #d5d5d5;
 }
 
+hr {
+    margin: 2em 0;
+    height: 1px;
+    border-bottom: none;
+    border-top: solid 1px #ccc;
+}
+
 /* table-layout: fixed allows us to use tables with many columns in email without losing responsive behaviour on small devices */
 table.body {
     table-layout: fixed;
@@ -125,6 +132,11 @@ li span {
 
 .footer {
     margin-top: 10px;
+}
+
+.footer hr {
+    margin: 1em 0;
+    border-top: 1px solid #aaa;
 }
 
 .header {
