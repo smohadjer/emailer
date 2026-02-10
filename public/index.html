@@ -32,7 +32,7 @@
 </head>
 <body>
     <p>
-        <label>Select template:
+        <label>Template:
         <select id="template">
             <option value="authentication_nonce">authentication_nonce</option>
             <option value="client_cc">client_cc</option>
@@ -62,31 +62,27 @@
         </label>
     </p>
     <p>
-        <label>Select language:
+        <label>Language:
             <select id="language">
                 <option value="en">English</option>
                 <option value="ar">Arabic</option>
             </select>
         </label>
-    </p>
-    <p>
-        <label><input id="v2" type="checkbox" name="v2" /> Use V2 templates</label>
+        <label  style="margin-left: 1em;"><input id="v2" type="checkbox" name="v2" />Original version</label>
         <label style="margin-left: 1em;">
             <input type="checkbox" name="branded" id="branded" value="true">
             Use branding (if available)
         </label>
     </p>
-    <p><a id="template_link" target="_blank" href="">Open selected Mustache template in a new tab</a></p>
-    <p><a id="email_link" target="_blank" href="">Open email in a browser tab</a></p>
+    <p><a id="template_link" target="_blank" href="">Open Mustache template in a new tab</a></p>
+    <p><a id="email_link" target="_blank" href="">Open email in a new tab</a></p>
     <form id="form" method="post" action="api/emailer">
         <p>Enter your email address to receive selected template as email:</p>
         <p>
             <label>Email:
                 <input type="email" name="email" value="">
             </label>
-        </p>
-        <p>
-            <label>
+            <label style="margin-left: 1em;">
                 <input type="checkbox" name="mailtrap" value="true">
                 Use mailtrap.io
             </label>
