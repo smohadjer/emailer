@@ -23,7 +23,7 @@ table.listing td:first-child {
     padding-right: 1em;
 }
 
-table.listing tr:nth-child(odd) td {
+table.listing tr.alt td {
     background: #F3F4F6;
 }
 

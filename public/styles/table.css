@@ -16,7 +16,7 @@
         vertical-align: top;
 }
 
-.table tr:nth-child(even) td {
+.table tr.alt td {
     background: #F3F4F6;
 }
 

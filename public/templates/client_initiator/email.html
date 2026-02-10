@@ -128,7 +128,7 @@
                                         <td>Event Name</td>
                                         <td>{{event_details.event_name}}</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="alt">
                                         <td>Event Type</td>
                                         <td>{{event_details.event_type.type_label}}</td>
                                     </tr>
@@ -146,12 +146,12 @@
                                         <td>Incident Name</td>
                                         <td>{{incident_details.incident_name}}</td>
                                     </tr>
-                                    <tr>
+                                     <tr class="alt">
                                         <td>Incident Type</td>
                                         <td>{{incident_details.incident_type.type_label}}</td>
                                     </tr>
                                     <tr>
-                                    <td>Area of Concern</td>
+                                        <td>Area of Concern</td>
                                         <td>
                                             {{#incident_details.has_concern_area}}{{incident_details.concern_area.area_label}}{{/incident_details.has_concern_area}}
                                             {{^incident_details.has_concern_area}}-{{/incident_details.has_concern_area}}
@@ -171,7 +171,7 @@
                                         <td>Company</td>
                                         <td>{{incident_details.initiating_company}}</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="alt">
                                         <td>Initiated at</td>
                                         <td>{{event_details.initiated_at.value}}</td>
                                     </tr>
@@ -193,7 +193,7 @@
                                         <td>Initiated at</td>
                                         <td>{{wave_details.initiated_at.value}}</td>
                                     </tr>
-                                    <tr>
+                                     <tr class="alt">
                                         <td>Created by</td>
                                         <td>{{client_wave_details.created_by.name_initials}}</td>
                                     </tr>
@@ -201,7 +201,7 @@
                                         <td>Schedule</td>
                                         <td>{{client_wave_details.communication_schedule.schedule_name.value}}</td>
                                     </tr>
-                                    <tr>
+                                    <tr class="alt">
                                         <td>Scope</td>
                                         <td>{{client_wave_details.communication_schedule.schedule_scope.value}}</td>
                                     </tr>
@@ -221,7 +221,7 @@
                                         <td>{{trade_item_count}}</td>
                                     </tr>
                                     {{/has_trade_items}}
-                                    <tr>
+                                    <tr class="alt">
                                         <td>Number of Distribution Points</td>
                                         <td>{{distribution_point_count}}</td>
                                     </tr>
