@@ -35,8 +35,6 @@ export function init() {
         langSelector.value = langParam;
     }
 
-    console.log(v2Param)
-
     v2Checkbox.checked = v2Param === 'true' ? true : false;
     brandedCheckbox.checked = v2Param === 'true' ? true : false;
 
@@ -59,10 +57,18 @@ export function init() {
     });
 
     langSelector.addEventListener('change', async (e) => {
-        lang = e.target.value;
-        updateTemplateLink(template, lang, v2, branded);
-        renderTemplate(template, lang, v2, );
-        updateUrlParam();
+        const newLang = e.target.value;
+        const rendered = await renderTemplate(template, newLang, v2, );
+        if (rendered) {
+            lang = newLang;
+            updateTemplateLink(template, lang, v2, branded);
+            updateUrlParam();
+        } else {
+            // if rendering failed (most likely due to missing data file for the selected language), we can revert the language selection back to the previous value to prevent broken template rendering and links.
+            console.log(lang);
+            langSelector.value = lang;
+
+        }
     });
 
     v2Checkbox.addEventListener('change', async (e) => {
@@ -111,17 +117,25 @@ async function renderTemplate(templateName, lang, v2) {
     const folder = v2 ? 'templates_v2' : 'templates';
     const file = v2 ? 'data_v2.json' : `./${folder}/${templateName}/data_${lang}.json`;
     const filename = v2 ? `email_${lang}.html` : 'email.html';
-    const data = await fetch(file).then(res => res.json());
+    const data = await fetch(file).then(res => res.json()).catch(error => {
+        alert('Specified language data file not found.');
+        return null;
+    });
+
     // if branded is false, we can remove the branding section from the data to prevent it from rendering in the email. This allows us to use the same template with or without branding based on the user's choice.
     if (!branded) {
-        if (data.branding) {
+        if (data && data.branding) {
             console.log('Removing branding from email data');
             delete data.branding;
         }
     }
-    const template = await fetch(`./${folder}/${templateName}/${filename}`).then(res => res.text());
-    const rendered = Mustache.render(template, data);
-    document.querySelector('iframe').srcdoc = rendered;
+
+    if (data) {
+        const template = await fetch(`./${folder}/${templateName}/${filename}`).then(res => res.text());
+        const rendered = Mustache.render(template, data);
+        document.querySelector('iframe').srcdoc = rendered;
+        return true;
+    }
 }
 
 function updateUrlParam() {

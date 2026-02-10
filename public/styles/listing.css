@@ -1,3 +1,10 @@
+table.listing  {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 1px #ddd;
+    border-radius: 0.375rem;
+}
+
 table.listing th {
     padding-right: 1em;
     line-height: 1.2;
@@ -12,7 +19,6 @@ table.listing td {
 }
 
 table.listing td:first-child {
-    font-weight: 700;
     width: 15ch;
     padding-right: 1em;
 }

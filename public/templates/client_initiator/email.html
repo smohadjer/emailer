@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{language_code}}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/meta.css" />
+    <link rel="stylesheet" href="styles/listing.css" />
+    <!--[if mso]>
+        <style>
+            .mso_table_banner,
+            .mso_table_footer {
+                border-collapse: collapse;
+                max-width: 756px;
+                margin-bottom: 0;
+            }
+
+            .mso_table_banner td {
+                padding: 0.25em 0;
+                background: #fdc04c;
+            }
+
+            .header {
+                margin: 0;
+            }
+
+            .footer {
+                margin-bottom: 15px;
+            }
+
+            .mso_table_main {
+                border-collapse: collapse;
+                max-width: 728px;
+                margin-bottom: 0;
+            }            
+
+            .mso_table_main td {
+                background: yellow;
+                padding: 14px;
+            }
+
+            .main {
+                margin: 0;
+                padding: 0;
+                max-width: none;
+                border-radius: 0;
+            }
+
+
+            .mso_table_cta td {
+                padding: 0.1em 1.5em;
+                background: #3671e7;
+                text-align: center;
+            }
+
+            .meta p {
+                text-align: right;
+                font-size: 12px;
+                color: #333333
+            }
+
+            .meta p span {
+                font-weight: bold;
+                font-size: 12px;
+                color: #333333v
+            }
+        </style>
+    <![endif]-->
+  </head>
+    <span class="preheader">{{title}}</span>
+    <table class="body" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
+            <td {{#dir}} dir="{{dir}}" class="{{dir}}" {{/dir}} valign="top" bgcolor="#d5d5d5">
+                <!--[if mso]>
+                <div style="text-align: center;">
+                <table class="mso_table_banner" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                <td>
+                <![endif]-->                
+                {{^incident_details.incident_purview.purview_is_live}}
+                <div class="banner">
+                    {{incident_details.incident_purview.purview_label}}
+                </div>
+                {{/incident_details.incident_purview.purview_is_live}}
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                </div>
+                <![endif]-->
+
+                <p class="header">{{header}}</p>
+                <!--[if mso]>
+                <div style="text-align: center; margin: 1em 0 0;">
+                <table class="mso_table_main" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                <td>
+                <![endif]-->  
+                <div class="main">
+                    {{#branding.email_header_image}}
+                    <div class="branding-header">
+                        <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="logo" />
+                    </div>
+                    {{/branding.email_header_image}}
+
+                    <div class="meta">
+                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
+                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                    </div>
+                    <table class="section">
+                        <tr>
+                            <td>
+                                <p>Event #{{event_details.short_event_id}} has been successfully initiated:<br />
+                                    <a href="{{event_link}}">{{event_link}}</a></p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="section">
+                        <tr>
+                            <td>
+                                <h2>Event Information</h2>
+                                <table class="listing">
+                                    <tr>
+                                        <td>Event Name</td>
+                                        <td>{{event_details.event_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Event Type</td>
+                                        <td>{{event_details.event_type.type_label}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="section">
+                        <tr>
+                            <td>
+                                <h2>Incident Information</h2>
+                                <table class="listing">
+                                    <tr>
+                                        <td>Incident Name</td>
+                                        <td>{{incident_details.incident_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Incident Type</td>
+                                        <td>{{incident_details.incident_type.type_label}}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Area of Concern</td>
+                                        <td>
+                                            {{#incident_details.has_concern_area}}{{incident_details.concern_area.area_label}}{{/incident_details.has_concern_area}}
+                                            {{^incident_details.has_concern_area}}-{{/incident_details.has_concern_area}}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="section">
+                        <tr>
+                            <td>
+                                <h2>Initiator Information</h2>
+                                <table class="listing">
+                                    <tr>
+                                        <td>Company</td>
+                                        <td>{{incident_details.initiating_company}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Initiated at</td>
+                                        <td>{{event_details.initiated_at.value}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created by</td>
+                                        <td>{{client_event_details.created_by.name_initials}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="section">
+                        <tr>
+                            <td>
+                                <h2>Wave Information</h2>
+                                <table class="listing">
+                                    <tr>
+                                        <td>Initiated at</td>
+                                        <td>{{wave_details.initiated_at.value}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created by</td>
+                                        <td>{{client_wave_details.created_by.name_initials}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Schedule</td>
+                                        <td>{{client_wave_details.communication_schedule.schedule_name.value}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Scope</td>
+                                        <td>{{client_wave_details.communication_schedule.schedule_scope.value}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="section">
+                        <tr>
+                            <td>
+                                <h2>Event Statistics</h2>
+                                <table class="listing">
+                                    {{#has_trade_items}}
+                                    <tr>
+                                        <td>Number of Trade Items</td>
+                                        <td>{{trade_item_count}}</td>
+                                    </tr>
+                                    {{/has_trade_items}}
+                                    <tr>
+                                        <td>Number of Distribution Points</td>
+                                        <td>{{distribution_point_count}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                     <!-- example of implementing a responsive image -->
+                    {{#branding.email_footer_image}}
+                    <table class="branding-footer" width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                                <img src="{{branding.email_footer_image.path}}" style="width:100%; height:auto; display:block;" alt="" />
+                            </td>
+                        </tr>
+                    </table>
+                    {{/branding.email_footer_image}}
+                </div>
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                </div>
+                <![endif]-->
+
+                <!--[if mso]>
+                <div style="text-align: center;">
+                <table class="mso_table_footer" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                <td>
+                <![endif]--> 
+                <div class="footer">
+                    {{{footer.preamble}}}
+                    <p>{{footer.copyright}}</p>
+                </div>
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                </div>
+                <![endif]-->
+            </td>
+            <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
+        </tr>
+    </table>
+</body>
+</html>
