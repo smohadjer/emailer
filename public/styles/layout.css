@@ -135,8 +135,12 @@ ul, ol {
     padding-left: 2em;
 }
 
-li span {
-    font-weight: 700;
+li {
+    margin: 5px 0 0;
+}
+
+li p {
+    margin: 0;
 }
 
 .header,
