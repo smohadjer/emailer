@@ -19,7 +19,7 @@
             "width": 150
         },  
         "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/sun_s.png"
+            "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
         }
     },
     "event_details": {

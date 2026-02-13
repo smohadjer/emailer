@@ -11,10 +11,14 @@ export function init() {
     const emailLink = document.querySelector('#email_link');
     const originalCheckbox = document.querySelector('#original');
     const brandedCheckbox = document.querySelector('#branded');
+    const form = document.getElementById('form');
 
     const params = window.location.search;
     const templateParam = params ? new URLSearchParams(params).get('template') : undefined;
     const langParam = params ? new URLSearchParams(params).get('lang') : undefined;
+    const brandedParam = params ? new URLSearchParams(params).get('branded') : undefined;
+    const originalParam = params ? new URLSearchParams(params).get('original') : undefined;
+
     const updateTemplateLink = (template, lang, original, branded) => {
         const folder = original ? 'templates_original' : 'templates';
         const filename = original ? `email_${lang}.html` : 'email.html';
@@ -24,9 +28,6 @@ export function init() {
         emailLink.setAttribute('href', href);
     };
 
-    const originalParam = params ? new URLSearchParams(params).get('original') : undefined;
-
-
     if (templateParam) {
         templateSelector.value = templateParam 
     }
@@ -35,18 +36,18 @@ export function init() {
         langSelector.value = langParam;
     }
 
+    if (brandedParam) {
+        brandedCheckbox.checked = brandedParam === 'true' ? true : false;
+    }
+
     originalCheckbox.checked = originalParam === 'true' ? true : false;
-    brandedCheckbox.checked = originalParam === 'true' ? true : false;
 
     template = templateSelector.value;
     lang = langSelector.value;
     original = originalCheckbox.checked;
     branded = brandedCheckbox.checked;
 
-    console.log(`Initial template: ${template}, lang: ${lang}, original: ${original}`, `branded: ${branded}`);
-
     updateTemplateLink(template, lang, original, branded);
-
     renderTemplate(template, lang, original, branded);
 
     templateSelector.addEventListener('change', async (e) => {
@@ -85,7 +86,6 @@ export function init() {
         updateUrlParam();
     });
 
-    const form = document.getElementById('form');
     if (form) {
         document.getElementById('form').addEventListener('submit', (e) => {
             e.preventDefault();
