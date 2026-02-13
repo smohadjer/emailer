@@ -1,7 +1,7 @@
 
 let template = '';
 let lang = '';
-let v2 = '';
+let original = '';
 let branded = '';
 
 export function init() {    
@@ -9,22 +9,22 @@ export function init() {
     const langSelector =  document.querySelector('select#language');
     const templateLink = document.querySelector('#template_link');
     const emailLink = document.querySelector('#email_link');
-    const v2Checkbox = document.querySelector('#v2');
+    const originalCheckbox = document.querySelector('#original');
     const brandedCheckbox = document.querySelector('#branded');
 
     const params = window.location.search;
     const templateParam = params ? new URLSearchParams(params).get('template') : undefined;
     const langParam = params ? new URLSearchParams(params).get('lang') : undefined;
-    const updateTemplateLink = (template, lang, v2, branded) => {
-        const folder = v2 ? 'templates_v2' : 'templates';
-        const filename = v2 ? `email_${lang}.html` : 'email.html';
+    const updateTemplateLink = (template, lang, original, branded) => {
+        const folder = original ? 'templates_original' : 'templates';
+        const filename = original ? `email_${lang}.html` : 'email.html';
         templateLink.setAttribute('href', `${folder}/${template}/${filename}`);
 
-        const href = `api/emailer?template=${template}&lang=${lang}${v2 ? `&v2=${v2}` : ''}${branded ? `&branded=${branded}` : ''}`;
+        const href = `api/emailer?template=${template}&lang=${lang}${original ? `&original=${original}` : ''}${branded ? `&branded=${branded}` : ''}`;
         emailLink.setAttribute('href', href);
     };
 
-    const v2Param = params ? new URLSearchParams(params).get('v2') : undefined;
+    const originalParam = params ? new URLSearchParams(params).get('original') : undefined;
 
 
     if (templateParam) {
@@ -35,33 +35,33 @@ export function init() {
         langSelector.value = langParam;
     }
 
-    v2Checkbox.checked = v2Param === 'true' ? true : false;
-    brandedCheckbox.checked = v2Param === 'true' ? true : false;
+    originalCheckbox.checked = originalParam === 'true' ? true : false;
+    brandedCheckbox.checked = originalParam === 'true' ? true : false;
 
     template = templateSelector.value;
     lang = langSelector.value;
-    v2 = v2Checkbox.checked;
+    original = originalCheckbox.checked;
     branded = brandedCheckbox.checked;
 
-    console.log(`Initial template: ${template}, lang: ${lang}, v2: ${v2}`, `branded: ${branded}`);
+    console.log(`Initial template: ${template}, lang: ${lang}, original: ${original}`, `branded: ${branded}`);
 
-    updateTemplateLink(template, lang, v2, branded);
+    updateTemplateLink(template, lang, original, branded);
 
-    renderTemplate(template, lang, v2, branded);
+    renderTemplate(template, lang, original, branded);
 
     templateSelector.addEventListener('change', async (e) => {
         template = e.target.value;
-        updateTemplateLink(template, lang, v2, branded);
-        renderTemplate(template, lang, v2, branded);
+        updateTemplateLink(template, lang, original, branded);
+        renderTemplate(template, lang, original, branded);
         updateUrlParam();
     });
 
     langSelector.addEventListener('change', async (e) => {
         const newLang = e.target.value;
-        const rendered = await renderTemplate(template, newLang, v2, );
+        const rendered = await renderTemplate(template, newLang, original, );
         if (rendered) {
             lang = newLang;
-            updateTemplateLink(template, lang, v2, branded);
+            updateTemplateLink(template, lang, original, branded);
             updateUrlParam();
         } else {
             // if rendering failed (most likely due to missing data file for the selected language), we can revert the language selection back to the previous value to prevent broken template rendering and links.
@@ -71,17 +71,17 @@ export function init() {
         }
     });
 
-    v2Checkbox.addEventListener('change', async (e) => {
-        v2 = e.target.checked;
-        updateTemplateLink(template, lang, v2, branded);
-        renderTemplate(template, lang, v2, branded);
+    originalCheckbox.addEventListener('change', async (e) => {
+        original = e.target.checked;
+        updateTemplateLink(template, lang, original, branded);
+        renderTemplate(template, lang, original, branded);
         updateUrlParam();
     });
 
     brandedCheckbox.addEventListener('change', async (e) => {
         branded = e.target.checked;
-        updateTemplateLink(template, lang, v2, branded);
-        renderTemplate(template, lang, v2, branded);
+        updateTemplateLink(template, lang, original, branded);
+        renderTemplate(template, lang, original, branded);
         updateUrlParam();
     });
 
@@ -97,7 +97,7 @@ export function init() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, template, lang, mailtrap, branded, v2}),
+                body: JSON.stringify({ email, template, lang, mailtrap, branded, original}),
             })
             .then(response => response.json())
             .then(data => {
@@ -111,10 +111,10 @@ export function init() {
     }
 }
 
-async function renderTemplate(templateName, lang, v2) {
-    const folder = v2 ? 'templates_v2' : 'templates';
-    const file = v2 ? 'data_v2.json' : `./${folder}/${templateName}/data_${lang}.json`;
-    const filename = v2 ? `email_${lang}.html` : 'email.html';
+async function renderTemplate(templateName, lang, original) {
+    const folder = original ? 'templates_original' : 'templates';
+    const file = original ? 'data_original.json' : `./${folder}/${templateName}/data_${lang}.json`;
+    const filename = original ? `email_${lang}.html` : 'email.html';
     const data = await fetch(file).then(res => res.json()).catch(error => {
         alert('Specified language data file not found.');
         return null;
@@ -142,10 +142,10 @@ function updateUrlParam() {
     url.searchParams.set('template', template);
     url.searchParams.set('lang', lang);
 
-    if (v2) {
-        url.searchParams.set('v2', v2);
+    if (original) {
+        url.searchParams.set('original', original);
     } else {
-        url.searchParams.delete('v2');
+        url.searchParams.delete('original');
     }
 
     if (branded) {

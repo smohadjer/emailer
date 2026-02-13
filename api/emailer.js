@@ -26,9 +26,9 @@ const mailtrapTransporter = nodemailer.createTransport({
   }
 });
 
-const renderEmail = (template, lang, v2, branded) => {
-    const folder = v2 ? 'templates_v2' : 'templates';
-    const dataPath = v2 ? path.join(process.cwd(), `public/data_v2.json`) :
+const renderEmail = (template, lang, original, branded) => {
+    const folder = original ? 'templates_original' : 'templates';
+    const dataPath = original ? path.join(process.cwd(), `public/data_original.json`) :
         lang === 'ar' ? path.join(process.cwd(), `public/${folder}/${template}/data_ar.json`) :
         path.join(process.cwd(), `public/${folder}/${template}/data_en.json`);
     const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
@@ -39,7 +39,8 @@ const renderEmail = (template, lang, v2, branded) => {
             delete data.branding;
         }
     }
-    const templatePath = path.join(process.cwd(), `public/${folder}/${template}/email.html`);
+    const filename = original ? `email_${lang}.html` : 'email.html';
+    const templatePath = path.join(process.cwd(), 'public', folder, template, filename);
     const templateData = fs.readFileSync(templatePath, 'utf8');
     const renderedEmail = Mustache.render(templateData, data);
     return renderedEmail;
@@ -49,9 +50,9 @@ export default async function handler(req, res) {
   if (req.method !== "POST") {
     const template = req.query.template;
     const lang = req.query.lang || 'en';
-    const v2 = req.query.v2 || false;
+    const original = req.query.original || false;
     const branded = req.query.branded ? req.query.branded === 'true' : false;
-    const email = renderEmail(template, lang, v2, branded);
+    const email = renderEmail(template, lang, original, branded);
     inline.html({
         fileContent: email,
         images: false,
@@ -75,14 +76,14 @@ export default async function handler(req, res) {
   let body = req.body;
     console.log('cwd', process.cwd());
     console.log(body.mailtrap);
-    console.log('version', body.v2)
+    console.log('version', body.original)
 
     const transporter = (body.mailtrap) ? mailtrapTransporter : gmailTransporter;
     const sender = (body.mailtrap) ? process.env.MAILTRAP_EMAIL_USER : process.env.EMAIL_USER;
 
     if (body.email && body.template && body.lang) {
         inline.html({
-            fileContent: renderEmail(body.template, body.lang, body.v2, body.branded),
+            fileContent: renderEmail(body.template, body.lang, body.original, body.branded),
             images: false,
             relativeTo: path.resolve(process.cwd(), 'public')
         }, function(err, result) {
