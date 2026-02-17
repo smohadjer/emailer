@@ -7,13 +7,18 @@
     border-collapse: separate;
     margin-top: 0;
     font-size: 13px;
+    background: white;
 }
 
 .table td, 
 .table th {
-        text-align: left;
-        padding: 0.5em;
-        vertical-align: top;
+    text-align: left;
+    padding: 0.5em;
+}
+
+[dir=rtl] .table td,
+[dir=rtl] .table th {
+    text-align: right;
 }
 
 .table tr.alt td {

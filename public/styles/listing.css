@@ -1,7 +1,8 @@
 table.listing  {
     width: 100%;
     border-collapse: collapse;
-    border: solid 1px #ddd;
+    background: white;
+    margin-top: 16px;
 }
 
 table.listing th {
@@ -23,7 +24,7 @@ table.listing td:first-child {
 }
 
 table.listing tr.alt td {
-    background: #F3F4F6;
+    background: #eee;
 }
 
 

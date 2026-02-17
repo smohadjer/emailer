@@ -9,11 +9,18 @@
     "company_name": "Acme Corp", 
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
-    "header": "لا تشارك هذه الرسالة الإلكترونية مع أي شخص.",
+    "header": "<p>لا تشارك هذه الرسالة الإلكترونية مع أي شخص.</p>",
     "branding": {
+        "styles": {
+            "cta": {
+                "background": "#1742DD",
+                "color": "white",
+                "hover": "#3671e7"
+            }
+        },
         "email_header_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 140
+            "width": 150
         },  
         "email_footer_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
@@ -69,7 +76,7 @@
         "support_phone": "1 (208) 890-9169",
         "support_email": "support@recallinfolink.com",
         "name": "Recall Inc.",
-        "address": "123 Main St, Anytown, USA"
+        "address": "500 شارع إس الثامن، بويز، أيداهو 83702، الولايات المتحدة الأمريكية"
     },
     "event_link": "https://dashboard.recallinfolink.eu/",
     "wave_details": {
@@ -121,9 +128,9 @@
     "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
     "preamble": "<h1>إشعار هام بالانسحاب من شركة تيست إنك</h1><p>في مكانٍ قصيٍّ وراء جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء. يعيشون متفرقين في بوكماركسجروف على ساحل علم الدلالة، وهو محيط لغوي واسع. يجري نهر صغير يُدعى دودن بجوارهم، ويزودهم بما يلزمهم من قواعد. إنها بلادٌ أشبه بالجنة، حيث تتساقط أجزاء الجمل المحمصة في أفواههم.</p>",
     "footer": {
-        "copyright": "مدعوم من Recall InfoLink",
+        "copyright": "مدعوم من <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink, Inc.</a>",
         "preamble": "<p>تم إرسال هذه الرسالة الإلكترونية من عنوان غير مراقب. لا ترد على هذا البريد الإلكتروني. اتصل بـ <a href=\"mailto:support@ril.com\">support@ril.com</a> أو اتصل على <span class=\"nowrap\">&#x2066;1 (208) 890-9169&#x2069;</span> إذا كنت بحاجة إلى دعم.</p><p>إذا تلقيت هذا البريد الإلكتروني عن طريق الخطأ، أو إذا كنت ترغب في إلغاء الاشتراك في هذه الرسائل الإلكترونية، فيرجى تعديل <a href=\"{{notification_preferences_link}}\">تفضيلات الإشعارات</a>.</p>"
     },
-    "warning": "لقد تلقيت هذه الرسالة الإلكترونية لأنك أحد المستجيبين لعملية سحب منتجات بدأتها شركة Test Inc. لا تقم بإعادة توجيه هذه الرسالة الإلكترونية لأن الرابط يعرض معلومات مخصصة تحديدًا لـ test@example.com.",
+    "warning": "<p>لقد تلقيت هذه الرسالة الإلكترونية لأنك أحد المستجيبين لعملية سحب منتجات بدأتها شركة Test Inc. لا تقم بإعادة توجيه هذه الرسالة الإلكترونية لأن الرابط يعرض معلومات مخصصة تحديدًا لـ test@example.com.</p>",
     "cta_label": "عرض التفاصيل"
 }

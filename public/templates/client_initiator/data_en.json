@@ -9,14 +9,21 @@
     "company_name": "Acme Corp", 
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
-    "header": "Do not share this email with anyone",
+    "header": "<p>Do not share this email with anyone</p>",
     "branding": {
+        "styles": {
+            "cta": {
+                "background": "#1742DD",
+                "color": "white",
+                "hover": "#3671e7"
+            }
+        },
         "email_header_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
             "width": 150
         },  
         "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/sun_s.png"
+            "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
         }
     },
     "event_details": {
@@ -97,7 +104,7 @@
     "trade_item_count": 10,
     "distribution_point_count": 5,
     "footer": {
-        "copyright": "Powered by Recall InfoLink",
+        "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
         "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
     },
     "title": "Client Initiator Email"
