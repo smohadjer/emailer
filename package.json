@@ -2,7 +2,8 @@
     "name": "notifications",
     "type": "module",
     "scripts": {
-        "build": "echo \"No build step\""
+        "build": "echo \"No build step\"",
+        "start": "vercel dev"
     },
     "dependencies": {
         "dotenv": "^17.2.3",
