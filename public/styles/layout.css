@@ -37,6 +37,36 @@ table.body {
 table td {
     vertical-align: top;
 }
+
+.email_header {
+    margin: 0 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .email_header {
+        margin: 0;
+    }
+}
+
+.email_header table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.email_header td {
+    vertical-align: middle;
+}
+
+.user_content_header {
+    margin: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .user_content_header {
+        margin: 16px 0;
+    }
+}
+
 .main {
     margin: 0 auto;
     background-color: white;
@@ -52,19 +82,14 @@ table td {
     }
 }
 
-.branding-header {
-    margin-bottom: 1em;
-}
-
-@media only screen and (min-width: 768px) {
-    .branding-header {
-        margin-bottom: 0;
-    }
-}
-
 .branding-header,
 .branding-footer {
     max-width: 700px;
+}
+
+.branding-footer {
+    margin-top: 2em;
+    margin-bottom: 0;
     padding: 0 16px;
 }
 
@@ -75,23 +100,12 @@ table td {
     }
 }
 
-.branding-footer {
-    margin-top: 2em;
-    margin-bottom: 0;
-}
-
 .section {
     margin: 16px 0;
     width: 100%;
     table-layout: fixed;
     background: #eee;
-    padding: 0 16px 16px;
-}
-
-@media only screen and (min-width: 768px) {
-    .section {
-        padding: 0 20px 20px;
-    }
+    padding: 0 16px;
 }
 
 h1 {

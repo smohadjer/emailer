@@ -1,8 +1,8 @@
 .meta {
     text-align: right;
-    margin: 0.75em auto 2.5em;
+    /* margin: 0.75em auto 2.5em;
     font-size: 0;
-    padding: 0 16px;
+    padding: 0 16px; */
 }
 
 [dir=rtl] .meta {

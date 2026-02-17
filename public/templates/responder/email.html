@@ -57,16 +57,27 @@
                 <td>
                 <![endif]-->  
                 <div class="main">
-                    {{#branding.email_header_image}}
-                    <div class="branding-header">
-                        <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="{{company_name}}" />
+                    <div class="email_header">
+                        <table>
+                            <tr>
+                                <td>
+                                    {{#branding.email_header_image}}
+                                    <div class="branding-header">
+                                        <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="{{company_name}}" />
+                                    </div>
+                                    {{/branding.email_header_image}}
+                                </td>
+                                <td>
+                                    <div class="meta">
+                                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
+                                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    {{/branding.email_header_image}}
 
-                    <div class="meta">
-                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
-                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
-                    </div>
+                    <h4 class="user_content_header">{{user_content_header}}</h4>
 
                     <table class="section">
                         <tr>

@@ -20,7 +20,7 @@
         },
         "email_header_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 150
+            "width": 120
         },  
         "email_footer_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
@@ -125,6 +125,7 @@
         }
     },
     "nonce": "123456",
+    "user_content_header": "إشعار هام بالانسحاب من شركة تيست إنك",
     "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
     "preamble": "<h1>إشعار هام بالانسحاب من شركة تيست إنك</h1><p>في مكانٍ قصيٍّ وراء جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء. يعيشون متفرقين في بوكماركسجروف على ساحل علم الدلالة، وهو محيط لغوي واسع. يجري نهر صغير يُدعى دودن بجوارهم، ويزودهم بما يلزمهم من قواعد. إنها بلادٌ أشبه بالجنة، حيث تتساقط أجزاء الجمل المحمصة في أفواههم.</p>",
     "footer": {
