@@ -38,12 +38,6 @@ table td {
     vertical-align: top;
 }
 
-.browser_link {
-    text-align: center;
-    margin: 0 0 16px;
-    font-size: 13px;
-}
-
 .user_content_header {
     margin: 16px;
 }
@@ -185,7 +179,7 @@ li p {
 
 .header p,
 .footer p {
-    margin: 13px 0 0;
+    margin: 10px 0 0;
     font-size: 13px;
 }
 
