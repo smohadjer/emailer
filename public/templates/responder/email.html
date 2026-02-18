@@ -57,6 +57,9 @@
                 <td>
                 <![endif]-->  
                 <div class="main">
+                    {{#browser_link}}
+                    <p class="browser_link"><a href="{{browser_link.url}}">{{browser_link.text}}</a></p>
+                    {{/browser_link}}
                     <div class="meta">
                         <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
                         <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
