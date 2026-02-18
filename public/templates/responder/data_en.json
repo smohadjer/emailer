@@ -8,7 +8,7 @@
     },
     "browser_link": {
         "url": "https://recallinfolink.com/",
-        "text": "Open Email in Browser"
+        "text": "Open in Browser"
     },
     "company_name": "Acme Corp", 
     "expires_in_days": 7, 
@@ -70,7 +70,7 @@
             }
         },
         "incident_purview": {
-            "purview_is_live": false,
+            "purview_is_live": true,
             "purview_label": "Practice",
             "purview_value": "customer_data"
         }
