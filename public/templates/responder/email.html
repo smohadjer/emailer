@@ -57,56 +57,51 @@
                 <td>
                 <![endif]-->  
                 <div class="main">
-                    <div class="email_header">
-                        <table>
+                    <div class="meta">
+                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
+                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                    </div>
+
+                    {{#branding.email_header_image}}
+                    <div class="branding-header">
+                        <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="{{company_name}}" />
+                    </div>
+                    {{/branding.email_header_image}}
+
+                    <h4 class="user_content_header">{{user_content_header}}</h4>
+
+                    <div class="section_wrapper">
+                        <table class="section">
                             <tr>
                                 <td>
-                                    {{#branding.email_header_image}}
-                                    <div class="branding-header">
-                                        <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="{{company_name}}" />
+                                    <div class="user-content">
+                                        {{{preamble}}}
                                     </div>
-                                    {{/branding.email_header_image}}
-                                </td>
-                                <td>
-                                    <div class="meta">
-                                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
-                                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+
+                                    <!--[if mso]>
+                                    <div style="text-align: center; margin: 1em 0;">
+                                    <table class="mso_table_cta" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                    <td>
+                                    <![endif]-->
+                                    <p class="cta">
+                                        <a class="button" href="{{event_link}}">{{cta_label}}</a>
+                                    </p>
+                                    <!--[if mso]>
+                                    </td>
+                                    </tr>
+                                    </table>
                                     </div>
+                                    <![endif]-->
                                 </td>
                             </tr>
                         </table>
                     </div>
 
-                    <h4 class="user_content_header">{{user_content_header}}</h4>
-
-                    <table class="section">
-                        <tr>
-                            <td>
-                                <div class="user-content">
-                                    {{{preamble}}}
-                                </div>
-
-                                <!--[if mso]>
-                                <div style="text-align: center; margin: 1em 0;">
-                                <table class="mso_table_cta" role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                <td>
-                                <![endif]-->
-                                <p class="cta">
-                                    <a class="button" href="{{event_link}}">{{cta_label}}</a>
-                                </p>
-                                <!--[if mso]>
-                                </td>
-                                </tr>
-                                </table>
-                                </div>
-                                <![endif]-->
-                            </td>
-                        </tr>
-                    </table>
                     <div class="warning">
                         {{{warning}}}
                     </div>
+
                     {{#branding.email_footer_image}}
                     <table class="branding-footer" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>

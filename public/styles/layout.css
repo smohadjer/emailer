@@ -38,33 +38,8 @@ table td {
     vertical-align: top;
 }
 
-.email_header {
-    margin: 0 16px;
-}
-
-@media only screen and (min-width: 768px) {
-    .email_header {
-        margin: 0;
-    }
-}
-
-.email_header table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.email_header td {
-    vertical-align: middle;
-}
-
 .user_content_header {
     margin: 16px;
-}
-
-@media only screen and (min-width: 768px) {
-    .user_content_header {
-        margin: 16px 0;
-    }
 }
 
 .main {
@@ -78,34 +53,35 @@ table td {
 
 @media only screen and (min-width: 768px) {
     .main {
-        padding: 20px 56px;
+        padding: 20px 40px;
     }
 }
 
-.branding-header,
-.branding-footer {
-    max-width: 700px;
+.branding-header {
+    margin-top: 5px;
+    padding: 0 16px;
+}
+
+.branding-header img {
+    max-width: 500px;
 }
 
 .branding-footer {
-    margin-top: 2em;
+    max-width: 700px;
+    margin-top: 1em;
     margin-bottom: 0;
     padding: 0 16px;
 }
 
-@media only screen and (min-width: 768px) {
-    .branding-header,
-    .branding-footer {
-        padding: 0;
-    }
+.section_wrapper {
+    margin: 16px;
+    background: #eee;
+    padding: 0 16px;
 }
 
 .section {
-    margin: 16px 0;
     width: 100%;
     table-layout: fixed;
-    background: #eee;
-    padding: 0 16px;
 }
 
 h1 {
@@ -146,6 +122,7 @@ p {
 h1, h2, h3, h4, h5, p {
     text-wrap: pretty;
     margin-bottom: 0;
+    line-height: 1.5;
 }
 
 a {
@@ -174,12 +151,6 @@ li p {
 .warning p {
     font-size: 13px;
     font-style: italic;
-}
-
-@media only screen and (min-width: 768px) {
-    .warning {
-        padding: 0;
-    }
 }
 
 .header,
