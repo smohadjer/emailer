@@ -11,7 +11,6 @@
         "url": "https://recallinfolink.com/",
         "text": "Open in Browser"
     },
-    "company_name": "Acme Corp", 
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
     "branding": {
@@ -22,13 +21,9 @@
                 "hover": "#3671e7"
             }
         },
-        "email_header_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 120
-        },  
-        "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
-        }
+        "company_name": "Acme Corp", 
+        "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
+        "email_footer_image": "https://emailer-psi-five.vercel.app/assets/sun.png"
     },
     "event_details": {
         "event_name": "event_name",
@@ -42,6 +37,9 @@
             "type_label_l10n": {
                 "fr_CA": "étiquette_de_type_d'événement"
             }
+        },
+        "initiated_date": {
+            "value": "01/22/2026"
         },
         "initiated_ago": {
             "value": "initiated_ago_value"

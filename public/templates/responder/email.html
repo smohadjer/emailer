@@ -65,15 +65,15 @@
                 <![endif]-->  
                 <div class="main">
                     <div class="meta">
-                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.event_date}}</p>
+                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
                         <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
                     </div>
 
-                    {{#branding.email_header_image}}
+                    {{#branding.email_client_logo}}
                     <div class="branding-header">
-                        <img style="width: {{branding.email_header_image.width}}px; height: auto; display: block;" width="{{branding.email_header_image.width}}" src="{{branding.email_header_image.path}}" alt="{{company_name}}" />
+                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{branding.company_name}}">
                     </div>
-                    {{/branding.email_header_image}}
+                    {{/branding.email_client_logo}}
 
                     <h4 class="content_header">{{header}}</h4>
 
@@ -111,12 +111,12 @@
 
                     {{#branding.email_footer_image}}
                     <table class="branding-footer" width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
+                        <tbody><tr>
                             <td>
-                                <img src="{{branding.email_footer_image.path}}" style="width:100%; height:auto; display:block;" alt="" />
+                                <img src="{{branding.email_footer_image}}" style="width:100%; height:auto; display:block;" alt="">
                             </td>
                         </tr>
-                    </table>
+                    </tbody></table>
                     {{/branding.email_footer_image}}
                 </div>
                 <!--[if mso]>
