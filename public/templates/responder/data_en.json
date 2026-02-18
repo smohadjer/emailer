@@ -70,7 +70,7 @@
             }
         },
         "incident_purview": {
-            "purview_is_live": true,
+            "purview_is_live": false,
             "purview_label": "Practice",
             "purview_value": "customer_data"
         }
