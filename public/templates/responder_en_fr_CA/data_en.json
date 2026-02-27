@@ -1,0 +1,158 @@
+{ 
+    "account": "account",
+    "language_code": "en",
+    "dir": "ltr",
+    "event_point_link": "event_point_link",
+    "submitted_by": {
+        "formatted_channel_value": "formatted_channel_value"
+    },
+    "warning_share": "Do not share this email with anyone. | Ne partagez pas ce courriel avec personne.",
+    "browser_link": {
+        "url": "https://recallinfolink.com/",
+        "text": "Open in Browser"
+    },
+    "browser_link_fr": {
+        "url": "https://recallinfolink.com/",
+        "text": "Ouvrir dans le navigateur"
+    },
+    "expires_in_days": 7, 
+    "invite_link": "https://example.com/invite",
+    "branding": {
+        "styles": {
+            "cta": {
+                "background": "#1742DD",
+                "color": "white",
+                "hover": "#3671e7"
+            }
+        },
+        "company_name": "Acme Corp", 
+        "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
+        "email_footer_image": "https://emailer-psi-five.vercel.app/assets/sun.png"
+    },
+    "event_details": {
+        "event_name": "event_name",
+        "short_event_id": "12345",
+        "short_event_id_label": "Event ID",
+        "short_event_id_label_fr": "ID de l'événement",
+        "event_date": "01/22/2026",
+        "event_date_label": "Event Date",
+        "event_date_label_fr": "Date de l'événement",
+        "event_type": {
+            "type_label": "Withdrawal",
+            "type_value": "event_type_value",
+            "type_label_l10n": {
+                "fr_CA": "étiquette_de_type_d'événement"
+            }
+        },
+        "initiated_date": {
+            "value": "01/22/2026"
+        },
+        "initiated_ago": {
+            "value": "initiated_ago_value"
+        },
+        "initiated_at": {
+            "value": "initiated_at_value"
+        }
+    },
+    "incident_details": {
+        "concern_area": {
+            "area_label": "Privacy",
+            "area_value": "privacy_value",
+            "area_label_l10n": {
+                "fr_CA": "Confidentialité"
+            }
+        },
+        "has_concern_area": true,
+        "incident_id": "incident_id_value",
+        "incident_name": "incident_name_value",
+        "initiating_company": "Acme Corp",
+        "incident_type": {
+            "type_label": "Security",
+            "type_value": "security_value",
+            "type_label_l10n": {
+                "fr_CA": "Sécurité"
+            }
+        },
+        "incident_purview": {
+            "purview_is_live": false,
+            "purview_label": "Practice",
+            "purview_label_l10n": {
+                "fr_CA": "Pratique"
+            },
+            "purview_value": "customer_data"
+        }
+    },
+    "channel_value": "test@example.com",
+    "ril_corporate": {
+        "support_phone": "1 (208) 890-9169",
+        "support_email": "support@recallinfolink.com",
+        "name": "Recall Inc.",
+        "address": "500 S 8th St, Boise, ID 83702, United States"
+    },
+    "event_link": "https://dashboard.recallinfolink.eu/",
+    "wave_details": {
+        "initiated_ago": {
+            "value": "20"
+        },
+        "initiated_at": {
+            "value": "25. November 2025, 12:44:11 MEZ"
+        }
+    },
+    "client_event_details": {
+        "created_by": {
+            "name_initials": "JD"
+        }
+    },
+    "client_wave_details": {
+        "communication_schedule": {
+            "schedule_id": "schedule_id_value",
+            "schedule_name": {
+                "value": "Quarterly Update"
+            },
+            "schedule_scope": {
+                "value": "Global"
+            }
+        },
+        "created_by": {
+            "full_name": "Jane Doe",
+            "name_initials": "JD"
+        }
+    },
+    "has_trade_items": true,
+    "trade_item_count": 10,
+    "distribution_point_count": 5,
+    "distribution_points_by_status": {
+        "notified": {
+            "count": 3,
+            "percentage": {"value": "50%"}
+        },
+        "accessed": {
+            "count": 2,
+            "percentage": {"value": "33%"}
+        },
+        "confirmed": {
+            "count": 1,
+            "percentage": {"value": "17%"}
+        }
+    },
+    "nonce": "123456",
+    "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
+    "header": "Important Withdrawal Notification from Test Inc",
+    "header_fr": "Avis important de retrait de Test Inc.",
+    "content": "<h1>The quick, brown fox jumps over a lazy dog.</h1><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>",
+    "content_fr": "<h1>Le renard brun et rapide saute par-dessus un chien paresseux.</h1><p>Loin derrière les montagnes de mots, loin des pays de Vokalia et Consonantia, vivent les textes aveugles. Séparés, ils vivent à Bookmarksgrove, sur la côte de la Sémantique, un vaste océan de langage.</p><p>Une petite rivière nommée Duden coule près de chez eux et leur fournit tout le nécessaire. C'est un pays paradisiaque où des bribes de phrases rôties vous tombent dans la bouche.</p>",
+    "footer": {
+        "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
+        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
+    },
+    "footer_fr": {
+        "copyright": "Propulsé par <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
+        "preamble": "<p>Ce message a été envoyé d'une adresse non surveillée. Veuillez ne pas y répondre. Contactez <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> ou appelez le <span class=\"nowrap bold\">1 (208) 890-9169</span> si vous avez besoin d'aide.</p><p>Si vous avez reçu ce courriel par erreur, ou pour vous désabonner de ces courriels, veuillez modifier vos <a href=\"\">préférences de notification</a>.</p>"
+    },
+    "warning": "<p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
+    "warning_fr": "<p>Vous recevez ce courriel parce que vous répondez à un rappel de produits lancé par Test Inc. Veuillez ne pas transférer ce courriel, car le lien affiche des informations destinées spécifiquement à test@example.com.</p>",
+
+    "cta_label": "View Details",
+    "cta_label_fr": "Voir les détails",
+    "title": "Important Security Notification from Acme Corp"
+}

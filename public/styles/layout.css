@@ -13,8 +13,10 @@ body, table.body {
 hr {
     margin: 2em 0;
     height: 1px;
-    border-bottom: none;
-    border-top: solid 1px #ccc;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: dotted 1px #999;
 }
 
 /* table-layout: fixed allows us to use tables with many columns in email without losing responsive behaviour on small devices */
@@ -167,20 +169,14 @@ li p {
     box-sizing: border-box;
 }
 
-@media only screen and (min-width: 768px) {
-    .header,
-    .footer {
-        padding: 0 56px;
-    }
+.footer > div + div {
+    border-top: dotted 1px #666;
+    padding-top: 10px;
+    margin-top: 20px;
 }
 
 .footer {
     margin-top: 10px;
-}
-
-.footer hr {
-    margin: 1em 0;
-    border-top: 1px solid #aaa;
 }
 
 .header p,
@@ -196,6 +192,28 @@ li p {
 .header a,
 .footer a {
     color: #333;
+}
+
+@media only screen and (min-width: 768px) {
+    .header,
+    .footer {
+        padding: 0 56px;
+    }
+
+    .footer > div + div {
+        border-top: 0;
+        padding-top: 0;
+        margin-top: 0;      
+    }
+
+    .footer > div {
+        padding: 0 25px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .banner {
