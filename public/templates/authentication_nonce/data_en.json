@@ -1,8 +1,18 @@
 { 
+    "account": "account",
     "language_code": "en",
     "dir": "ltr",
-    "title": "Important Security Notification from Acme Corp",
-    "header": "<p>Do not share this email with anyone</p>",
+    "event_point_link": "event_point_link",
+    "submitted_by": {
+        "formatted_channel_value": "formatted_channel_value"
+    },
+    "warning_share": "Do not share this email with anyone.",
+    "browser_link": {
+        "url": "https://recallinfolink.com/",
+        "text": "Open in Browser"
+    },
+    "expires_in_days": 7, 
+    "invite_link": "https://example.com/invite",
     "branding": {
         "styles": {
             "cta": {
@@ -11,29 +21,120 @@
                 "hover": "#3671e7"
             }
         },
-        "email_header_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 150
-        },  
-        "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
+        "company_name": "Acme Corp", 
+        "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
+        "email_footer_image": "https://emailer-psi-five.vercel.app/assets/sun.png"
+    },
+    "event_details": {
+        "event_name": "event_name",
+        "short_event_id": "12345",
+        "short_event_id_label": "Event ID",
+        "event_date": "01/22/2026",
+        "event_date_label": "Event Date",
+        "event_type": {
+            "type_label": "Withdrawal",
+            "type_value": "event_type_value",
+            "type_label_l10n": {
+                "fr_CA": "étiquette_de_type_d'événement"
+            }
+        },
+        "initiated_date": {
+            "value": "01/22/2026"
+        },
+        "initiated_ago": {
+            "value": "initiated_ago_value"
+        },
+        "initiated_at": {
+            "value": "initiated_at_value"
         }
     },
-    "nonce": "123456",
     "incident_details": {
+        "concern_area": {
+            "area_label": "Privacy",
+            "area_value": "privacy_value",
+            "area_label_l10n": {
+                "fr_CA": "Confidentialité"
+            }
+        },
+        "has_concern_area": true,
+        "incident_id": "incident_id_value",
+        "incident_name": "incident_name_value",
+        "initiating_company": "Acme Corp",
+        "incident_type": {
+            "type_label": "Security",
+            "type_value": "security_value",
+            "type_label_l10n": {
+                "fr_CA": "Sécurité"
+            }
+        },
         "incident_purview": {
             "purview_is_live": false,
             "purview_label": "Practice",
             "purview_value": "customer_data"
         }
     },
+    "channel_value": "test@example.com",
+    "ril_corporate": {
+        "support_phone": "1 (208) 890-9169",
+        "support_email": "support@recallinfolink.com",
+        "name": "Recall Inc.",
+        "address": "500 S 8th St, Boise, ID 83702, United States"
+    },
+    "event_link": "https://dashboard.recallinfolink.eu/",
+    "wave_details": {
+        "initiated_ago": {
+            "value": "20"
+        },
+        "initiated_at": {
+            "value": "25. November 2025, 12:44:11 MEZ"
+        }
+    },
+    "client_event_details": {
+        "created_by": {
+            "name_initials": "JD"
+        }
+    },
+    "client_wave_details": {
+        "communication_schedule": {
+            "schedule_id": "schedule_id_value",
+            "schedule_name": {
+                "value": "Quarterly Update"
+            },
+            "schedule_scope": {
+                "value": "Global"
+            }
+        },
+        "created_by": {
+            "full_name": "Jane Doe",
+            "name_initials": "JD"
+        }
+    },
+    "has_trade_items": true,
+    "trade_item_count": 10,
+    "distribution_point_count": 5,
+    "distribution_points_by_status": {
+        "notified": {
+            "count": 3,
+            "percentage": {"value": "50%"}
+        },
+        "accessed": {
+            "count": 2,
+            "percentage": {"value": "33%"}
+        },
+        "confirmed": {
+            "count": 1,
+            "percentage": {"value": "17%"}
+        }
+    },
+    "nonce": "123456",
+    "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
+    "header": "Use this code to verify your account",
+    "content": "<h1>The quick, brown fox jumps over a lazy dog. </h1><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>",
     "footer": {
         "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
+        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
     },
-    "content": {
-        "para1": "Your Recall InfoLink PIN is:",
-        "para2": "Enter it in your open browser window to sign in.",
-        "para3": "If you haven't requested this email, there's nothing to worry about - you can safely ignore it."
-    }
+    "warning": "<p>Your code expires in 15 minutes. If you did not request this, you can safely ignore this email.</p>",
+    "cta_label": "View Details",
+    "title": "Important Security Notification from Acme Corp"
 }

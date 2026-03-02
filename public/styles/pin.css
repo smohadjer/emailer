@@ -1,17 +1,15 @@
 
 .pin {
     text-align: center;
-    background: #fff;
-    padding: 3em 1em;
-    margin: 1em 0;
+    margin: 10px 0;
     box-sizing: border-box;
 }
 .pin span {
     display: block;
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 0.4em;
-    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    padding: 20px 0;
 }
 @media only screen and (min-width: 768px) {
     .pin {
