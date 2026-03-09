@@ -1,1 +1,0 @@
-Votre NIP de Recall InfoLink est : {{{nonce}}}

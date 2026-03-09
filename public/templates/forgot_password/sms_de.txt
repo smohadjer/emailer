@@ -1,1 +1,0 @@
-Um Ihr Passwort für Recall InfoLink zurückzusetzen, besuchen Sie bitte: {{{set_password_link}}}
