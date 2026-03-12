@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{{language_code}}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{language_code}}" {{#dir}}dir="{{dir}}"{{/dir}}>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" content="yes" />
@@ -68,12 +68,24 @@
         }
     </style>
     <![endif]-->
+    {{#branding.styles}}
+    <style>
+        .cta a.button {
+            background-color: {{branding.styles.cta.background}};
+            color: {{branding.styles.cta.color}};
+        }
+        .cta a.button:hover {
+            background-color: {{branding.styles.cta.hover}};
+        }
+    </style>
+    {{/branding.styles}}  
   </head>
+  <body>
     <span class="preheader">{{title}}</span>
     <table class="body" width="100%" cellpadding="0" cellspacing="0">
         <tr>
-            <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
-            <td {{#dir}} dir="{{dir}}" class="{{dir}}" {{/dir}} valign="top" bgcolor="#d5d5d5">
+            <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
+            <td {{#dir}} dir="{{dir}}" class="{{dir}}" {{/dir}} valign="top" bgcolor="#c5c5c5">
                 <!--[if mso]>
                 <div style="text-align: center;">
                 <table class="mso_table_banner" role="presentation" cellspacing="0" cellpadding="0" border="0">
@@ -125,7 +137,7 @@
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
-                                <td>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                     <h2>Event Information</h2>
                                     <table class="listing">
                                         <tr>
@@ -145,7 +157,7 @@
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
-                                <td>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                     <h2>Incident Information</h2>
                                     <table class="listing">
                                         <tr>
@@ -172,7 +184,7 @@
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
-                                <td>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                     <h2>Initiator Information</h2>
                                     <table class="listing">
                                         <tr>
@@ -196,7 +208,7 @@
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
-                                <td>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                     <h2>Wave Information</h2>
                                     <table class="listing">
                                         <tr>
@@ -225,7 +237,7 @@
 
                     <table class="section">
                         <tr>
-                            <td>
+                            <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                 <h2>Event Statistics</h2>
                                 <table class="listing">
                                     {{#has_trade_items}}
@@ -287,8 +299,8 @@
                 </div>
                 <![endif]-->
             </td>
-            <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
+            <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
         </tr>
     </table>
-</body>
+  </body>
 </html>

@@ -19,13 +19,9 @@
                 "hover": "#3671e7"
             }
         },
-        "email_header_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 150
-        },  
-        "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
-        }
+        "company_name": "Acme Corp", 
+        "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
+        "email_footer_image": "https://emailer-psi-five.vercel.app/assets/sun.png"
     },
     "ril_corporate": {
         "support_phone": "1 (208) 890-9169",
