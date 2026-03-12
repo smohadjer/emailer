@@ -12,9 +12,15 @@ table.listing th {
 }
 
 table.listing td {
-    padding: 0.25em 0;
+    padding: 0.25em 0.5em;
     vertical-align: top;
     line-height: 1.1;
+    border: solid 1px #999;
+    background: #e5e5e5;
+}
+
+table.listing tr.alt td {
+    background: white;
 }
 
 table.listing td p {
@@ -26,12 +32,10 @@ table.listing td:first-child {
     padding-right: 5px;
 }
 
-table.listing td:first-child:after {
-    content: ":";
-    margin-right: 5px;
+[dir=rtl] table.listing td:first-child {
+    padding-right: 0;
+    padding-left: 5px;
 }
 
-table.listing tr:last-child td {
-    border-bottom: none;
-}
+
 
