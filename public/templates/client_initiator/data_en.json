@@ -10,7 +10,6 @@
     "company_name": "Acme Corp", 
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
-    "header": "<p>Do not share this email with anyone</p>",
     "branding": {
         "styles": {
             "cta": {

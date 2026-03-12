@@ -9,10 +9,7 @@
     "company_name": "Acme Corp", 
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
-    "header": "<p>Do not share this email with anyone</p>",
-    "header_l10n": {
-        "fr_CA": "<p>Ne partagez pas cet e-mail avec qui que ce soit</p>"
-    },
+    "warning_share": "Do not share this email with anyone. | Ne partagez pas ce courriel avec personne.",
     "branding": {
         "styles": {
             "cta": {
@@ -21,32 +18,33 @@
                 "hover": "#3671e7"
             }
         },
-        "email_header_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
-            "width": 150
-        },  
-        "email_footer_image": {
-            "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
-        }
+        "company_name": "Acme Corp", 
+        "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
+        "email_footer_image": "https://emailer-psi-five.vercel.app/assets/sun.png"
+    },
+    "ril_corporate": {
+        "support_phone": "1 (208) 890-9169",
+        "support_email": "support@recallinfolink.com",
+        "name": "Recall Inc.",
+        "address": "500 S 8th St, Boise, ID 83702, United States"
     },
     "event_details": {
-        "event_name": "Test Event",
+        "event_name": "event_name",
         "short_event_id": "12345",
         "short_event_id_label": "Event ID",
-        "short_event_id_label_l10n": {
-            "fr_CA": "ID de l'événement"
-        },
+        "short_event_id_label_fr": "ID de l'événement",
         "event_date": "01/22/2026",
         "event_date_label": "Event Date",
-        "event_date_label_l10n": {
-            "fr_CA": "Date de l'événement"
-        },
+        "event_date_label_fr": "Date de l'événement",
         "event_type": {
-            "type_label": "Product Removal",
-            "type_value": "Product Removal",
+            "type_label": "Withdrawal",
+            "type_value": "event_type_value",
             "type_label_l10n": {
                 "fr_CA": "étiquette_de_type_d'événement"
             }
+        },
+        "initiated_date": {
+            "value": "01/22/2026"
         },
         "initiated_ago": {
             "value": "initiated_ago_value"
@@ -115,6 +113,8 @@
     "has_trade_items": true,
     "trade_item_count": 10,
     "distribution_point_count": 5,
+    "header": "Event 12345 has been successfully initiated:<br /><a href=\"https://dashboard.recallinfolink.eu/\">dashboard.recallinfolink.eu</a>",
+    "header_fr_CA": "L'événement n° 12345 a été lancé avec succès:<br /><a href=\"https://dashboard.recallinfolink.eu/?langTag=fr-CA\">dashboard.recallinfolink.eu</a>",
     "footer": {
         "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
         "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
