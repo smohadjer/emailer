@@ -6,6 +6,7 @@
     "submitted_by": {
         "formatted_channel_value": "formatted_channel_value"
     },
+    "warning_share": "Do not share this email with anyone.",
     "company_name": "Acme Corp", 
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
@@ -26,6 +27,12 @@
             "path": "https://emailer-psi-five.vercel.app/assets/sun.png"
         }
     },
+    "ril_corporate": {
+        "support_phone": "1 (208) 890-9169",
+        "support_email": "support@recallinfolink.com",
+        "name": "Recall Inc.",
+        "address": "500 S 8th St, Boise, ID 83702, United States"
+    },
     "event_details": {
         "event_name": "Test Event",
         "short_event_id": "12345",
@@ -38,6 +45,9 @@
             "type_label_l10n": {
                 "fr_CA": "étiquette_de_type_d'événement"
             }
+        },
+        "initiated_date": {
+            "value": "01/22/2026"
         },
         "initiated_ago": {
             "value": "initiated_ago_value"
@@ -105,7 +115,8 @@
     "distribution_point_count": 5,
     "footer": {
         "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
+        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
     },
+    "warning": "<p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
     "title": "Client Initiator Email"
 }

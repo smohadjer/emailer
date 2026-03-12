@@ -1,8 +1,7 @@
 table.listing  {
-    width: 100%;
     border-collapse: collapse;
-    background: white;
-    margin-top: 16px;
+    margin-top: 5px;
+    margin-bottom: 16px;
 }
 
 table.listing th {
@@ -13,27 +12,23 @@ table.listing th {
 }
 
 table.listing td {
-    padding: 0.5em;
+    padding: 0.25em 0;
     vertical-align: top;
-    line-height: 1.3;
+    line-height: 1.1;
 }
-
-table.listing td:first-child {
-    width: 15ch;
-    padding-right: 1em;
-}
-
-table.listing tr.alt td {
-    background: #eee;
-}
-
 
 table.listing td p {
     margin-top: 0.5em;
 }
 
-table.listing td p:first-child {
-    margin-top: 0;
+table.listing td:first-child {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+table.listing td:first-child:after {
+    content: ":";
+    margin-right: 5px;
 }
 
 table.listing tr:last-child td {
