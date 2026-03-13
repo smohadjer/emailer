@@ -1,6 +1,6 @@
 .cta {
-    margin: 1em auto;
-    padding: 1em 0;
+    margin: 16px auto 0;
+    padding: 16px 0;
     text-align: center;
     max-width: none;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 @media only screen and (min-width: 768px) {
     .cta {
-        padding: 2em 0;
+        padding: 32px 0;
     }    
 }
 
@@ -19,7 +19,7 @@
     text-align: center;
     background-color: #1742DD;
     color: white;
-    padding: 0.55em 1.5em;
+    padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 500;
@@ -29,7 +29,7 @@
 }
 
 .cta a + a {
-    margin-top: 1em;
+    margin-top: 16px;
 }
 
 .cta--background {
@@ -40,7 +40,7 @@
     font-size: 16px;
     display: block;
     text-align: center;
-    padding: 0.5em 1em;
+    padding: 8px 16px;
     font-weight: 500;
 }
 
@@ -53,6 +53,6 @@
 
     .cta a + a.button,
     .cta a + a.link {
-        margin-left: 2em;
+        margin-left: 32px;
     }
 }
