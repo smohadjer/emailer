@@ -159,9 +159,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
 
-                    <div class="section_wrapper">
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
@@ -186,9 +184,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
 
-                    <div class="section_wrapper">
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
@@ -210,9 +206,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
-                    
-                    <div class="section_wrapper">
+
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
@@ -238,29 +232,26 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
 
-                    <div class="section_wrapper">
-
-                    <table class="section">
-                        <tr>
-                            <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                <h2>Event Statistics</h2>
-                                <table class="listing">
-                                    {{#has_trade_items}}
-                                    <tr>
-                                        <td>Number of Trade Items</td>
-                                        <td>{{trade_item_count}}</td>
-                                    </tr>
-                                    {{/has_trade_items}}
-                                    <tr class="alt">
-                                        <td>Number of Distribution Points</td>
-                                        <td>{{distribution_point_count}}</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+                        <table class="section">
+                            <tr>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
+                                    <h2>Event Statistics</h2>
+                                    <table class="listing">
+                                        {{#has_trade_items}}
+                                        <tr>
+                                            <td>Number of Trade Items</td>
+                                            <td>{{trade_item_count}}</td>
+                                        </tr>
+                                        {{/has_trade_items}}
+                                        <tr class="alt">
+                                            <td>Number of Distribution Points</td>
+                                            <td>{{distribution_point_count}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
 
                     <hr>
@@ -285,9 +276,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
 
-                    <div class="section_wrapper">
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
@@ -309,80 +298,74 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
 
-                    <div class="section_wrapper">
-                    <table class="section">
-                        <tr>
-                            <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                <h2>Informations sur l'Initiateur</h2>
-                                <table class="listing">
-                                    <tr>
-                                    <td>Société</td>
-                                    <td>{{incident_details.initiating_company}}</td>
-                                    </tr>
-                                    <tr class="alt">
-                                    <td>Lancé à</td>
-                                    <td>{{event_details.initiated_at.value}}</td>
-                                    </tr>
-                                    <tr>
-                                    <td>Créé par</td>
-                                    <td>{{client_event_details.created_by.name_initials}}</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    </div>
+                        <table class="section">
+                            <tr>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
+                                    <h2>Informations sur l'Initiateur</h2>
+                                    <table class="listing">
+                                        <tr>
+                                        <td>Société</td>
+                                        <td>{{incident_details.initiating_company}}</td>
+                                        </tr>
+                                        <tr class="alt">
+                                        <td>Lancé à</td>
+                                        <td>{{event_details.initiated_at.value}}</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Créé par</td>
+                                        <td>{{client_event_details.created_by.name_initials}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
 
-                    <div class="section_wrapper">
-                    <table class="section">
-                        <tr>
-                            <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                <h2>Informations sur les vagues</h2>
-                                <table class="listing">
-                                    <tr>
-                                    <td>Lancé à</td>
-                                    <td>{{wave_details.initiated_at.value}}</td>
-                                    </tr>
-                                    <tr class="alt">
-                                    <td>Créé par</td>
-                                    <td>{{client_wave_details.created_by.name_initials}}</td>
-                                    </tr>
-                                    <tr>
-                                    <td>Calendrier</td>
-                                    <td>{{client_wave_details.communication_schedule.schedule_name.value}}</td>
-                                    </tr>
-                                    <tr class="alt">
-                                    <td>Portée</td>
-                                    <td>{{client_wave_details.communication_schedule.schedule_scope.value}}</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    </div>
+                        <table class="section">
+                            <tr>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
+                                    <h2>Informations sur les vagues</h2>
+                                    <table class="listing">
+                                        <tr>
+                                        <td>Lancé à</td>
+                                        <td>{{wave_details.initiated_at.value}}</td>
+                                        </tr>
+                                        <tr class="alt">
+                                        <td>Créé par</td>
+                                        <td>{{client_wave_details.created_by.name_initials}}</td>
+                                        </tr>
+                                        <tr>
+                                        <td>Calendrier</td>
+                                        <td>{{client_wave_details.communication_schedule.schedule_name.value}}</td>
+                                        </tr>
+                                        <tr class="alt">
+                                        <td>Portée</td>
+                                        <td>{{client_wave_details.communication_schedule.schedule_scope.value}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
 
-                    <div class="section_wrapper">
-                    <table class="section">
-                        <tr>
-                            <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                <h2>Statistiques de l'Événement</h2>
-                                <table class="listing">
-                                    {{#has_trade_items}}
-                                    <tr>
-                                    <td>Nombre d'Articles Commerciaux</td>
-                                    <td>{{trade_item_count}}</td>
-                                    </tr>
-                                    {{/has_trade_items}}
-                                    <tr class="alt">
-                                    <td>Nombre de Points de Distribution</td>
-                                    <td>{{distribution_point_count}}</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+                        <table class="section">
+                            <tr>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
+                                    <h2>Statistiques de l'Événement</h2>
+                                    <table class="listing">
+                                        {{#has_trade_items}}
+                                        <tr>
+                                        <td>Nombre d'Articles Commerciaux</td>
+                                        <td>{{trade_item_count}}</td>
+                                        </tr>
+                                        {{/has_trade_items}}
+                                        <tr class="alt">
+                                        <td>Nombre de Points de Distribution</td>
+                                        <td>{{distribution_point_count}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
 
                     <div class="warning">

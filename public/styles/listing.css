@@ -2,6 +2,7 @@ table.listing  {
     border-collapse: collapse;
     margin-top: 5px;
     margin-bottom: 16px;
+    width: 100%;
 }
 
 table.listing th {
@@ -30,6 +31,7 @@ table.listing tr.alt td {
 
 table.listing td:first-child {
     font-weight: bold;
+    width: 100px;
 }
 
 
