@@ -30,7 +30,6 @@ table.listing tr.alt td {
 }
 
 table.listing td:first-child {
-    font-weight: bold;
     width: 100px;
 }
 
