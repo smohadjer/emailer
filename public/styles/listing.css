@@ -4,6 +4,12 @@ table.listing  {
     width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+    table.listing  {
+        width: 80%;
+    }
+}
+
 table.listing th {
     padding-right: 10px;
     line-height: 1.2;
