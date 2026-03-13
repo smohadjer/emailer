@@ -16,7 +16,7 @@ table.listing td {
     vertical-align: top;
     line-height: 1.1;
     border: solid 1px #999;
-    background: #e5e5e5;
+    background: #eef3f8;
 }
 
 [dir=rtl] table.listing td {
