@@ -93,7 +93,7 @@ table td {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin: 16px 0;
 }
@@ -105,18 +105,12 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 16px 0;
-}
-
-h4 {
     font-size: 16px;
     font-weight: 600;
     margin: 16px 0;
 }
 
-h5 {
+h4 {
     font-size: 14px;
     font-weight: 600;
     margin: 16px 0;
@@ -127,7 +121,7 @@ p {
     margin: 16px 0;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, p {
     text-wrap: pretty;
     margin-bottom: 0;
     line-height: 1.5;
