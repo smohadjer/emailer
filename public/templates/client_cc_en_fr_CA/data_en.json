@@ -7,10 +7,6 @@
         "formatted_channel_value": "formatted_channel_value"
     },
     "warning_share": "Do not share this email with anyone. | Ne partagez pas ce courriel avec personne.",
-    "browser_link": {
-        "url": "https://recallinfolink.com/",
-        "text": "Open in Browser"
-    },
     "browser_link_fr": {
         "url": "https://recallinfolink.com/",
         "text": "Ouvrir dans le navigateur"
@@ -141,11 +137,11 @@
     "header_fr": "Avis important de retrait de Test Inc.",
     "footer": {
         "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
+        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error or to opt out of these emails, please contact the initiator of the event.</p>"
     },
     "footer_fr": {
         "copyright": "Propulsé par <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>Ce message a été envoyé d'une adresse non surveillée. Veuillez ne pas y répondre. Contactez <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> ou appelez le <span class=\"nowrap bold\">1 (208) 890-9169</span> si vous avez besoin d'aide.</p><p>Si vous avez reçu ce courriel par erreur, ou pour vous désabonner de ces courriels, veuillez modifier vos <a href=\"\">préférences de notification</a>.</p>"
+        "preamble": "<p>Ce message a été envoyé d'une adresse non surveillée. Veuillez ne pas y répondre. Contactez <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> ou appelez le <span class=\"nowrap bold\">1 (208) 890-9169</span> si vous avez besoin d'aide.</p><p>Si vous avez reçu ce courriel par erreur ou si vous souhaitez vous désabonner de ces courriels, veuillez contacter l'organisateur de l'événement.</p>"
     },
     "warning": "<p>You are receiving this email because Test Inc. included you in this event. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
     "warning_fr": "<p>Vous recevez ce courriel parce que Test Inc. vous a inclus dans cet événement. Veuillez ne pas le transférer, car le lien renvoie à des informations destinées exclusivement à test@example.com.</p>",
