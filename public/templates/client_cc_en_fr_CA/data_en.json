@@ -133,19 +133,19 @@
     },
     "nonce": "123456",
     "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
-    "header": "Important Withdrawal Notification from Test Inc",
-    "header_fr": "Avis important de retrait de Test Inc.",
+    "header": "Important Withdrawal Notification for Internal Users of Test Inc",
+    "header_fr": "Avis important de retrait pour les utilisateurs internes de Test Inc",
+    "title": "Important Withdrawal Notification for Internal Users of Test Inc",
     "footer": {
         "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error or to opt out of these emails, please contact the initiator of the event.</p>"
+        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error or to opt out of these emails, please view event details and reach out to the initiator of the event.</p>"
     },
     "footer_fr": {
         "copyright": "Propulsé par <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>Ce message a été envoyé d'une adresse non surveillée. Veuillez ne pas y répondre. Contactez <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> ou appelez le <span class=\"nowrap bold\">1 (208) 890-9169</span> si vous avez besoin d'aide.</p><p>Si vous avez reçu ce courriel par erreur ou si vous souhaitez vous désabonner de ces courriels, veuillez contacter l'organisateur de l'événement.</p>"
+        "preamble": "<p>Ce message a été envoyé d'une adresse non surveillée. Veuillez ne pas y répondre. Contactez <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> ou appelez le <span class=\"nowrap bold\">1 (208) 890-9169</span> si vous avez besoin d'aide.</p><p>Si vous avez reçu ce courriel par erreur ou si vous souhaitez vous désabonner de ces courriels, veuillez consulter les détails de l'événement et contacter son organisateur.</p>"
     },
     "warning": "<p>You are receiving this email because Test Inc. included you in this event. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
     "warning_fr": "<p>Vous recevez ce courriel parce que Test Inc. vous a inclus dans cet événement. Veuillez ne pas le transférer, car le lien renvoie à des informations destinées exclusivement à test@example.com.</p>",
     "cta_label": "View Details",
-    "cta_label_fr": "Voir les détails",
-    "title": "Important Security Notification from Acme Corp"
+    "cta_label_fr": "Voir les détails"
 }
