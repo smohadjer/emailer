@@ -128,6 +128,7 @@
     },
     "nonce": "123456",
     "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
+    "title": "Important Withdrawal Notification from Test Inc",
     "header": "Important Withdrawal Notification from Test Inc",
     "content": "<h1>The quick, brown fox jumps over a lazy dog. </h1><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>",
     "footer": {
@@ -135,6 +136,5 @@
         "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
     },
     "warning": "<p>You are receiving this email because you are a responder for a recall started by Test Inc. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
-    "cta_label": "View Details",
-    "title": "Important Security Notification from Acme Corp"
+    "cta_label": "View Details"
 }
