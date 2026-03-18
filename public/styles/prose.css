@@ -1,0 +1,17 @@
+.prose table {
+    border-collapse: collapse;
+    text-align: left;
+    vertical-align: top;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.prose table th {
+    background: #ddd;
+}
+
+.prose table th,
+.prose table td {
+    padding: 5px;
+    border: solid 1px #aaa;
+}
