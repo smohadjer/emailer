@@ -11,12 +11,9 @@
     "invite_link": "https://example.com/invite",
     "warning_share": "Do not share this email with anyone. | Ne partagez pas ce courriel avec personne.",
     "branding": {
-        "styles": {
-            "cta": {
-                "background": "#1742DD",
-                "color": "white",
-                "hover": "#3671e7"
-            }
+        "theme": {
+            "email_button_color": "#1742DD",
+            "email_button_color_hover": "#3671e7"
         },
         "company_name": "Acme Corp", 
         "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
@@ -81,6 +78,7 @@
             "purview_value": "customer_data"
         }
     },
+    "channel_value": "test@example.com",
     "event_link": "https://dashboard.recallinfolink.eu/",
     "wave_details": {
         "initiated_ago": {

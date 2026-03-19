@@ -1,7 +1,7 @@
 { 
     "branding": {
         "theme": {
-            "email_button_color": "red",
+            "email_button_color": "#1742DD",
             "email_button_color_hover": "#3671e7"
         },
         "company_name": "Acme Corp", 
@@ -62,6 +62,7 @@
             "purview_value": "customer_data"
         }
     },
+    "channel_value": "test@example.com",
     "event_link": "https://dashboard.recallinfolink.eu/",
     "wave_details": {
         "initiated_ago": {
