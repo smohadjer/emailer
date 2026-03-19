@@ -103,7 +103,7 @@
                 "value": "Quarterly Update"
             },
             "schedule_scope": {
-                "value": "Global"
+                "value": "Initial"
             }
         },
         "created_by": {
