@@ -11,7 +11,7 @@
         "url": "https://recallinfolink.com/",
         "text": "Open in Browser"
     },
-    "company_name": "Acme Corp", 
+    "company_name": "Test Inc.", 
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
     "branding": {
@@ -61,7 +61,7 @@
         "has_concern_area": true,
         "incident_id": "incident_id_value",
         "incident_name": "Test Incident",
-        "initiating_company": "Acme Corp",
+        "initiating_company": "Test Inc.",
         "incident_type": {
             "type_label": "Withdrawal",
             "type_value": "Withdrawal",

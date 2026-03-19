@@ -16,7 +16,7 @@
                 "hover": "#3671e7"
             }
         },
-        "company_name": "Acme Corp", 
+        "company_name": "Test Inc.", 
         "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
         "email_footer_image": "https://emailer-psi-five.vercel.app/assets/sun.png"
     },
@@ -56,7 +56,7 @@
         "has_concern_area": true,
         "incident_id": "incident_id_value",
         "incident_name": "incident_name_value",
-        "initiating_company": "Acme Corp",
+        "initiating_company": "Test Inc.",
         "incident_type": {
             "type_label": "Security",
             "type_value": "security_value",
@@ -127,7 +127,7 @@
         }
     },
     "nonce": "123456",
-    "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
+    "body_content": "<body>\n<p>You've been invited to join Test Inc. on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
     "title": "Important Withdrawal Notification for Internal Users of Test Inc",
     "content_header": "Important Withdrawal Notification for Internal Users of Test Inc",
     "content_header_fr": "Avis important de retrait pour les utilisateurs internes de Test Inc",

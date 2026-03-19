@@ -10,14 +10,11 @@
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
     "branding": {
-        "styles": {
-            "cta": {
-                "background": "#1742DD",
-                "color": "white",
-                "hover": "#3671e7"
-            }
+        "theme": {
+            "email_button_color": "#1742DD",
+            "email_button_color_hover": "#3671e7"
         },
-        "company_name": "Acme Corp", 
+        "company_name": "Test Inc.", 
         "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
         "email_footer_image": "https://emailer-psi-five.vercel.app/assets/sun.png"
     },
@@ -55,7 +52,7 @@
         "has_concern_area": true,
         "incident_id": "incident_id_value",
         "incident_name": "incident_name_value",
-        "initiating_company": "Acme Corp",
+        "initiating_company": "Test Inc.",
         "incident_type": {
             "type_label": "Security",
             "type_value": "security_value",
