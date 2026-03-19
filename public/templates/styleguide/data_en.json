@@ -15,12 +15,9 @@
     "expires_in_days": 7, 
     "invite_link": "https://example.com/invite",
     "branding": {
-        "styles": {
-            "cta": {
-                "background": "#1742DD",
-                "color": "white",
-                "hover": "#3671e7"
-            }
+        "theme": {
+            "email_button_color": "#1742DD",
+            "email_button_color_hover": "#3671e7"
         },
         "email_header_image": {
             "path": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
@@ -31,23 +28,26 @@
         }
     },
     "event_details": {
-        "event_name": "Test Event",
+        "event_name": "event_name",
         "short_event_id": "12345",
         "short_event_id_label": "Event ID",
         "event_date": "01/22/2026",
         "event_date_label": "Event Date",
         "event_type": {
-            "type_label": "Product Removal",
-            "type_value": "Product Removal",
+            "type_label": "Withdrawal",
+            "type_value": "event_type_value",
             "type_label_l10n": {
                 "fr_CA": "étiquette_de_type_d'événement"
             }
+        },
+        "initiated_date": {
+            "value": "01/22/2026"
         },
         "initiated_ago": {
             "value": "initiated_ago_value"
         },
         "initiated_at": {
-            "value": "25. November 2025, 12:44:11 MEZ"
+            "value": "initiated_at_value"
         }
     },
     "incident_details": {
@@ -129,14 +129,6 @@
         }
     },
     "nonce": "123456",
-    "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
-    "header": "Important Withdrawal Notification from Test Inc",
-    "content": "<h1>Example of H1 heading</h1><h2>Example of H2 heading</h2><h3>Example of H3 heading</h3><h4>Example of H4 heading</h4><p>Example of a paragraph Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><h5>Example of Unordered list (h5)</h5><ul><li><p>list item 1 inside a p element that is long enough to see the spacing when it wraps to a second line.</p></li><li><p>list item 2 also inside p element</p></li><li>list item 3 without p element</li></ul><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><h4>Example of ordered list (h4)</h4><ol><li>numbered list item 1</li><li>numbered list item 2</li><li>numbered list item 3</li></ol><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><h3>Example of a table</h3><table><tr><th>Item Name</th><th>Item Number</th></tr><tr><td>Amys Kitchen Rice Mac and Cheeze Non Dairy</td> <td>4227200043</td></tr><tr><td>Another product</td><td>1227200041</td></tr><tr><td>Some other product</td><td>3227200047</td></tr></table><p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>",
-    "footer": {
-        "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
-    },
-    "warning": "You are receiving this email because Test Inc. included you in this event. Do not forward this email as the link displays information intended specifically for test@example.com.",
-    "cta_label": "View Details",
-    "title": "Important Security Notification from Acme Corp"
+    "content_header": "Important Withdrawal Notification from Test Inc",
+    "content_body": "<h1>Example of H1 heading</h1><h2>Example of H2 heading</h2><h3>Example of H3 heading</h3><h4>Example of H4 heading</h4><p>Example of a paragraph Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><h5>Example of Unordered list (h5)</h5><ul><li><p>list item 1 inside a p element that is long enough to see the spacing when it wraps to a second line.</p></li><li><p>list item 2 also inside p element</p></li><li>list item 3 without p element</li></ul><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><h4>Example of ordered list (h4)</h4><ol><li>numbered list item 1</li><li>numbered list item 2</li><li>numbered list item 3</li></ol><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><h3>Example of a table</h3><table><tr><th>Item Name</th><th>Item Number</th></tr><tr><td>Amys Kitchen Rice Mac and Cheeze Non Dairy</td> <td>4227200043</td></tr><tr><td>Another product</td><td>1227200041</td></tr><tr><td>Some other product</td><td>3227200047</td></tr></table><p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>"
 }

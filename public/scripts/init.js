@@ -114,8 +114,7 @@ export function init() {
 async function renderTemplate(templateName, lang, original) {
     const folder = original ? 'templates_original' : 'templates';
     const file = original ? 'data_original.json' : `./${folder}/${templateName}/data_${lang}.json`;
-    const filename = original ? `email_${lang}.html` : 'email.html';
-    console.log(file);
+    const filename = `email_${lang}.html`;
     const data = await fetch(file).then(res => res.json()).catch(error => {
         alert('Specified language data file not found.');
         return null;
@@ -138,7 +137,6 @@ async function renderTemplate(templateName, lang, original) {
 }
 
 function updateUrlParam() {
-    console.log('Updating URL params', lang);
     const url = new URL(window.location.href);
     url.searchParams.set('template', template);
     url.searchParams.set('lang', lang);

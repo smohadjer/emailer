@@ -39,7 +39,7 @@ const renderEmail = (template, lang, original, branded) => {
             delete data.branding;
         }
     }
-    const filename = original ? `email_${lang}.html` : 'email.html';
+    const filename = `email_${lang}.html`;
     const templatePath = path.join(process.cwd(), 'public', folder, template, filename);
     const templateData = fs.readFileSync(templatePath, 'utf8');
     const renderedEmail = Mustache.render(templateData, data);

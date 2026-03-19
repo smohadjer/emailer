@@ -113,17 +113,7 @@
     "has_trade_items": true,
     "trade_item_count": 10,
     "distribution_point_count": 5,
-    "header": "Event 12345 has been successfully initiated:<br /><a href=\"https://dashboard.recallinfolink.eu/\">dashboard.recallinfolink.eu</a>",
-    "header_fr_CA": "L'événement n° 12345 a été lancé avec succès:<br /><a href=\"https://dashboard.recallinfolink.eu/?langTag=fr-CA\">dashboard.recallinfolink.eu</a>",
-    "footer": {
-        "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please view event details and reach out to the initiator of the event.</p>"
-    },
-    "footer_fr_CA": {
-        "copyright": "Propulsé par Recall InfoLink",
-        "preamble": "<p>Ce message a été envoyé d'une adresse non surveillée. Veuillez ne pas y répondre. Contactez <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> ou appelez le  <span class=\"nowrap\">1 (208) 890-9169</span> si vous avez besoin d'aide.</p><p>Si vous avez reçu ce courriel par erreur ou si vous souhaitez vous désabonner de ces courriels, veuillez consulter les détails de l'événement et contacter son organisateur.</p>"
-    },
-    "warning": "<p>You are receiving this email because Test Inc. included you in this event. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
-    "warning_fr": "<p>Vous recevez ce courriel parce que Test Inc. vous a inclus dans cet événement. Veuillez ne pas le transférer, car le lien renvoie à des informations destinées exclusivement à test@example.com.</p>",
-    "title": "Client Initiator Email"
+    "content_header": "Event 12345 has been successfully initiated:<br /><a href=\"https://dashboard.recallinfolink.eu/\">dashboard.recallinfolink.eu</a>",
+    "content_header_fr_CA": "L'événement n° 12345 a été lancé avec succès:<br /><a href=\"https://dashboard.recallinfolink.eu/?langTag=fr-CA\">dashboard.recallinfolink.eu</a>"
+
 }

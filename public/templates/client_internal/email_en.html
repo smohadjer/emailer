@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{{language_code}}" {{#dir}}dir="{{dir}}"{{/dir}}>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>{{title}}</title>
+    <title>Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}</title>
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/cta.css" />
     <link rel="stylesheet" href="styles/meta.css" />
@@ -69,24 +69,24 @@
         }
     </style>
     <![endif]-->
-    {{#branding.styles}}
+    {{#branding.theme}}
     <style>
+        .mso_table_cta td,
         .cta a.button {
-            background-color: {{branding.styles.cta.background}};
-            color: {{branding.styles.cta.color}};
+            background-color: {{branding.theme.email_button_color}};
         }
         .cta a.button:hover {
-            background-color: {{branding.styles.cta.hover}};
+            background-color: {{branding.theme.email_button_color_hover}};
         }
     </style>
-    {{/branding.styles}}
+    {{/branding.theme}}
   </head>
   <body>
-    <span class="preheader">{{title}}</span>
+    <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}</span>
     <table class="body" width="100%" cellpadding="0" cellspacing="0">
         <tr>
-            <td {{#dir}} dir="{{dir}}" class="{{dir}}" {{/dir}} valign="top" bgcolor="#c5c5c5">
-
+            <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
+            <td valign="top" bgcolor="#c5c5c5">
                 <!--[if mso]>
                 <div style="text-align: center;">
                 <table class="mso_table_banner" role="presentation" cellspacing="0" cellpadding="0" border="0">
@@ -106,12 +106,7 @@
                 <![endif]-->
 
                 <div class="header">
-                    {{#warning_share}}
-                        <p>{{warning_share}}</p>
-                    {{/warning_share}}
-                    {{#browser_link}}
-                        <p><a href="{{browser_link.url}}">{{browser_link.text}}</a></p>
-                    {{/browser_link}}
+                    <p>Do not share this email with anyone.</p>
                 </div>
 
                 <!--[if mso]>
@@ -122,24 +117,24 @@
                 <![endif]-->  
                 <div class="main">
                     <div class="meta">
-                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
-                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                        <p><span>Event Date<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
+                        <p><span>Event ID<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
                     </div>
 
                     {{#branding.email_client_logo}}
                     <div class="branding-header">
-                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{branding.company_name}}">
+                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{incident_details.initiating_company}}">
                     </div>
                     {{/branding.email_client_logo}}
 
-                    <h4 class="content_header">{{header}}</h4>
+                    <h4 class="content_header">{{{content_header}}}</h4>
 
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                     <div class="content prose">
-                                        {{{content}}}
+                                        {{{content_body}}}
                                     </div>
 
                                     <!--[if mso]>
@@ -149,7 +144,7 @@
                                     <td>
                                     <![endif]-->
                                     <p class="cta">
-                                        <a class="button" href="{{event_link}}">{{cta_label}}</a>
+                                        <a class="button" href="{{event_link}}">View Details</a>
                                     </p>
                                     <!--[if mso]>
                                     </td>
@@ -163,7 +158,7 @@
                     </div>
 
                     <div class="warning">
-                        {{{warning}}}
+                        <p>You are receiving this email because {{incident_details.initiating_company}} included you in this event. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
                     </div>
 
                     {{#branding.email_footer_image}}
@@ -191,11 +186,9 @@
                 <![endif]--> 
                 <div class="footer">
                     <div>
-                        {{{footer.preamble}}}
-                        <p>
-                            {{{footer.copyright}}}<br />
-                            {{ril_corporate.address}}
-                        </p>
+                        <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a> or call <span class="nowrap bold">{{ril_corporate.support_phone}}</span> if you need support.</p>
+                        <p>If you have received this email in error, or to opt out of these emails, please view event details and reach out to the initiator of the event.</p>
+                        <p>Powered by <a href="https://www.recallinfolink.com/">{{ril_corporate.name}}</a><br />{{ril_corporate.address}}</p>
                     </div>                
                 </div>
                 <!--[if mso]>

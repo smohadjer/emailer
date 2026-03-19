@@ -1,21 +1,8 @@
 { 
-    "account": "account",
-    "language_code": "en",
-    "dir": "ltr",
-    "event_point_link": "event_point_link",
-    "submitted_by": {
-        "formatted_channel_value": "formatted_channel_value"
-    },
-    "warning_share": "Do not share this email with anyone.",
-    "expires_in_days": 7, 
-    "invite_link": "https://example.com/invite",
     "branding": {
-        "styles": {
-            "cta": {
-                "background": "#1742DD",
-                "color": "white",
-                "hover": "#3671e7"
-            }
+        "theme": {
+            "email_button_color": "#1742DD",
+            "email_button_color_hover": "#3671e7"
         },
         "company_name": "Acme Corp", 
         "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
@@ -122,15 +109,6 @@
             "percentage": {"value": "17%"}
         }
     },
-    "nonce": "123456",
-    "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
-    "title": "Important Withdrawal Notification for Internal Users of Test Inc",
-    "header": "Important Withdrawal Notification for Internal Users of Test Inc",
-    "content": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>",
-    "footer": {
-        "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please view event details and reach out to the initiator of the event.</p>"
-    },
-    "warning": "<p>You are receiving this email because Test Inc. included you in this event. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
-    "cta_label": "View Details"
+    "content_header": "Important Withdrawal Notification for Internal Users of Test Inc",
+    "content_body": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"
 }

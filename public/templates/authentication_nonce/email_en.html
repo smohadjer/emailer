@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{{language_code}}" {{#dir}}dir="{{dir}}"{{/dir}}>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>{{title}}</title>
+    <title>Your Recall InfoLink PIN</title>
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/pin.css" />
     <!--[if mso]>
@@ -46,34 +46,15 @@
             max-width: none;
             border-radius: 0;
         }
-
-
-        .mso_table_cta td {
-            padding: 1px 15px;
-            background: #1742DD;
-            text-align: center;
-        }
-
-        .meta p {
-            text-align: right;
-            font-size: 12px;
-            color: #333333;
-        }
-
-        .meta p span {
-            font-weight: bold;
-            font-size: 12px;
-            color: #333333;
-        }
     </style>
     <![endif]-->
   </head>
   <body>
-    <span class="preheader">{{title}}</span>
+    <span class="preheader">Your Recall InfoLink PIN</span>
     <table class="body" width="100%" cellpadding="0" cellspacing="0">
         <tr>
             <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
-            <td {{#dir}} dir="{{dir}}" class="{{dir}}" {{/dir}} valign="top" bgcolor="#c5c5c5">
+            <td valign="top" bgcolor="#c5c5c5">
 
                 <!--[if mso]>
                 <div style="text-align: center;">
@@ -94,12 +75,7 @@
                 <![endif]-->
 
                 <div class="header">
-                    {{#warning_share}}
-                        <p>{{warning_share}}</p>
-                    {{/warning_share}}
-                    {{#browser_link}}
-                        <p><a href="{{browser_link.url}}">{{browser_link.text}}</a></p>
-                    {{/browser_link}}
+                    <p>Do not share this email with anyone.</p>
                 </div>
 
                 <!--[if mso]>
@@ -111,11 +87,11 @@
                 <div class="main">
                     {{#branding.email_client_logo}}
                     <div class="branding-header">
-                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{branding.company_name}}">
+                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{incident_details.initiating_company}}">
                     </div>
                     {{/branding.email_client_logo}}
 
-                    <h4 class="content_header" style="text-align: center">{{header}}</h4>
+                    <h4 class="content_header" style="text-align: center">{{content_header}}</h4>
 
                     <!-- <h4 class="content_header">Your code expires in 15 minutes</h4> -->
                     <div class="section_wrapper">
@@ -133,7 +109,7 @@
                     </div>
 
                     <div class="warning">
-                        {{{warning}}}
+                        <p>Your PIN expires in 15 minutes. If you did not request this, you can safely ignore this email.</p>
                     </div>
 
                     {{#branding.email_footer_image}}
@@ -161,11 +137,9 @@
                 <![endif]--> 
                 <div class="footer">
                     <div>
-                        {{{footer.preamble}}}
-                        <p>
-                            {{{footer.copyright}}}<br />
-                            {{ril_corporate.address}}
-                        </p>
+                        <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a> or call <span class="nowrap bold">{{ril_corporate.support_phone}}</span> if you need support.</p>
+                        <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
+                        <p>Powered by <a href="https://www.recallinfolink.com/">{{ril_corporate.name}}</a><br />{{ril_corporate.address}}</p>
                     </div>                
                 </div>
                 <!--[if mso]>

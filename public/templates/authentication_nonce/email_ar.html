@@ -1,14 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{{language_code}}" {{#dir}}dir="{{dir}}"{{/dir}}>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>{{title}}</title>
+    <title>التحقق من حسابك</title>
     <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/cta.css" />
-    <link rel="stylesheet" href="styles/meta.css" />
-    <link rel="stylesheet" href="styles/prose.css" />
+    <link rel="stylesheet" href="styles/pin.css" />
     <!--[if mso]>
     <style>
         .mso_table_banner,
@@ -48,45 +46,15 @@
             max-width: none;
             border-radius: 0;
         }
-
-
-        .mso_table_cta td {
-            padding: 1px 15px;
-            background: #1742DD;
-            text-align: center;
-        }
-
-        .meta p {
-            text-align: right;
-            font-size: 12px;
-            color: #333333;
-        }
-
-        .meta p span {
-            font-weight: bold;
-            font-size: 12px;
-            color: #333333;
-        }
     </style>
     <![endif]-->
-    {{#branding.styles}}
-    <style>
-        .cta a.button {
-            background-color: {{branding.styles.cta.background}};
-            color: {{branding.styles.cta.color}};
-        }
-        .cta a.button:hover {
-            background-color: {{branding.styles.cta.hover}};
-        }
-    </style>
-    {{/branding.styles}}
   </head>
   <body>
-    <span class="preheader">{{title}}</span>
+    <span class="preheader">التحقق من حسابك</span>
     <table class="body" width="100%" cellpadding="0" cellspacing="0">
         <tr>
             <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
-            <td {{#dir}} dir="{{dir}}" class="{{dir}}" {{/dir}} valign="top" bgcolor="#c5c5c5">
+            <td dir="rtl" class="rtl" valign="top" bgcolor="#c5c5c5">
 
                 <!--[if mso]>
                 <div style="text-align: center;">
@@ -107,12 +75,7 @@
                 <![endif]-->
 
                 <div class="header">
-                    {{#warning_share}}
-                        <p>{{warning_share}}</p>
-                    {{/warning_share}}
-                    {{#browser_link}}
-                        <p><a href="{{browser_link.url}}">{{browser_link.text}}</a></p>
-                    {{/browser_link}}
+                    <p>لا تشارك هذه الرسالة الإلكترونية مع أي شخص.</p>
                 </div>
 
                 <!--[if mso]>
@@ -122,49 +85,31 @@
                 <td>
                 <![endif]-->  
                 <div class="main">
-                    <div class="meta">
-                        <p><span>{{event_details.event_date_label}}<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
-                        <p><span>{{event_details.short_event_id_label}}<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
-                    </div>
-
                     {{#branding.email_client_logo}}
                     <div class="branding-header">
-                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{branding.company_name}}">
+                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{incident_details.initiating_company}}">
                     </div>
                     {{/branding.email_client_logo}}
 
-                    <h4 class="content_header">{{header}}</h4>
+                    <h4 class="content_header" style="text-align: center">{{content_header}}</h4>
 
+                    <!-- <h4 class="content_header">Your code expires in 15 minutes</h4> -->
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <div class="content prose">
-                                        {{{content}}}
+                                    <div class="content">
+                                        <p class="pin">
+                                            <span>{{nonce}}</span>
+                                        </p>
                                     </div>
-
-                                    <!--[if mso]>
-                                    <div style="text-align: center; margin: 30px 0;">
-                                    <table class="mso_table_cta" role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                    <tr>
-                                    <td>
-                                    <![endif]-->
-                                    <p class="cta">
-                                        <a class="button" href="{{event_link}}">{{cta_label}}</a>
-                                    </p>
-                                    <!--[if mso]>
-                                    </td>
-                                    </tr>
-                                    </table>
-                                    </div>
-                                    <![endif]-->
                                 </td>
                             </tr>
                         </table>
                     </div>
 
                     <div class="warning">
-                        {{{warning}}}
+                        <p>سينتهي صلاحية رقم التعريف الشخصي الخاص بك خلال 15 دقيقة. إذا لم تطلب ذلك، يمكنك تجاهل هذه الرسالة الإلكترونية بأمان.</p>
                     </div>
 
                     {{#branding.email_footer_image}}
@@ -192,10 +137,8 @@
                 <![endif]--> 
                 <div class="footer">
                     <div>
-                        {{{footer.preamble}}}
-                        <p>
-                            {{{footer.copyright}}}<br />
-                            {{ril_corporate.address}}
+                        <p>تم إرسال هذه الرسالة الإلكترونية من عنوان غير مراقب. لا ترد على هذا البريد الإلكتروني. اتصل بـ <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a> أو اتصل على <span class="nowrap bold">&#x2066;{{ril_corporate.support_phone}}&#x2069;</span> إذا كنت بحاجة إلى دعم.</p><p>إذا تلقيت هذا البريد الإلكتروني عن طريق الخطأ، أو إذا كنت ترغب في إلغاء الاشتراك في هذه الرسائل الإلكترونية، فيرجى تعديل <a href="{{notification_preferences_link}}">تفضيلات الإشعارات</a>.</p>
+                        <p>مدعوم من <a dir="rtl" href="https://www.recallinfolink.com/">{{ril_corporate.name}}</a><br />{{ril_corporate.address}}
                         </p>
                     </div>                
                 </div>

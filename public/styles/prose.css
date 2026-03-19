@@ -1,6 +1,6 @@
 .prose table {
     border-collapse: collapse;
-    text-align: left;
+    text-align: start;
     vertical-align: top;
     margin: 10px 0;
     width: 100%;
@@ -14,4 +14,5 @@
 .prose table td {
     padding: 5px;
     border: solid 1px #aaa;
+    text-align: start;
 }

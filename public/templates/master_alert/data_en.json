@@ -1,22 +1,8 @@
 { 
-    "account": "account",
-    "language_code": "en",
-    "dir": "ltr",
-    "event_point_link": "event_point_link",
-    "submitted_by": {
-        "formatted_channel_value": "formatted_channel_value"
-    },
-    "warning_share": "Do not share this email with anyone.",
-    "company_name": "Acme Corp", 
-    "expires_in_days": 7, 
-    "invite_link": "https://example.com/invite",
     "branding": {
-        "styles": {
-            "cta": {
-                "background": "#1742DD",
-                "color": "white",
-                "hover": "#3671e7"
-            }
+        "theme": {
+            "email_button_color": "#1742DD",
+            "email_button_color_hover": "#3671e7"
         },
         "company_name": "Acme Corp", 
         "email_client_logo": "https://emailer-psi-five.vercel.app/assets/ril-logo.png",
@@ -108,11 +94,5 @@
     "has_trade_items": true,
     "trade_item_count": 10,
     "distribution_point_count": 5,
-    "header": "Event 12345 has been successfully initiated.",
-    "footer": {
-        "copyright": "Powered by <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink Inc.</a>",
-        "preamble": "<p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href=\"mailto:support@recallinfolink.com\">support@recallinfolink.com</a> or call <span class=\"nowrap bold\">1 (208) 890-9169</span> if you need support.</p><p>If you have received this email in error, or to opt out of these emails, please adjust your <a href=\"\">notification preferences</a>.</p>"
-    },
-    "warning": "<p>You are receiving this email because Test Inc. included you in this event. Do not forward this email as the link displays information intended specifically for test@example.com.</p>",
-    "title": "Client Initiator Email"
+    "content_header": "Event 12345 has been successfully initiated."
 }

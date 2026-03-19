@@ -123,14 +123,5 @@
         }
     },
     "nonce": "123456",
-    "body_content": "<body>\n<p>You've been invited to join Acme Corp on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
-    "header": "استخدم هذا الرمز للتحقق من حسابك",
-    "content": "<h1>إشعار هام بالانسحاب من شركة تيست إنك</h1><p>في مكانٍ قصيٍّ وراء جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء. يعيشون متفرقين في بوكماركسجروف على ساحل علم الدلالة، وهو محيط لغوي واسع. يجري نهر صغير يُدعى دودن بجوارهم، ويزودهم بما يلزمهم من قواعد. إنها بلادٌ أشبه بالجنة، حيث تتساقط أجزاء الجمل المحمصة في أفواههم.</p>",
-    "footer": {
-        "copyright": "مدعوم من <a dir=\"ltr\" href=\"https://www.recallinfolink.com/\">Recall InfoLink, Inc.</a>",
-        "preamble": "<p>تم إرسال هذه الرسالة الإلكترونية من عنوان غير مراقب. لا ترد على هذا البريد الإلكتروني. اتصل بـ <a href=\"mailto:support@ril.com\">support@ril.com</a> أو اتصل على <span class=\"nowrap\">&#x2066;1 (208) 890-9169&#x2069;</span> إذا كنت بحاجة إلى دعم.</p>"
-    },
-    "warning": "<p>ينتهي صلاحية رمزك خلال 15 دقيقة. إذا لم تطلب ذلك، يمكنك تجاهل هذه الرسالة الإلكترونية بأمان.</p>",
-    "cta_label": "عرض التفاصيل",
-    "title": "التحقق من حسابك"
+    "content_header": "استخدم هذا الرمز للتحقق من حسابك"
 }
