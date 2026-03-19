@@ -55,25 +55,6 @@
         <tr>
             <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
             <td dir="rtl" class="rtl" valign="top" bgcolor="#c5c5c5">
-
-                <!--[if mso]>
-                <div style="text-align: center;">
-                <table class="mso_table_banner" role="presentation" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                <td>
-                <![endif]-->                
-                {{^incident_details.incident_purview.purview_is_live}}
-                <div class="banner">
-                    {{incident_details.incident_purview.purview_label}}
-                </div>
-                {{/incident_details.incident_purview.purview_is_live}}
-                <!--[if mso]>
-                </td>
-                </tr>
-                </table>
-                </div>
-                <![endif]-->
-
                 <div class="header">
                     <p>لا تشارك هذه الرسالة الإلكترونية مع أي شخص.</p>
                 </div>
@@ -85,15 +66,7 @@
                 <td>
                 <![endif]-->  
                 <div class="main">
-                    {{#branding.email_client_logo}}
-                    <div class="branding-header">
-                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{incident_details.initiating_company}}">
-                    </div>
-                    {{/branding.email_client_logo}}
-
-                    <h4 class="content_header" style="text-align: center">{{content_header}}</h4>
-
-                    <!-- <h4 class="content_header">Your code expires in 15 minutes</h4> -->
+                    <h4 class="content_header" style="text-align: center">استخدم هذا الرمز للتحقق من حسابك</h4>
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
@@ -111,16 +84,6 @@
                     <div class="warning">
                         <p>سينتهي صلاحية رقم التعريف الشخصي الخاص بك خلال 15 دقيقة. إذا لم تطلب ذلك، يمكنك تجاهل هذه الرسالة الإلكترونية بأمان.</p>
                     </div>
-
-                    {{#branding.email_footer_image}}
-                    <table class="branding-footer" width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tbody><tr>
-                            <td>
-                                <img src="{{branding.email_footer_image}}" style="width:100%; height:auto; display:block;" alt="">
-                            </td>
-                        </tr>
-                    </tbody></table>
-                    {{/branding.email_footer_image}}
                 </div>
                 <!--[if mso]>
                 </td>

@@ -55,25 +55,6 @@
         <tr>
             <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
             <td valign="top" bgcolor="#c5c5c5">
-
-                <!--[if mso]>
-                <div style="text-align: center;">
-                <table class="mso_table_banner" role="presentation" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                <td>
-                <![endif]-->                
-                {{^incident_details.incident_purview.purview_is_live}}
-                <div class="banner">
-                    {{incident_details.incident_purview.purview_label}}
-                </div>
-                {{/incident_details.incident_purview.purview_is_live}}
-                <!--[if mso]>
-                </td>
-                </tr>
-                </table>
-                </div>
-                <![endif]-->
-
                 <div class="header">
                     <p>Do not share this email with anyone.</p>
                 </div>
@@ -85,15 +66,8 @@
                 <td>
                 <![endif]-->  
                 <div class="main">
-                    {{#branding.email_client_logo}}
-                    <div class="branding-header">
-                        <img style="width: 120px; height: auto; display: block;" width="120" src="{{branding.email_client_logo}}" alt="{{incident_details.initiating_company}}">
-                    </div>
-                    {{/branding.email_client_logo}}
+                    <h4 class="content_header" style="text-align: center">Use this PIN to log into Recall InfoLink</h4>
 
-                    <h4 class="content_header" style="text-align: center">{{content_header}}</h4>
-
-                    <!-- <h4 class="content_header">Your code expires in 15 minutes</h4> -->
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
@@ -111,16 +85,6 @@
                     <div class="warning">
                         <p>Your PIN expires in 15 minutes. If you did not request this, you can safely ignore this email.</p>
                     </div>
-
-                    {{#branding.email_footer_image}}
-                    <table class="branding-footer" width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tbody><tr>
-                            <td>
-                                <img src="{{branding.email_footer_image}}" style="width:100%; height:auto; display:block;" alt="">
-                            </td>
-                        </tr>
-                    </tbody></table>
-                    {{/branding.email_footer_image}}
                 </div>
                 <!--[if mso]>
                 </td>
@@ -138,8 +102,7 @@
                 <div class="footer">
                     <div>
                         <p>This email message was sent from an address that is not monitored. Do not reply to this email. Contact <a href="mailto:{{ril_corporate.support_email}}">{{ril_corporate.support_email}}</a> or call <span class="nowrap bold">{{ril_corporate.support_phone}}</span> if you need support.</p>
-                        <p>If you have received this email in error, or to opt out of these emails, please adjust your <a href="{{notification_preferences_link}}">notification preferences</a>.</p>
-                        <p>Powered by <a href="https://www.recallinfolink.com/">{{ril_corporate.name}}</a><br />{{ril_corporate.address}}</p>
+                        <p>Powered by <a href="{{ril_corporate.website}}">{{ril_corporate.name}}</a><br />{{ril_corporate.address}}</p>
                     </div>                
                 </div>
                 <!--[if mso]>

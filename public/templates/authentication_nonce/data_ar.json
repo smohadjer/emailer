@@ -1,14 +1,4 @@
 { 
-    "account": "account",
-    "language_code": "ar",
-    "dir": "rtl",
-    "event_point_link": "event_point_link",
-    "submitted_by": {
-        "formatted_channel_value": "formatted_channel_value"
-    },
-    "warning_share": "لا تشارك هذه الرسالة الإلكترونية مع أي شخص.",
-    "expires_in_days": 7, 
-    "invite_link": "https://example.com/invite",
     "branding": {
         "theme": {
             "email_button_color": "#1742DD",
@@ -119,6 +109,5 @@
             "percentage": {"value": "17%"}
         }
     },
-    "nonce": "123456",
-    "content_header": "استخدم هذا الرمز للتحقق من حسابك"
+    "nonce": "123456"
 }
