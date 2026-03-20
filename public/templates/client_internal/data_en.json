@@ -44,10 +44,10 @@
         "incident_name": "incident_name_value",
         "initiating_company": "Test Inc.",
         "incident_type": {
-            "type_label": "Security",
-            "type_value": "security_value",
+            "type_label": "Withdrawal",
+            "type_value": "Withdrawal",
             "type_label_l10n": {
-                "fr_CA": "Sécurité"
+                "fr_CA": "Retrait"
             }
         },
         "incident_purview": {
@@ -109,6 +109,5 @@
             "percentage": {"value": "17%"}
         }
     },
-    "content_header": "Important Withdrawal Notification for Internal Users of Test Inc.",
     "content_body": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"
 }

@@ -48,10 +48,10 @@
         "incident_name": "incident_name_value",
         "initiating_company": "Test Inc.",
         "incident_type": {
-            "type_label": "Security",
-            "type_value": "security_value",
+            "type_label": "انسحاب",
+            "type_value": "انسحاب",
             "type_label_l10n": {
-                "fr_CA": "Sécurité"
+                "fr_CA": "Retrait"
             }
         },
         "incident_purview": {
@@ -68,6 +68,5 @@
         "address": "500 شارع إس الثامن، بويز، أيداهو 83702، الولايات المتحدة الأمريكية"
     },
     "event_link": "https://dashboard.recallinfolink.eu/",
-    "content_header": "إشعار هام بالانسحاب من شركة تيست إنك",
     "content_body": "<h1>إشعار هام بالانسحاب من شركة تيست إنك</h1><p>في مكانٍ قصيٍّ وراء جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء. يعيشون متفرقين في بوكماركسجروف على ساحل علم الدلالة، وهو محيط لغوي واسع. يجري نهر صغير يُدعى دودن بجوارهم، ويزودهم بما يلزمهم من قواعد. إنها بلادٌ أشبه بالجنة، حيث تتساقط أجزاء الجمل المحمصة في أفواههم.</p>"
 }

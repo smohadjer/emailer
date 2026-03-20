@@ -53,7 +53,7 @@
             "type_label": "Withdrawal",
             "type_value": "Withdrawal",
             "type_label_l10n": {
-                "fr_CA": ""
+                "fr_CA": "Retrait"
             }
         },
         "incident_purview": {
@@ -93,6 +93,5 @@
     },
     "has_trade_items": true,
     "trade_item_count": 10,
-    "distribution_point_count": 5,
-    "content_header": "Event 12345 has been successfully initiated."
+    "distribution_point_count": 5
 }

@@ -66,7 +66,7 @@
             "type_label": "Withdrawal",
             "type_value": "Withdrawal",
             "type_label_l10n": {
-                "fr_CA": ""
+                "fr_CA": "Retrait"
             }
         },
         "incident_purview": {
@@ -110,8 +110,6 @@
     },
     "has_trade_items": true,
     "trade_item_count": 10,
-    "distribution_point_count": 5,
-    "content_header": "Event 12345 has been successfully initiated:<br /><a href=\"https://dashboard.recallinfolink.eu/\">dashboard.recallinfolink.eu</a>",
-    "content_header_fr_CA": "L'événement n° 12345 a été lancé avec succès:<br /><a href=\"https://dashboard.recallinfolink.eu/?langTag=fr-CA\">dashboard.recallinfolink.eu</a>"
+    "distribution_point_count": 5
 
 }

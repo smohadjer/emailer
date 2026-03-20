@@ -58,10 +58,10 @@
         "incident_name": "incident_name_value",
         "initiating_company": "Test Inc.",
         "incident_type": {
-            "type_label": "Security",
-            "type_value": "security_value",
+            "type_label": "Withdrawal",
+            "type_value": "Withdrawal",
             "type_label_l10n": {
-                "fr_CA": "Sécurité"
+                "fr_CA": "Retrait"
             }
         },
         "incident_purview": {
@@ -129,8 +129,6 @@
     "nonce": "123456",
     "body_content": "<body>\n<p>You've been invited to join Test Inc. on Recall InfoLink.</p>\n<p>Please visit this link to accept the invitation:<br><a href=\"https://example.com/invite\">https://example.com/invite</a></p>\n<p>Your link will expire after 7 days.</p>\n\n</body>",
     "title": "Important Withdrawal Notification for Internal Users of Test Inc.",
-    "content_header": "Important Withdrawal Notification for Internal Users of Test Inc.",
-    "content_header_fr": "Avis important de retrait pour les utilisateurs internes de Test Inc.",
     "content_body": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>",
     "content_body_fr": "<p>Une petite rivière nommée Duden coule près de chez eux et leur fournit tout le nécessaire. C'est un pays paradisiaque où des bribes de phrases rôties vous tombent dans la bouche.</p>",
     "footer": {

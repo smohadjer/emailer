@@ -66,7 +66,7 @@
             "type_label": "Withdrawal",
             "type_value": "Withdrawal",
             "type_label_l10n": {
-                "fr_CA": ""
+                "fr_CA": "Retrait"
             }
         },
         "incident_purview": {
@@ -129,6 +129,5 @@
         }
     },
     "nonce": "123456",
-    "content_header": "Important Withdrawal Notification from Test Inc.",
     "content_body": "<h1>Example of H1 heading</h1><h2>Example of H2 heading</h2><h3>Example of H3 heading</h3><h4>Example of H4 heading</h4><p>Example of a paragraph Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><h5>Example of Unordered list (h5)</h5><ul><li><p>list item 1 inside a p element that is long enough to see the spacing when it wraps to a second line.</p></li><li><p>list item 2 also inside p element</p></li><li>list item 3 without p element</li></ul><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><h4>Example of ordered list (h4)</h4><ol><li>numbered list item 1</li><li>numbered list item 2</li><li>numbered list item 3</li></ol><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p><h3>Example of a table</h3><table><tr><th>Item Name</th><th>Item Number</th></tr><tr><td>Amys Kitchen Rice Mac and Cheeze Non Dairy</td> <td>4227200043</td></tr><tr><td>Another product</td><td>1227200041</td></tr><tr><td>Some other product</td><td>3227200047</td></tr></table><p>Voluptatum ex debitis iure modi expedita laudantium eligendi corporis maiores assumenda sapiente a quis quo facere saepe, fugiat facilis quidem asperiores in!</p>"
 }

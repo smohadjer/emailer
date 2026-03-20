@@ -64,10 +64,10 @@
         "incident_name": "incident_name_value",
         "initiating_company": "Test Inc.",
         "incident_type": {
-            "type_label": "Security",
-            "type_value": "security_value",
+            "type_label": "Withdrawal",
+            "type_value": "Withdrawal",
             "type_label_l10n": {
-                "fr_CA": "Sécurité"
+                "fr_CA": "Retrait"
             }
         },
         "incident_purview": {
