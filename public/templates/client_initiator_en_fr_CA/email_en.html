@@ -110,7 +110,7 @@
                         <p>
                             <span>Event ID<!--[if mso]>:<![endif]--></span>
                             <span>ID de l'événement<!--[if mso]>:<![endif]--></span> 
-                            {{event_details.short_event_id}}
+                            <a href="{{event_link}}">{{event_details.short_event_id}}</a>
                         </p>
                     </div>
 
@@ -120,7 +120,7 @@
                     </div>
                     {{/branding.email_client_logo}}
 
-                    <h4 class="content_header">Event #{{event_details.short_event_id}} has been successfully initiated:<br /><a href="{{event_link}}">{{event_link}}</a></h4>
+                    <h4 class="content_header">Event #{{event_details.short_event_id}} has been successfully initiated.</h4>
 
                     <div class="section_wrapper">
                         <table class="section">
@@ -240,7 +240,7 @@
 
                     <hr>
                     
-                    <h4 class="content_header">L'événement n° {{event_details.short_event_id}} a été lancé avec succès:<br /><a href="{{event_link}}">{{event_link}}</a></h4>
+                    <h4 class="content_header">L'événement n° {{event_details.short_event_id}} a été lancé avec succès.</h4>
 
                     <div class="section_wrapper">
                         <table class="section">

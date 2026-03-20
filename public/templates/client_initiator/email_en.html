@@ -99,7 +99,7 @@
                 <div class="main">
                     <div class="meta">
                         <p><span>Event Date<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
-                        <p><span>Event ID<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                        <p><span>Event ID<!--[if mso]>:<![endif]--></span> <a href="{{event_link}}">{{event_details.short_event_id}}</a></p>
                     </div>
 
                     {{#branding.email_client_logo}}
@@ -108,7 +108,7 @@
                     </div>
                     {{/branding.email_client_logo}}
 
-                    <h4 class="content_header">Event #{{event_details.short_event_id}} has been successfully initiated:<br /><a href="{{event_link}}">{{event_link}}</a></h4>
+                    <h4 class="content_header">Event #{{event_details.short_event_id}} has been successfully initiated.</h4>
 
                     <div class="section_wrapper">
                         <table class="section">
