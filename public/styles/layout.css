@@ -100,7 +100,7 @@ table td {
 .section_wrapper {
     margin: 16px 0;
     background: #eee;
-    padding: 0 16px 16px;
+    padding: 0 16px 24px;
 }
 
 @media only screen and (min-width: 768px) {
