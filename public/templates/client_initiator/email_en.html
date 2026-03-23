@@ -38,7 +38,7 @@
 
         .mso_table_main td {
             background: white;
-            padding: 14px;
+            padding: 16px;
         }
 
         .main {
@@ -228,13 +228,21 @@
                     </div>
 
                     {{#branding.email_footer_image}}
-                    <table class="branding-footer" width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tbody><tr>
-                            <td>
-                                <img src="{{branding.email_footer_image}}" style="width:100%; height:auto; display:block;" alt="">
-                            </td>
-                        </tr>
-                    </tbody></table>
+                    <div class="branding-footer">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="center" style="padding: 0;">
+                                    <table role="presentation" width="668" style="border-collapse: collapse; width:100%; table-layout: fixed;">
+                                        <tr>
+                                            <td class="branding_footer_img_wrapper" align="center" style="padding: 0;">
+                                                <img class="branding_footer_img" src="{{branding.email_footer_image}}" alt="" width="668" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>    
+                    </div>       
                     {{/branding.email_footer_image}}
                 </div>
                 <!--[if mso]>
