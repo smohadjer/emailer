@@ -46,8 +46,43 @@
             max-width: none;
             border-radius: 0;
         }
+
+
+        .mso_table_cta td {
+            padding: 10px 15px;
+            background: #1742DD;
+            text-align: center;
+        }
+
+        .mso_table_cta td .cta {
+            margin: 0;
+            padding: 0;
+        }
+
+        .meta p {
+            text-align: right;
+            font-size: 12px;
+            color: #333333;
+        }
+
+        .meta p span {
+            font-weight: bold;
+            font-size: 12px;
+            color: #333333;
+        }
     </style>
     <![endif]-->
+    {{#branding.theme}}
+    <style>
+        .mso_table_cta td,
+        .cta a.button {
+            background-color: {{branding.theme.email_button_color}};
+        }
+        .cta a.button:hover {
+            background-color: {{branding.theme.email_button_color_hover}};
+        }
+    </style>
+    {{/branding.theme}}
   </head>
   <body>
     <span class="preheader">التحقق من حسابك</span>
