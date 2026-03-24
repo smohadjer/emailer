@@ -128,7 +128,7 @@
                 <div class="main">
                     <div class="meta">
                         <p><span>تاريخ الحدث<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
-                        <p><span>معرف الحدث<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                        <p><span>معرف الحدث<!--[if mso]>:<![endif]--></span> <a href="{{event_link}}">{{event_details.short_event_id}}</a></p>
                     </div>
 
                     {{#branding.email_client_logo}}
@@ -144,7 +144,46 @@
                             <tr>
                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                     <div class="content prose">
-                                        {{{content_body}}}
+                                        <h1>مثال على عنوان H1</h1>
+                                        <h2>مثال على عنوان H2</h2>
+                                        <h3>مثال على عنوان H3</h3>
+                                        <h4>مثال على عنوان H4</h4>
+                                        <h5>مثال على عنوان H5</h5>
+                                        <p>مثال على فقرة: في مكان بعيد، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء. يعيشون منفصلين في بوكماركسجروف على ساحل علم الدلالة، وهو محيط لغوي واسع.</p>
+                                        <p>يمر نهر صغير يُدعى دودن بجوار منزلهم، ويزوده بما يحتاجه من مستلزمات. إنها بلادٌ أشبه بالجنة، حيث تتطاير إليك أجزاء الجمل المحمصة.</p>
+                                        <ul>
+                                            <li>عنصر القائمة 1</li>
+                                            <li>عنصر القائمة 2</li>
+                                            <li>عنصر القائمة 3</li>
+                                        </ul>
+                                        <p>يمر نهر صغير يُدعى دودن بجوار مكانهم ويزوده باللوازم الضرورية.</p>
+                                        <h4>مثال على قائمة مرتبة (h4)</h4>
+                                        <ol>
+                                            <li>البند رقم 1 في القائمة</li>
+                                            <li>البند رقم 2 في القائمة</li>
+                                            <li>البند رقم 3 في القائمة</li>
+                                        </ol>
+                                        <p>يمر نهر صغير يُدعى دودن بجوار مكانهم ويزوده باللوازم الضرورية.</p>
+                                        <h3>مثال على الجدول</h3>
+                                        <table>
+                                            <tr>
+                                                <th>اسم الصنف</th>
+                                                <th>رقم الصنف</th>
+                                            </tr>
+                                            <tr>
+                                                <td>معكرونة بالجبنة والأرز من إيمي كيتشن (خالية من منتجات الألبان)</td> 
+                                                <td>4227200043</td>
+                                            </tr>
+                                            <tr>
+                                                <td>منتج آخر</td>
+                                                <td>1227200041</td>
+                                            </tr>
+                                            <tr>
+                                                <td>منتج آخر</td>
+                                                <td>3227200047</td>
+                                            </tr>
+                                        </table>
+                                        <p>ملذات من الديون، الطريق الصحيح، مناسب، مدح، اختيار الجسد، أكبر، افتراض، حكيم، ممن، أين، يفعل، غالباً، يهرب، سهل، بالفعل، أكثر خشونة!</p>
                                     </div>
                                     <!--[if mso]>
                                     <div style="text-align: center; margin: 30px 0;">
@@ -175,18 +214,18 @@
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
                                     <h2>CTA</h2>
-                                    <p>Emails can contain a call to action button which is a link styled as button with padding around it and an optional background:</p>
+                                    <p>يمكن أن تحتوي رسائل البريد الإلكتروني على زر دعوة لاتخاذ إجراء، وهو عبارة عن رابط مصمم على شكل زر مع مساحة فارغة حوله وخلفية اختيارية:</p>
                                     <p class="cta cta--background">
-                                        <a class="button" href="http://link.to.reset.password">Call to Action button</a>
+                                        <a class="button" href="http://link.to.reset.password">زر دعوة للعمل</a>
                                     </p>
-                                    <p>While we can have links <a href="#">inline like this</a> if more emphasis is needed a link can be displayed as below:</p>
+                                    <p>بينما يمكننا وضع روابط <a href="#">مضمنة هكذا</a>، إذا كانت هناك حاجة إلى مزيد من التأكيد، فيمكن عرض الرابط كما يلي:</p>
                                     <p class="cta cta--background">
-                                        <a class="link" href="http://link.to.reset.password">Call to Action Link</a>
+                                        <a class="link" href="http://link.to.reset.password">رابط دعوة للعمل</a>
                                     </p>  
                                     <p>We can also have a CTA button and CTA link beside one another:</p>
                                     <p class="cta cta--background">
-                                        <a class="button" href="http://link.to.reset.password">Call to Action Button</a>
-                                        <a class="link" href="http://link.to.reset.password">Call to Action Link</a>
+                                        <a class="button" href="http://link.to.reset.password">زر دعوة للعمل</a>
+                                        <a class="link" href="http://link.to.reset.password">رابط دعوة للعمل</a>
                                     </p>
                                 </td>
                             </tr>
@@ -216,7 +255,7 @@
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h2>Table styled as name/value list</h2>
+                                    <h2>جدول مصمم كقائمة اسم/قيمة</h2>
                                     <table class="listing">
                                         <tr>
                                             <td>Event Name</td>
@@ -264,7 +303,7 @@
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h2>Second table styled as name/value list</h2>
+                                    <h2>الجدول الثاني مصمم كقائمة اسم/قيمة</h2>
                                     <table class="listing">
                                         <tr>
                                             <td>Incident Name</td>
@@ -288,8 +327,8 @@
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h2>Tables styled as table</h2>
-                                    <p>If we have tables with many rows of same type or with many columns we display them as table and not as a listing:</p>
+                                    <h2>الجداول المصممة على شكل جدول</h2>
+                                    <p>إذا كانت لدينا جداول تحتوي على العديد من الصفوف من نفس النوع أو العديد من الأعمدة، فإننا نعرضها كجدول وليس كقائمة:</p>
                                     <div class="table-wrapper">
                                         <table class="table">
                                             <tr>
