@@ -135,7 +135,7 @@
                         <p>
                             <span>Event ID<!--[if mso]>:<![endif]--></span>
                             <span>ID de l'événement<!--[if mso]>:<![endif]--></span> 
-                            {{event_details.short_event_id}}
+                            <a href="{{event_link}}">{{event_details.short_event_id}}</a>
                         </p>
                     </div>
 
@@ -175,7 +175,7 @@
                         </table>
                     </div>
                     <div class="warning">
-                        <p>You are receiving this email because {{incident_details.initiating_company}} included you in this event. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
+                        <p>You are receiving this email because {{incident_details.initiating_company}} included you in this event as an internal user. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
                     </div>
 
                     <hr>
@@ -210,7 +210,7 @@
                         </table>
                     </div>
                     <div class="warning">
-                        <p>Vous recevez ce courriel parce que {{incident_details.initiating_company}} vous a inclus dans cet événement. Veuillez ne pas le transférer, car le lien renvoie à des informations destinées exclusivement à {{channel_value}}.</p>
+                        <p>Vous recevez ce courriel parce que {{incident_details.initiating_company}} vous a inclus dans cet événement en tant qu'utilisateur interne. Veuillez ne pas transférer ce courriel, car le lien affiche des informations destinées spécifiquement à {{channel_value}}.</p>
                     </div>
 
                     {{#branding.email_footer_image}}

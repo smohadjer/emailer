@@ -122,7 +122,7 @@
                 <div class="main">
                     <div class="meta">
                         <p><span>Event Date<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
-                        <p><span>Event ID<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                        <p><span>Event ID<!--[if mso]>:<![endif]--></span> <a href="{{event_link}}">{{event_details.short_event_id}}</a></p>
                     </div>
 
                     {{#branding.email_client_logo}}
@@ -177,7 +177,7 @@
                         </table>
                     </div>
                     <div class="warning">
-                        <p>You are receiving this email because you have an Initiator role at {{incident_details.initiating_company}}. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
+                        <p>You are receiving this email because {{incident_details.initiating_company}} included you in this event as an internal user. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
                     </div>
 
                     {{#branding.email_footer_image}}
