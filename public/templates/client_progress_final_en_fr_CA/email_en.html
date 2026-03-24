@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" content="yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -86,10 +86,7 @@
     {{/branding.theme}}
   </head>
   <body>
-    <span class="preheader">
-        Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}}
-        Notification importante {{incident_details.incident_type.type_label_l10n.fr_CA}} de {{incident_details.initiating_company}}
-    </span>    
+    <span class="preheader">Important {{incident_details.incident_type.type_label}} Notification from {{incident_details.initiating_company}} Notification importante {{incident_details.incident_type.type_label_l10n.fr_CA}} de {{incident_details.initiating_company}}</span>
     <table class="body" width="100%" cellpadding="0" cellspacing="0">
         <tr>
             <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
@@ -143,7 +140,7 @@
                     </div>
                     {{/branding.email_client_logo}}
 
-                    <h4 class="content_header">Event #{{event_details.short_event_id}} has been successfully initiated.</h4>
+                    <h4 class="content_header">Progress update for event #{{event_details.short_event_id}}:</h4>
 
                     <div class="section_wrapper">
                         <table class="section">
@@ -156,98 +153,13 @@
                                             <td>{{event_details.event_name}}</td>
                                         </tr>
                                         <tr class="alt">
-                                            <td>Event Type</td>
-                                            <td>{{event_details.event_type.type_label}}</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="section">
-                            <tr>
-                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Incident Information</h3>
-                                    <table class="listing">
-                                        <tr>
-                                            <td>Incident Name</td>
-                                            <td>{{incident_details.incident_name}}</td>
-                                        </tr>
-                                        <tr class="alt">
-                                            <td>Incident Type</td>
-                                            <td>{{incident_details.incident_type.type_label}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Area of Concern</td>
-                                            <td>
-                                                {{#incident_details.has_concern_area}}{{incident_details.concern_area.area_label}}{{/incident_details.has_concern_area}}
-                                                {{^incident_details.has_concern_area}}-{{/incident_details.has_concern_area}}
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="section">
-                            <tr>
-                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Initiator Information</h3>
-                                    <table class="listing">
-                                        <tr>
-                                            <td>Company</td>
-                                            <td>{{incident_details.initiating_company}}</td>
-                                        </tr>
-                                        <tr class="alt">
                                             <td>Initiated at</td>
                                             <td>{{event_details.initiated_at.value}}</td>
                                         </tr>
                                         <tr>
-                                            <td>Created by</td>
-                                            <td>{{client_event_details.created_by.name_initials}}</td>
+                                            <td>Initiated ago</td>
+                                            <td>{{event_details.initiated_ago.value}}</td>
                                         </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="section">
-                            <tr>
-                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Wave Information</h3>
-                                    <table class="listing">
-                                        <tr>
-                                            <td>Initiated at</td>
-                                            <td>{{wave_details.initiated_at.value}}</td>
-                                        </tr>
-                                        <tr class="alt">
-                                            <td>Created by</td>
-                                            <td>{{client_wave_details.created_by.name_initials}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Schedule</td>
-                                            <td>{{client_wave_details.communication_schedule.schedule_name.value}}</td>
-                                        </tr>
-                                        <tr class="alt">
-                                            <td>Scope</td>
-                                            <td>{{client_wave_details.communication_schedule.schedule_scope.value}}</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="section">
-                            <tr>
-                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Event Statistics</h3>
-                                    <table class="listing">
-                                        {{#has_trade_items}}
-                                        <tr>
-                                            <td>Number of Trade Items</td>
-                                            <td>{{trade_item_count}}</td>
-                                        </tr>
-                                        {{/has_trade_items}}
                                         <tr class="alt">
                                             <td>Number of Distribution Points</td>
                                             <td>{{distribution_point_count}}</td>
@@ -256,28 +168,51 @@
                                 </td>
                             </tr>
                         </table>
+
+                        <table class="section">
+                            <tr>
+                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
+                                    <h3>Distribution Point Status</h3>
+                                    <table class="listing">
+                                        <tr><td>Notified</td>
+                                          <td>{{distribution_points_by_status.notified.count}} ({{distribution_points_by_status.notified.percentage.value}})</td></tr>
+                                        <tr class="alt"><td>Accessed</td>
+                                          <td>{{distribution_points_by_status.accessed.count}} ({{distribution_points_by_status.accessed.percentage.value}})</td></tr>
+                                        <tr><td>Confirmed</td>
+                                          <td>{{distribution_points_by_status.confirmed.count}} ({{distribution_points_by_status.confirmed.percentage.value}})</td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
+
                     <div class="warning">
                         <p>You are receiving this email because {{incident_details.initiating_company}} included you in this event as an internal user. Do not forward this email as the link displays information intended specifically for {{channel_value}}.</p>
                     </div>
 
                     <hr />
-                    
-                    <h4 class="content_header">L'événement n° {{event_details.short_event_id}} a été lancé avec succès.</h4>
 
                     <div class="section_wrapper">
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Informations sur l'Événement</h3>
+                                    <h3>Informations sur l'événement</h3>
                                     <table class="listing">
                                         <tr>
-                                            <td>Nom de l'Événement</td>
+                                            <td>Nom de l'événement</td>
                                             <td>{{event_details.event_name}}</td>
                                         </tr>
                                         <tr class="alt">
-                                            <td>Type d'Événement</td>
-                                            <td>{{event_details.event_type.type_label_l10n.fr_CA}}</td>
+                                            <td>Initié à</td>
+                                            <td>{{event_details.initiated_at.value}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Initié il y a</td>
+                                            <td>{{event_details.initiated_ago.value}}</td>
+                                        </tr>
+                                        <tr class="alt">
+                                            <td>Nombre de points de distribution</td>
+                                            <td>{{distribution_point_count}}</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -287,94 +222,26 @@
                         <table class="section">
                             <tr>
                                 <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Informations sur l'Incident</h3>
+                                    <h3>État du point de distribution</h3>
                                     <table class="listing">
                                         <tr>
-                                            <td>Nom de l'Incident</td>
-                                            <td>{{incident_details.incident_name}}</td>
+                                            <td>Notifié</td>
+                                            <td>{{distribution_points_by_status.notified.count}} ({{distribution_points_by_status.notified.percentage.value}})</td>
                                         </tr>
                                         <tr class="alt">
-                                            <td>Type d'Incident</td>
-                                            <td>{{incident_details.incident_type.type_label_l10n.fr_CA}}</td>
+                                            <td>Accédé</td>
+                                            <td>{{distribution_points_by_status.accessed.count}} ({{distribution_points_by_status.accessed.percentage.value}})</td>
                                         </tr>
                                         <tr>
-                                            <td>Zone de Préoccupation</td>
-                                            <td>{{incident_details.concern_area.area_label_l10n.fr_CA}}</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="section">
-                            <tr>
-                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Informations sur l'Initiateur</h3>
-                                    <table class="listing">
-                                        <tr>
-                                        <td>Société</td>
-                                        <td>{{incident_details.initiating_company}}</td>
-                                        </tr>
-                                        <tr class="alt">
-                                        <td>Lancé à</td>
-                                        <td>{{event_details.initiated_at.value}}</td>
-                                        </tr>
-                                        <tr>
-                                        <td>Créé par</td>
-                                        <td>{{client_event_details.created_by.name_initials}}</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="section">
-                            <tr>
-                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Informations sur les vagues</h3>
-                                    <table class="listing">
-                                        <tr>
-                                        <td>Lancé à</td>
-                                        <td>{{wave_details.initiated_at.value}}</td>
-                                        </tr>
-                                        <tr class="alt">
-                                        <td>Créé par</td>
-                                        <td>{{client_wave_details.created_by.name_initials}}</td>
-                                        </tr>
-                                        <tr>
-                                        <td>Calendrier</td>
-                                        <td>{{client_wave_details.communication_schedule.schedule_name.value}}</td>
-                                        </tr>
-                                        <tr class="alt">
-                                        <td>Portée</td>
-                                        <td>{{client_wave_details.communication_schedule.schedule_scope.value}}</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="section">
-                            <tr>
-                                <td bgColor="#eeeeee" style="background-color:#eeeeee;">
-                                    <h3>Statistiques de l'Événement</h3>
-                                    <table class="listing">
-                                        {{#has_trade_items}}
-                                        <tr>
-                                        <td>Nombre d'Articles Commerciaux</td>
-                                        <td>{{trade_item_count}}</td>
-                                        </tr>
-                                        {{/has_trade_items}}
-                                        <tr class="alt">
-                                        <td>Nombre de Points de Distribution</td>
-                                        <td>{{distribution_point_count}}</td>
+                                            <td>Confirmé</td>
+                                            <td>{{distribution_points_by_status.confirmed.count}} ({{distribution_points_by_status.confirmed.percentage.value}})</td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
                         </table>
                     </div>
-
+                    
                     <div class="warning">
                         <p>Vous recevez ce courriel parce que {{incident_details.initiating_company}} vous a inclus dans cet événement en tant qu'utilisateur interne. Veuillez ne pas transférer ce courriel, car le lien affiche des informations destinées spécifiquement à {{channel_value}}.</p>
                     </div>
@@ -396,7 +263,7 @@
                         </table>    
                     </div>       
                     {{/branding.email_footer_image}}
-                </div>
+               </div>
                 <!--[if mso]>
                 </td>
                 </tr>
@@ -429,8 +296,10 @@
                 </div>
                 <![endif]-->
             </td>
-            <td width="10px" bgcolor="#d5d5d5">&nbsp;</td>
+            <td width="15px" bgcolor="#c5c5c5">&nbsp;</td>
         </tr>
     </table>
 </body>
 </html>
+
+
