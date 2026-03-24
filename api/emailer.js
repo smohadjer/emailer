@@ -42,7 +42,11 @@ const renderEmail = (template, lang, original, branded) => {
     const filename = `email_${lang}.html`;
     const templatePath = path.join(process.cwd(), 'public', folder, template, filename);
     const templateData = fs.readFileSync(templatePath, 'utf8');
-    const renderedEmail = Mustache.render(templateData, data);
+    const partials = {
+        mso: fs.readFileSync(path.join(process.cwd(), 'public/styles/mso.mustache'), 'utf8')
+    };
+
+    const renderedEmail = Mustache.render(templateData, data, partials);
     return renderedEmail;
 }
 
