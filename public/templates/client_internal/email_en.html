@@ -123,7 +123,7 @@
                 <div class="main">
                     <div class="meta">
                         <p><span>Event Date<!--[if mso]>:<![endif]--></span> {{event_details.initiated_date.value}}</p>
-                        <p><span>Event ID<!--[if mso]>:<![endif]--></span> {{event_details.short_event_id}}</p>
+                        <p><span>Event ID<!--[if mso]>:<![endif]--></span> <a href="{{event_link}}">{{event_details.short_event_id}}</a></p>
                     </div>
 
                     {{#branding.email_client_logo}}
